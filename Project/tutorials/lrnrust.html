@@ -176,47 +176,132 @@
         p {
             font-family: soft;
             color: palevioletred;
-            margin-left: 16vw;
+            margin-left: 2vw;
 
         }
-        
-        #title {
-            font-size:3vw;
-            margin-bottom:2vw;
-            margin-top:2vw;
+
+        #title_n {
+            font-size: 7vw;
+            margin-bottom: 2vw;
+            margin-top: 2vw;
         }
-        
-        #desc {
-            font-size:1.5vw;
-            width:55vw;
+
+        #text {}
+
+        #code {
+            color: mediumvioletred;
         }
-        
     </style>
 </head>
 
 <body>
     <div id="building">
-        <p style="margin-top:5vh" id="title">Julia</p>
-        <p id="desc">• Numerical Computing • Algorithms • Scientific applications • Server-side programming • 2D Game Programming • Phone application development</p>
-        <p id="title">GO!</p>
-        <p id="desc">• Server-side programming • Cloud computing Scala Applications: • Web-applications • Data analysis • Software development • Machine Learning</p>
-        <p id="title">Kotlin</p>
-        <p id="desc">• App development • JS development • Software development</p>
-        <p id="title">C++</p>
-        <p id="desc">• Numeric computing • GUI-based applications • Game development • Web development • DB Software • Operation Systems</p>
-        <p id="title">Python</p>
-        <p id="desc">• Numerical computing • Web development • Desktop GUIs and Software development in general • Game development • Operation Systems</p>
-        <p id="title">R</p>
-        <p id="desc">• Numeric operations • Data analysis • Machine learning • Bio Science</p>
-        <p id="title">Rust</p>
-        <p id="desc">• Systems software development • Numeric operations • Web applications</p>
-        <p id="title">Java</p>
-        <p id="desc">• Mobile apps • Desktop GUI applications • Web applications • Numeric    operations • Scientific applications</p>
+        <p id="title_n" style="margin-top:3vw">The Rust tutorial</p>
+        <p id="text">
+        	Rust is something that appears on metal after a certain period of erosion, usually on objects that were around for a long time and served their purpose properly. Well, Rust is also a name of a programming language, which too is, coincidentally, trusty and heavily industrial. Most of the time it’s used for developing systems software and complex numeric operations. There are many ways to use this language, but if readability is an important factor for your coding experience, this language is not for you. Rust is, indeed, notorious for its syntax, but it definitely makes up for it with its efficiency (in terms of code length to result). 
+        </p><p id="text">
+To start working with Rust you have to make sure you have all the necessary things installed, like the compiler, which you can get on the official Rust website and an IDE, for the role of which IntelliJ IDEa will suffice.
+        <p id="text">
+	It’s a customary tradition for programmers to start learning a new language off by printing out “Hello, World!” in the console, so let’s get right to it!
+        </p>
+        <p id="code">
+fn main() {
+        </p>
+        <p id="code">
+    println!("Hello World!");
+        </p><p id="code">
+}
+        </p>
+        <p id="text">
+It’s quite easy to break this code down: fn is the basic definition of a function or void in this language, main() being the – you guessed it – main function, the one where all the magic happens, the parameters for functions are defined in parentheses, the contains of the functions are put in curly brackets, to print things out you can use println! And put the thing you want to print out in parentheses and the string of text in brackets. Also it’s important to note the necessary semicolon at the end of the line. To declare an array of elements you make it changeable and set the type of elements and its size in square brackets and assign it elements, also in square brackets.
+        </p><p id="text">
+	This might come as a shock, but you can also declare variables to print out in Rust. To be fair, there really aren’t any types to remember: all variable declarations start with code word let, whether it’s a real, floating point number, string or boolean. Basic numeric operations work as follows:
+        </p>
+        <p id="code">
+fn main() {
+        </p>
+        <p id="code">
+    let sum = 5 + 10;
+    let difference = 95.5 - 4.3;
+    let product = 4 * 30;
+    let quotient = 56.7 / 3 by 2.2;
+    let remainder = 43 % 5;
+    let mut array: [i32; 3] = [0; 3];
+        </p>
+        <p id="code">
+}
+        </p>
+        <p id="text">
+	To get user input, use read_line with stdin() like this:
+        </p>
+        <p id="code">
+let mut s; 
+        </p>
+        <p id="code">
+stdin().read_line(&mut s;)
+        </p>
+        <p id="text">
+	Rust, just like any other language, has loops (or cycles), which are simple to understand: for, which is the cycle in which you have to directly set the range and step of the loop iterator and while, which works under the condition that a certain statement is true, where ranges and statements are defined in parentheses. But you have most likely never seen the mysteriously called loop loop, which is an official implementation of an infinite loop. They work as shown below:
+        </p>
+        <p id="code">
+loop {
+        </p>
+        <p id="code">
+    	println!("Loop forever!");
+        </p>
+        <p id="code">
+}
+        </p>
+        <p id="code">
+while (!done) {
+        </p>
+        <p id="code">
+	println(“Loop for a while!”);
+        </p>
+        <p id="code">
+}
+        </p>
+        <p id="code">
+for (x = 0; x < 10; x++) {
+                   </p>
+            <p id="code">
+    	println(“Loop in some range!”)
+        </p>
+        <p id="code">
+                }
+        </p>
+        <p id="text">
+The concept of an infinite loop might seem pointless to you, but let me introduce you to break and continue statements. Break stops the cycle completely moving onto the next line of code, and continue moves on to the next iteration of the cycle.
+        </p>
+        <p id="text">
+	Conditionals are the universal way to complete action if statement is true. There are also ways to execute certain functions if said statement is false by using the code word else like this:
+        </p>
+        <p id="code">
+if n < 10 && n > -10 {
+            </p>
+            <p id="code">
+            println!(", and is a small number, increase ten-fold");
+        </p>
+        <p id="code">
+            10 * n
+        </p>
+        <p id="code">
+        } else {
+        </p>
+        <p id="code">
+            println!(", and is a big number, half the number");
+        </p>
+        <p id="code">
+            n / 2
+        </p>
+        <p id="code">
+        }
+        </p>
         <div id="roof-b-s"></div>
     </div>
 
-    <div id="bar" onclick="main()">Code:Excelso</div>
-    <div id="sb_click_fix" onclick="menu_slider()" s>
+    <div id="bar">Code:Excelso</div>
+    <div id="sb_click_fix" onclick="sb()" s>
         <div id="sb_click">
             <div id="bar9uk" onmouseover="c()" onmouseout="h()">
                 <div id="bar9uk_1"></div>
@@ -226,12 +311,12 @@
         </div>
     </div>
     <div id="sidebar" style="left:100vw;">
-        <div id="learn" onclick="learn_pg()">Tutorials
+        <div id="learn" onclick="lrn()">Tutorials
             <div id="learn_desc">
-                <div id="learn_desc_fix">Learn more about interesting languges in a colorful way!</div>
+                <div id="learn_desc_fix">Learn more about interesting languages in a colorful way!</div>
             </div>
         </div>
-        <div id="tend" onclick="article_pg()">Articles
+        <div id="tend" onclick="atc()">Articles
             <div id="tend_desc">
                 <div id="tend_desc_fix">Read up about the tendencies of programming languages</div>
             </div>
@@ -241,14 +326,6 @@
         </div>
     </div>
     <script>
-        function chosen_lang() {
-
-        }
-
-        function main() {
-            window.open("../index.html", "_self");
-        }
-
         function c() {
             document.getElementById("bar9uk_1").style.backgroundColor = "palevioletred";
             document.getElementById("bar9uk_2").style.backgroundColor = "palevioletred";
@@ -261,22 +338,21 @@
             document.getElementById("bar9uk_3").style.backgroundColor = "whitesmoke";
         }
 
-        function learn_pg() {
+        function lrn() {
             window.open("index.html", "_self");
         }
 
-        function article_pg() {
+        function atc() {
             window.open("../articles/index.html", "_self");
         }
 
-        function menu_slider() {
+        function sb() {
             if (document.getElementById("sidebar").style.left == "100vw") {
                 document.getElementById("sidebar").style.left = 0;
             } else {
                 document.getElementById("sidebar").style.left = "100vw";
             }
         }
-
     </script>
 </body>
 

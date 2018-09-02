@@ -1,0 +1,575 @@
+<!DOCTYPE html>
+<html>
+<meta charset="utf-8" ontent="width=device-width">
+
+<head>
+    <style>
+        @font-face {
+            font-family: soft;
+            src: url(../ssf.ttf);
+        }
+
+        @font-face {
+            font-family: rigid;
+            src: url(../reason.otf);
+        }
+
+        body {
+            background-color: #afeeee;
+            padding: 0;
+            overflow-x: hidden;
+        }
+
+        #sb_click {
+            position: absolute;
+            left: 100vw;
+            top: 0;
+            z-index: 2;
+            width: 5vh;
+            height: 5vh;
+            background-color: #661933;
+            z-index: 101;
+        }
+
+        #sb_click_fix {
+            position: absolute;
+            left: -5vh;
+            top: 0;
+        }
+
+        #bar {
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 100vw;
+            height: 5vh;
+            background-color: #661933;
+            color: #fff;
+            font-size: 3vh;
+            font-family: soft;
+            padding-top: 1vh;
+            padding-left: 1vh;
+            padding-bottom: 0;
+            z-index: 100;
+        }
+
+        #sidebar {
+            position: absolute;
+            z-index: 5;
+            left: 100vw;
+            top: 5vh;
+            width: 100vw;
+            height: 100vh;
+            background-color: #000000;
+            opacity: .75;
+            transition: left ease 1s;
+        }
+
+        #learn {
+            position: absolute;
+            top: 10vh;
+            left: 20vw;
+            text-transform: uppercase;
+            font-weight: 900;
+            font-size: 4vw;
+            color: white;
+            border-bottom: 3px solid #ff0000;
+        }
+
+        #tend {
+            position: absolute;
+            top: 10vh;
+            left: 60vw;
+            text-transform: uppercase;
+            font-size: 4vw;
+            font-weight: 900;
+            color: white;
+            opacity: 1;
+            border-bottom: 3px solid #ffa500;
+        }
+
+        #learn_desc {
+            position: absolute;
+            top: 1vh;
+            width: 100%;
+            font-size: 1.75vw;
+        }
+
+        #learn_desc_fix {
+            position: absolute;
+            top: 5vw;
+        }
+
+        #tend_desc {
+            position: absolute;
+            top: 1vh;
+            width: 100%;
+            font-size: 1.75vw;
+        }
+
+        #tend_desc_fix {
+            position: absolute;
+            top: 5vw;
+        }
+
+        #about {
+            border-top: 3px solid #ff0000;
+        }
+
+        #building {
+            background-color: #eee8aa;
+            width: 90vw;
+            height: auto;
+            position: absolute;
+            left: 0;
+            top: 5vh;
+        }
+
+        #roof-b-s {
+            position: absolute;
+            left: 0;
+            top: 1vh;
+            width: 90vw;
+            height: 2.5vh;
+            background-color: #e6dd7f;
+        }
+
+        #bar9uk {
+            position: absolute;
+            left: 0.75vh;
+        }
+
+        #bar9uk_1 {
+            position: absolute;
+            left: 0;
+            width: 25px;
+            height: 5px;
+            top: 0.75vh;
+            left: -0.25vw;
+            background-color: #f5f5f5;
+            border-radius: 5px;
+            transition: background-color 1s ease;
+        }
+
+        #bar9uk_2 {
+            position: absolute;
+            width: 25px;
+            height: 5px;
+            top: 2vh;
+            left: -0.25vw;
+            background-color: #f5f5f5;
+            border-radius: 5px;
+            transition: background-color 1s ease;
+        }
+
+        #bar9uk_3 {
+            position: absolute;
+            width: 25px;
+            height: 5px;
+            top: 3.35vh;
+            left: -0.25vw;
+            border-radius: 5px;
+            background-color: #f5f5f5;
+            transition: background-color 1s ease;
+        }
+
+        p {
+            font-family: soft;
+            color: palevioletred;
+            margin-left: 2vw;
+
+        }
+
+        #title_n {
+            font-size: 7vw;
+            margin-bottom: 2vw;
+            margin-top: 2vw;
+        }
+
+        #text {}
+
+        #code {
+            color: mediumvioletred;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="building">
+        <p id="title_n" style="margin-top:3vw">The Kotlin tutorial</p>
+        <p id="text">
+            Kotlin is a fairly new programming language developed by JetBrains to be safer and more minimal than Java and simpler than Scala. Its mainly used for desktop and mobile development, and while the performance may be a bit of a turn-off, Kotlin serves its purpose well: it has backwards and cross-platform compatibility and its syntax is very efficient.
+            <br>
+To start off let’s make sure you have everything necessary installed. To code in Kotlin you’ll need a compiler, available on the official website, and an IDE, the role of which can be fulfilled by the well-known Eclipse IDE.
+            <br>
+It’s a customary tradition among programmers to start learning a new language by printing out “Hello, world!”, so let’s do exactly that. 
+        </p>
+        <p id="code">
+fun main(args: Array<String>) {
+            <br>
+   println("Hello World!")
+            <br>
+}
+            </p>
+       <p id="text">     
+Let’s break this code down. Fun is the way to define functions in Kotlin, main is the name of the function and is the first function to be executed upon the launching of the code. In parentheses we put arguments, the variables we send over to the function from the main one, and in this case, considering the fact that this IS the main function, the arguments are obligatory and should be the same in every Kotlin file. The actions that are supposed to be executed when function is called are put in curly brackets, but as we see below, there is no semicolon to be found at the end of the println line, the one that does the printing out of the hellos and the worlds.
+           <br>
+Now, it’s important to know how variables work in a language, and the more modern ones choose to let go of the type declaration, and Kotlin is no exception. Well, that’s not entirely true, there is a way to declare variable types, but you can tell everyone’s trying to move on from that technique, meaning that:
+        </p>
+        <p id="code">
+val firstName: String = "Chike"
+        <br>
+and
+        <br>
+val firstName = "Chike"
+        </p>
+        <p id="text">
+do exactly the same thing. But anyways, val varName is the way to declare constants, and if you want to declare a variable, use var instead. But what will we do if we want to declare an incredibly large number as a variable? Well, fear not, you won’t exactly have to come back to the direct type declaration, and instead, we are going to use a shorter form:
+        </p>
+        <p id="code">
+val myLong = 19L
+        </p>
+        <p id="text">
+Just a reminder: this works the same way the full type declaration does, like this:
+        </p>
+        <p id="code">
+val myLongAgain: Long = 40
+        </p>
+        <p id="text">
+Another interesting feature of the variables to note is that you can put underscores in the value upon declaration: the compiler will completely ignore them, and the code becomes more readable.
+        </p>
+        <p id="code">
+val oneMillion = 1_000_000
+        </p>
+        <p id="text">
+Arrays are a numbered sequence of elements of a specific length. To declare one we must use the arrayOf function and list the elements.
+        </p>
+        <p id="code">
+val myArray = arrayOf(1, 2, 3, 4, 5)
+        </p>
+        <p id="text">
+Looks simple,right? Well here’s something very confusing for you:
+        </p>
+        <p id="code">
+val myArray = arrayOf(1, 2, 3, 4, 5, “what”)
+        </p>
+        <p id="text">
+Believe it or not, this will compile just fine. It’s just something called a mixed-type array. But if you want to be more clear with the types of elements in the array, specify the type in angle brackets, or instead use typeArrayOf().
+        </p>
+        <p id="code">
+val myArray = arrayOf<Int>(1, 2, 3, 4, 5)
+            </p>
+            <p id="text">
+Now let’s try to get user input. There are many ways to do that in Kotlin, and I’ll only address two of the most practical ones. The first one is done using the built-in and oh-so-familiar readline() function which works rather questionably:
+        </p>
+        <p id="code">
+val (a, b) = readLine()!!.split(' ')
+            <br>
+  println(a.toInt() + b.toInt())
+        </p>
+        <p id="text">
+This means that redline gets only string input, and you have to manually split the string in two to get this to work with two variables. It works just fine without that if you only want one variable to be input, but this syntax will definitely take some getting used to. So here’s a different way to get input:
+        </p>
+        <p id="code">
+import java.util.Scanner
+            <br>
+fun main(vararg args: String) {
+            <br>
+  val input = Scanner(System.`in`)
+            <br>
+  val a = input.nextInt()
+            <br>
+  val b = input.nextInt()
+            <br>
+  println(a + b)
+            <br>
+}
+        </p>
+        <p id="text">
+This one is certainly more organized than the first one but it does have an import required, which could be confusing if your project has many of those kinds of statements.
+            <br>
+Conditionals are implemented in a rather simple way in Kotlin. They look and work like this:
+        </p>
+        <p id="code">
+if (condition) {
+	do a thing
+} else {
+Do a slightly different thing
+}
+        </p>
+        <p id="text">
+Loops are great. They help free us from the extra and repetitive work by repeating the same code a number of times until a loop control statement is false. There are 2 types of loops: for and while. With for you can define the range in which the loop variable is contained. There are several ways to declare for loops: a simple range:
+        </p>
+        <p id="code">
+for (i in 1..3) {
+    println(i)
+}
+        </p>
+        <p id="text">
+A range from up to down with a modified step:
+        </p>
+        <p id="code">
+for (i in 6 downTo 0 step 2) {
+    println(i)
+}
+        </p>
+        <p id="text">
+A range in an array, which goes from 0 to (array length)-1
+        </p>
+        <p id="code">
+for (item in collection) {
+print(item)
+}
+        </p>
+        <p id="text">
+And the while loop only repeats while the loop control statement is true, no initial value, no step defined within the loop declaration.
+        </p>
+        <p id="code">
+while (condition) { do a thing }
+        </p>
+        <p id="text">
+Sometimes loops iterate for way too long, and the way to handle that are loop control statements, which alter the normal loop iteration. There are also two loop control statements: break, which completely stops the loop execution, and continue, which just skips the rest of the loop after it and moves onto the next iteration. 
+Now onto the project-making part. We’re going to make a full-on desktop application about making coffee, like real big-boy programmers. If you followed my Java course, this should sound and look familiar (just like everything about Kotlin, go figure).
+To set up our window we’ll need a scene and stage, which are responsible for the frame of the window and its contents accordingly. The windows setup is going to be located in a separate class which extends the package Application. Then we launch the window using an according command and setup some necessary things (like window size, its root, resizability and visibility) within a new function called start which takes stage as a parameter. You should end up with something like this.
+        </p>
+        <p id="code">
+class Main: Application() {
+<br>
+    override fun start(stage: Stage) {
+            <br>
+        var scene: Scene = Scene(root, 955.0,700.0, Color.WHITE)
+            <br>
+        scene.root = root
+            <br>
+        stage.scene = scene
+            <br>
+        stage.title = "coffee game v2"
+            <br>
+        stage.isResizable = false
+            <br>
+        stage.show()
+            <br>
+    }
+}
+            <br>
+fun main(args: Array<String>) {
+            <br>
+    Application.launch(Main::class.java, *args)
+            <br>
+}
+            </p>
+            <p id="text">
+You could say that the start function is our stage of action.
+Alright, now lets create some necessary variables, like a list of used ingredients, a service variable, a label and the images themselves. Considering the fact that there is a LOT of coffee to print out as an image, I’ll significantly shorten my code for readability and not-boring-the-reader purposes, but I will link the full code and the Images I used at the bottom of the page.
+        </p>
+        <p id="code">
+var coffee: MutableList<String> = mutableListOf()
+            <br>
+var wh = 0
+            <br>
+var lab = Label("")
+            <br>
+lab.font = Font.font("Monospaced",32.0)
+            <br>
+lab.translateY = 50.0
+            <br>
+var table = Image(Main::class.java.getResourceAsStream("table.png"))
+            </p>
+            <p id="text">
+After entering the rest of the images we initialize them and set their position on screen.
+        </p>
+        <p id="code">
+var tableInit = ImageView(table)
+            <br>
+tableInit.x = 90.0
+            <br>
+tableInit.y = 250.0
+        </p>
+        <p id="text">
+Instead of adding a separate function for a mouse listener, Kotlin provides a steady method which we’ll use to update our ingredients array like so:
+        </p>
+        <p id="code">
+var lungoInit = ImageView(lungo)
+            <br>
+lungoInit.x = 550.0
+            <br>
+lungoInit.y = 219.0
+            <br>
+lungoInit.setOnMouseClicked {
+            <br>
+    coffee.add("lungo")
+            <br>
+}
+        </p>
+        <p id="text">
+After initializing the rest of the objects, we’ll set up the functions for the buttons. When we click on the back button, we should clear our array, remove anything that shouldn’t be there (by just grouping every single object onscreen and deleting the last one)  and wipe the sevice variables.
+        </p>
+        <p id="code">
+var backInit = ImageView(back)
+            <br>
+var enterInit = ImageView(enter)
+            <br>
+var root = Group(tableInit,lungoInit,kettleInit,whiskInit,milkInit,ristrInit,cpotInit,enterInit,backInit,wcInit,teaInit,iceInit,lemonInit,lab)
+            <br>
+backInit.x = 10.0
+            <br>
+backInit.y = 10.0
+            <br>
+backInit.setOnMouseClicked {
+            <br>
+    coffee.clear()
+            <br>
+    if(root.children.last()!=lab) root.children.remove(root.children.last())
+            <br>
+    wh = 0
+            <br>
+    lab.text = ""
+            <br>
+}
+        </p>
+        <p id="text">
+And now onto the enter function, we check the list’s size and print out an according drink, by forcing it into the window group,and changing the label.
+        </p>
+        <p id="code">
+enterInit.x = 90.0
+            <br>
+enterInit.y = 10.0
+            <br>
+enterInit.setOnMouseClicked {
+            <br>
+    if(coffee.size==0) println("")
+            <br>
+    else if(coffee.size==1) {
+            <br>
+        if(coffee[0]=="tea") {
+            <br>
+            root.children.addAll(espInit)
+            <br>
+            lab.text = "Tea"
+            <br>
+            lab.translateX = 465.0
+            <br>
+        }
+            <br>
+    } else if(coffee.size==2) {
+            <br>
+        if(coffee[0]=="espresso") {
+            <br>
+            if(coffee[1]=="lemon") {
+            <br>
+                root.children.addAll(romInit)
+            <br>
+                lab.text = "Espresso Romano"
+            <br>
+                lab.translateX = 380.0
+            <br>
+            }
+            <br>
+            else if (coffee[1]=="ice") {
+            <br>
+                root.children.addAll(hlInit)
+            <br>
+                lab.text = "Café con Hielo"
+            <br>
+                lab.translateX = 380.0
+            <br>
+            }
+            <br>
+            else if (coffee[1]=="milk") {
+            <br>
+                root.children.addAll(bbInit)
+            <br>
+                lab.text = "Bon bon"
+            <br>
+                lab.translateX = 430.0
+            <br>
+            }
+            <br>
+        } else if(coffee[0]=="lungo" && coffee[1]=="lungo") {
+            <br>
+            root.children.addAll(lngInit)
+            <br>
+            lab.text = "Lungo"
+            <br>
+            lab.translateX = 455.0
+            <br>
+        }
+            <br>
+        else if(coffee[0]=="milk") {
+            <br>
+            if(coffee[1]=="espresso") {
+            <br>
+                root.children.addAll(bbInit)
+            <br>
+                lab.text = "Bon bon"
+            <br>
+                lab.translateX = 430.0
+            <br>
+            }
+        }
+    } 
+}
+        </p>
+        <p id="text">
+And that’s pretty much it! Now you just have to add in the details found in the source file and images, all of which can be found here. You’ve successfully created a desktop app on Kotlin and you probably have a very happy mug!.. Okay, have this one for that bad joke.
+        </p>
+        <div id="roof-b-s"></div>
+    </div>
+
+    <div id="bar">Code:Excelso</div>
+    <div id="sb_click_fix" onclick="sb()" s>
+        <div id="sb_click">
+            <div id="bar9uk" onmouseover="c()" onmouseout="h()">
+                <div id="bar9uk_1"></div>
+                <div id="bar9uk_2"></div>
+                <div id="bar9uk_3"></div>
+            </div>
+        </div>
+    </div>
+    <div id="sidebar" style="left:100vw;">
+        <div id="learn" onclick="lrn()">Tutorials
+            <div id="learn_desc">
+                <div id="learn_desc_fix">Learn more about interesting languges in a colorful way!</div>
+            </div>
+        </div>
+        <div id="tend" onclick="atc()">Articles
+            <div id="tend_desc">
+                <div id="tend_desc_fix">Read up about the tendencies of programming languages</div>
+            </div>
+        </div>
+        <div id="about">
+
+        </div>
+    </div>
+    <script>
+        function c() {
+            document.getElementById("bar9uk_1").style.backgroundColor = "palevioletred";
+            document.getElementById("bar9uk_2").style.backgroundColor = "palevioletred";
+            document.getElementById("bar9uk_3").style.backgroundColor = "palevioletred";
+        }
+
+        function h() {
+            document.getElementById("bar9uk_1").style.backgroundColor = "whitesmoke";
+            document.getElementById("bar9uk_2").style.backgroundColor = "whitesmoke";
+            document.getElementById("bar9uk_3").style.backgroundColor = "whitesmoke";
+        }
+
+        function lrn() {
+            window.open("index.html", "_self");
+        }
+
+        function atc() {
+            window.open("../articles/index.html", "_self");
+        }
+
+        function sb() {
+            if (document.getElementById("sidebar").style.left == "100vw") {
+                document.getElementById("sidebar").style.left = 0;
+            } else {
+                document.getElementById("sidebar").style.left = "100vw";
+            }
+        }
+    </script>
+</body>
+
+</html>

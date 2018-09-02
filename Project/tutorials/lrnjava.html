@@ -1,0 +1,685 @@
+<!DOCTYPE html>
+<html>
+<meta charset="utf-8" ontent="width=device-width">
+
+<head>
+    <style>
+        @font-face {
+            font-family: soft;
+            src: url(../ssf.ttf);
+        }
+
+        @font-face {
+            font-family: rigid;
+            src: url(../reason.otf);
+        }
+
+        body {
+            background-color: #afeeee;
+            padding: 0;
+            overflow-x: hidden;
+        }
+
+        #sb_click {
+            position: absolute;
+            left: 100vw;
+            top: 0;
+            z-index: 2;
+            width: 5vh;
+            height: 5vh;
+            background-color: #661933;
+            z-index: 101;
+        }
+
+        #sb_click_fix {
+            position: absolute;
+            left: -5vh;
+            top: 0;
+        }
+
+        #bar {
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 100vw;
+            height: 5vh;
+            background-color: #661933;
+            color: #fff;
+            font-size: 3vh;
+            font-family: soft;
+            padding-top: 1vh;
+            padding-left: 1vh;
+            padding-bottom: 0;
+            z-index: 100;
+        }
+
+        #sidebar {
+            position: absolute;
+            z-index: 5;
+            left: 100vw;
+            top: 5vh;
+            width: 100vw;
+            height: 100vh;
+            background-color: #000000;
+            opacity: .75;
+            transition: left ease 1s;
+        }
+
+        #learn {
+            position: absolute;
+            top: 10vh;
+            left: 20vw;
+            text-transform: uppercase;
+            font-weight: 900;
+            font-size: 4vw;
+            color: white;
+            border-bottom: 3px solid #ff0000;
+        }
+
+        #tend {
+            position: absolute;
+            top: 10vh;
+            left: 60vw;
+            text-transform: uppercase;
+            font-size: 4vw;
+            font-weight: 900;
+            color: white;
+            opacity: 1;
+            border-bottom: 3px solid #ffa500;
+        }
+
+        #learn_desc {
+            position: absolute;
+            top: 1vh;
+            width: 100%;
+            font-size: 1.75vw;
+        }
+
+        #learn_desc_fix {
+            position: absolute;
+            top: 5vw;
+        }
+
+        #tend_desc {
+            position: absolute;
+            top: 1vh;
+            width: 100%;
+            font-size: 1.75vw;
+        }
+
+        #tend_desc_fix {
+            position: absolute;
+            top: 5vw;
+        }
+
+        #about {
+            border-top: 3px solid #ff0000;
+        }
+
+        #building {
+            background-color: #eee8aa;
+            width: 90vw;
+            height: auto;
+            position: absolute;
+            left: 0;
+            top: 5vh;
+        }
+
+        #roof-b-s {
+            position: absolute;
+            left: 0;
+            top: 1vh;
+            width: 90vw;
+            height: 2.5vh;
+            background-color: #e6dd7f;
+        }
+
+        #bar9uk {
+            position: absolute;
+            left: 0.75vh;
+        }
+
+        #bar9uk_1 {
+            position: absolute;
+            left: 0;
+            width: 25px;
+            height: 5px;
+            top: 0.75vh;
+            left: -0.25vw;
+            background-color: #f5f5f5;
+            border-radius: 5px;
+            transition: background-color 1s ease;
+        }
+
+        #bar9uk_2 {
+            position: absolute;
+            width: 25px;
+            height: 5px;
+            top: 2vh;
+            left: -0.25vw;
+            background-color: #f5f5f5;
+            border-radius: 5px;
+            transition: background-color 1s ease;
+        }
+
+        #bar9uk_3 {
+            position: absolute;
+            width: 25px;
+            height: 5px;
+            top: 3.35vh;
+            left: -0.25vw;
+            border-radius: 5px;
+            background-color: #f5f5f5;
+            transition: background-color 1s ease;
+        }
+
+        p {
+            font-family: soft;
+            color: palevioletred;
+            margin-left: 2vw;
+
+        }
+
+        #title_n {
+            font-size: 7vw;
+            margin-bottom: 2vw;
+            margin-top: 2vw;
+        }
+
+        #text {}
+
+        #code {
+            color: mediumvioletred;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="building">
+        <p id="title_n" style="margin-top:3vw">The Java tutorial</p>
+        <p id="text">
+        	Java is a different name for coffee, which comes from an Island of Java, located near Indonesia. It also happens to be a name of a programming language released in 1995. Its main purpose is developing mobile, web and desktop applications. Despite the language being named after coffee, it has its weaker sides, the main one being the rather bulky syntax, which doesn’t exactly fit numeric and scientific programming. But after you figure out the basic structure of the syntax, the learning curve smoothens a lot. Other major advantages include the impressive performance and the wide variety of applications you can use the language for. 
+            <br>
+	To start off, you need to check if you have the compiler and IDE installed. The compiler for Java is JDK, which you can get here: *--*. The most productive IDE for Java is Eclipse.
+            <br>
+It’s a common tradition to start learning a language by printing out “Hello, World!” in the console, so let’s jump right in.
+        </p>
+        <p id="code">
+import java.util.*;
+            <br>
+class Main {
+            <br>
+  public static void main(String[] args) {
+            <br>
+    System.out.println("Hello world!");
+            <br>
+  }
+}
+        </p>
+        <p id="text">
+Let’s break this code down. Starting from the top, import is the key word for importing extra packages into the project to use. The thing that you actually want to import is defined in a fashion similar to that of websites’: if you want to specify what package to import, you keep nesting imports, so, Instead of importing the whole util package (the star at the end of java.util.* means that you import everything that is inside the package, same works for other directories), you can specify by adding, for example, Scanner, at the end, like java.util.Scanner; Class Main is the class of the main project file, the far superior one compared to other files. There can be many classes in a single file, but we’ll talk about that later. Moving on, public static void main(String[] args) is the main void of the file. There can be only one of this and it’s the part of the code that runs right after the imports, no matter the classes and voids above it(?). The basic structure of this function is simple, and all of the IDs used here can be used when declaring your very own functions. Public means it’s visible to every file of the project and all classes of the file, static means it’s going to be there for the compiler when it’s hard, or raining, or snowing, until the last string of code is executed, void simply means it’s a function, main is the name of the function, and in the brackets you see these things called arguments. There can be many of them, and there can be none (in that case the brackets should still be there). You define them like you would a variable, onto which we’ll move on later. I’ll just mention that the System.out.println() part is the one that actually is responsible for printing the code out. If you want to print out a number or a variable, there is no need to use brackets, and if you want to print out some words, then put them in single or double brackets. And if you want do mix things up a little and print out BOTH a variable and a string of words then put the different types together with a + sign between them.  There’s also the super-secret codes that only mega advanced programmer people use, but I’ll share my limited knowledge with you. Basically, there are certain strings that do cool things, for example, “\n” gets you to a new line, “\b” serves as backspace (but, you know, you can still use your keyboard key), “\”” will put a quote in your string, which is handy, considering the fact that if you were to try and put it without the backslash, input would end on it, and you would more than likely get an error message, saying your coffee spilled over the mainframe or something. 
+            <br>
+Onto the next topic, variables. Java has them. As I said earlier, they’re very important, so I’ll just list most of them. Int and long are numbers sized accordingly, float and double are floating-point numbers where double can take bigger values than float, char is a single character, String is many characters and Boolean is either true or false. As said earlier variables can be parameters for voids, just like a String args[] is a parameter for main. They are defined in the same manner as shown above: *type* *name*. If there are multiple variables you would want to put in the void, then list them off with a comma as a divider. Also, when naming your variables, remember that Java is case-sensitive. That means that ab and AB are to be considered two different vars. 
+            <br>
+User input is the way to get things into the computer during the program execution. It is implemented with the abovementioned Scanner import. To start off, you need to actually import the Scanner like shown before, then you define a new scanner for the program like this, much like you would an actual scanner. And only then you can input variables accordingly. 
+        </p>
+        <p id="code">
+import java.util.*;
+            <br>
+class sample {}
+            <br>
+class Main {
+            <br>
+  public static void main(String[] args) {
+            <br>
+    Scanner s = new Scanner(System.in);
+            <br>
+    int a = s.nextInt();
+            <br>
+    System.out.println(a);
+            <br>
+  }
+}
+        </p>
+        <p id="text">
+Next up are conditionals. They are defined simply as if(condition) action if true; conditions can be defined as equations (A==5) or as true statements (b) where b is a Boolean. If there is more than one action to be made, then list them off in curly brackets. And if you want the program to do something if the condition is false, there is an else parameter, which you put after the if statement, and which can also have its own condition and else.
+        </p>
+        <p id="code">
+if(a==5) {
+            <br>
+      doThings();
+            <br>
+    } else if(a==4) {
+            <br>
+      AllOfThem();
+            <br>
+    } else 
+            <br>
+      doSomething();
+        </p>
+        <p id="text">
+Loops are a crucial part of programming. They make our life easier and our code – more efficient. There are two kinds of loops in java, which is unsurprising, considering the fact that not that many really work with coffee: for and while. They work at approximately the same speed, except in the case of for, everything is simply more organized than with while. The syntax is quite common.
+        </p>
+        <p id="code">
+for(int i=0;i<n;++i) {}
+    <br>
+    int i=0;
+            <br>
+    while(i<n) {
+      ++i;
+    }
+               </p>
+            <p id="text">
+Arrays in Java are rows of data of the same type. To define one you specify the type of data in it, its name and the size of it in square brackets. It’s also optional to specify its contains right away. Reminder: elements in arrays are numbered starting from 0.
+        </p>
+        <p id="code">
+int[] cats = new int[10];
+            <br>
+int[] mice = {4, 8, 10, 12, 16};
+        </p>
+        <p id="text">
+To get the length of an array you can use the built-in length feature, and to access a particular element in it, put its index into square brackets beside the array name. 
+There also is a way to implement dynamic arrays, the size of which you can change after definition. It is done with a thing called ArrayList, which is defined like so:
+        </p>
+        <p id="code">
+ArrayList catNames = new ArrayList();
+        </p>
+        <p id="text">
+It has its own methods, size() being the one to check its length and add() to add an extra element, thus resizing an array, the same being for remove().
+            <br>
+Now let’s make our first Java project. It’s not going to be any ordinary project with consoles and “You have to download 72 apps for this to work” kind of thing, no-no-no, this is going to be a full-on desktop application, where we’ll have sprites of basic coffee ingredients and by mixing them together we’ll be able to make a delicious caffeine-filled drink, which does mean that there’s some theoretical parts to explain, so let’s get right into it. The two very important classes to remember here are JFrame and JPanel, and they are responsible for the window’s frame (you know, the part with the close button) and the panel (the part inside the frame). To properly tell the compiler that we’re going to be using these classes, use the extends suffix. Considering the fact that a panel cannot exist without a frame, we put the JPanel class inside the JFrame one. To set up our window we have to write some necessary code (like setting the window’s size, add the panel to it, make it visible and resizable, etc.) in void main. So that’s what we should end up with.
+        </p>
+        <p id="code">
+public class Main extends JFrame {
+            <br>
+    public static class Main1 extends JPanel {}
+            <br>
+    public static void main(String[] args) {
+            <br>
+        JFrame f = new JFrame("coffee like java");
+            <br>
+        f.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+            <br>
+        Main1 m = new Main1();
+            <br>
+        f.add(m);
+            <br>
+        f.setSize(900,700);
+            <br>
+        f.setResizable(false);
+            <br>
+        f.setVisible(true);
+            <br>
+    }
+}
+        </p>
+        <p id="text">
+Now let’s go straight to the Main1 class and declare some variables for the images we’re going to use. You can download the sprites here and make sure to add them into your project folder.
+        </p>
+        <p id="code">
+BufferedImage table = null, kettle = null, coffeepot = null, milk = null, whisk = null,enter = null, back = null;
+            <br>
+BufferedImage esp = null, dop = null, bb = null, fw = null, cpc = null,am = null, lt = null,mlk = null, wtr = null;
+            <br>
+BufferedImage mf = null,lb = null,mct = null,cvr = null;
+            <br>
+ArrayList coffee = new ArrayList();
+            <br>
+int wh = 0,cf = 0;
+        </p>
+        <p id="text">
+Coffee is an array which is going to contain the added ingredients, and the ints are service variables which are going to be used later on.
+Now let’s add a mouse listener in the rendering part of Main1 like so:
+        </p>
+        <p id="code">
+public Main1() {
+            <br>
+    addMouseListener(new MouseAdapter() {
+            <br>
+        public void mouseClicked(MouseEvent e) {}}}
+        </p>
+        <p id="text">
+That’s where our program will receive user input. Questionably enough, there is no better way to get information on whether an image has been clicked or not but to create a rectangle around the image’s bounds and check if the mouse clicked within it, which means we’re going to have to create some rectangles and a separate point which will get the mouse’s coordinates when it clicks.
+        </p>
+        <p id="code">
+Rectangle kettle_bounds = new Rectangle(626, 243, kettle.getWidth(), kettle.getHeight());
+            <br>
+Rectangle cpot_bounds = new Rectangle(510, 193, coffeepot.getWidth(), coffeepot.getHeight());
+            <br>
+Rectangle whisk_bounds = new Rectangle(159, 205, whisk.getWidth(), whisk.getHeight());
+            <br>
+Rectangle milk_bounds = new Rectangle(204, 230, milk.getWidth(), milk.getHeight());
+            <br>
+Rectangle back_bounds = new Rectangle(10, 10, back.getWidth(), back.getHeight());
+            <br>
+Rectangle enter_bounds = new Rectangle(100, 10, enter.getWidth(), enter.getHeight());
+            <br>
+Point clicked = e.getPoint();
+        </p>
+        <p id="text">
+Now we start checking the area and add ingredients to our array. Now, since we do have a whisk as one of the images that we’ll use to make milk foam, we’ll have to set the service variable wh to 1 and check it when we click on milk.
+        </p>
+        <p id="code">
+if (kettle_bounds.contains(clicked)) {
+            <br>
+    if (coffee.size() < 4)
+        coffee.add("water");
+                          <br>
+} else if (cpot_bounds.contains(clicked)) {
+            <br>
+    if (coffee.size() < 4)
+        coffee.add("espresso");
+                          <br>
+} else if (milk_bounds.contains(clicked)) {
+            <br>
+    if (coffee.size() < 6) {
+                          <br>
+        if (wh == 1) {
+            <br>
+            coffee.add("foam");
+            <br>
+            wh = 0;
+            <br>
+        } else coffee.add("milk");
+            <br>
+    }
+            <br>
+} else if (whisk_bounds.contains(clicked)) {
+            <br>
+    wh = 1;
+            <br>
+}
+                          </p>
+        <p id="text">
+When we click on the back button, we clear every service variable and the coffee array and refreshes the window using the repaint () function.  
+        </p>
+        <p id="code">
+if (back_bounds.contains(clicked)) {
+            <br>
+    coffee.clear();
+            <br>
+    cf = 0;
+            <br>
+    repaint();
+            <br>
+    wh = 0;
+            <br>
+}
+        </p>
+        <p id="text">
+Then if we click on the enter button, we’ll print out the drink we got. We’ll manually check the size and the array’s elements in a particular order. We’ll also have to set the cf service variable to a code number so the function that’s located outside of this keypress one we’re currently in knows what to print. While I have created a limit for only 5 ingredients in total, you can change things up by yourself. It’s really easy once you get used to it. 
+        </p>
+        <p id="code">
+if (enter_bounds.contains(clicked)) {
+            <br>
+                if(coffee.size()==0) {
+                    return;
+                }
+            <br>
+                if (coffee.size() == 1) {
+            <br>
+                    if (coffee.get(0) == "water") {
+            <br>
+                        System.out.println("GLASS OF WATER");
+            <br>
+                        cf = 1;
+            <br>
+                    } else if (coffee.get(0) == "espresso") {
+            <br>
+                        System.out.println("ESPRESSO");
+            <br>
+                        cf = 2;
+            <br>
+                    } else if (coffee.get(0) == "milk") {
+            <br>
+                        System.out.println("GLASS OF MILK");
+            <br>
+                        cf = 3;
+            <br>
+                    } else if (coffee.get(0) == "foam") {
+            <br>
+                        System.out.println("MILK FOAM");
+            <br>
+                        cf = 4;
+            <br>
+                    }
+            <br>
+                } else if (coffee.size() == 2) {
+            <br>
+                    if (coffee.get(0) == "espresso") {
+            <br>
+                        if (coffee.get(1) == "espresso") {
+            <br>
+                            System.out.println("DOPPIO");
+            <br>
+                            cf = 5;
+            <br>
+                        } else if (coffee.get(1) == "milk") {
+            <br>
+                            System.out.println("BONBON");
+            <br>
+                            cf = 6;
+            <br>
+                        } else if (coffee.get(1) == "foam") {
+            <br>
+                            System.out.println("MACHIATO");
+            <br>
+                            cf = 7;
+            <br>
+                        }
+            <br>
+                    } else if (coffee.get(0) == "milk") {
+            <br>
+                        if (coffee.get(1) == "espresso") {
+            <br>
+                            System.out.println("BONBON");
+            <br>
+                            cf = 6;
+            <br>
+                        } else if (coffee.get(1) == "MILK") {
+            <br>
+                            System.out.println("A LOT OF MILK");
+            <br>
+                            cf = 3;
+            <br>
+                        }
+            <br>
+                    } else if (coffee.get(0) == "water" && coffee.get(1) == "water") {
+            <br>
+                        System.out.println("A LOT OF WATER");
+            <br>
+                        cf=1;
+            <br>
+                    } else System.out.println("NO");
+            <br>
+                } 
+            <br>
+                repaint();
+            <br>
+            }
+        }
+            <br>
+    });
+            <br>
+}
+        </p>
+        <p id="text">
+While I did add a lot more coffee to the final project, which I’ll link at the end of this page, the code gets rather repetitive, so for now I’m skipping over it. Now we can get on to the painting function, the one that prints out the images onto the window. To start off, we’ll have to set the function to graphics mode in the first line, then we’ll set the background, and finally link the image variables to the source, which, as Java commands, has to be done within a try/catch syntax.
+               </p>
+        <p id="code">
+public void paintComponent(Graphics g) {
+            <br>
+    super.paintComponent(g);
+            <br>
+    this.setBackground(Color.WHITE);
+            <br>
+    try {
+            <br>
+        table = ImageIO.read(getClass().getResource("table.png"));
+            <br>
+        kettle = ImageIO.read(getClass().getResource("kettle.png"));
+            <br>
+        coffeepot = ImageIO.read(getClass().getResource("coffeepot.png"));
+            <br>
+        milk = ImageIO.read(getClass().getResource("milk.png"));
+            <br>
+        whisk = ImageIO.read(getClass().getResource("whisk.png"));
+            <br>
+        enter = ImageIO.read(getClass().getResource("enter.png"));
+            <br>
+        back = ImageIO.read(getClass().getResource("back.png"));
+            <br>
+        esp = ImageIO.read(getClass().getResource("espresso.png"));
+            <br>
+        dop = ImageIO.read(getClass().getResource("doppio.png"));
+            <br>
+        bb = ImageIO.read(getClass().getResource("bonbon.png"));
+            <br>
+        mlk = ImageIO.read(getClass().getResource("allmilk.png"));
+            <br>
+        mct = ImageIO.read(getClass().getResource("machiato.png"));
+            <br>
+        wtr = ImageIO.read(getClass().getResource("allwater.png"));
+            <br>
+        mf = ImageIO.read(getClass().getResource("allmilkfoam.png"));
+            <br>
+        cvr = ImageIO.read(getClass().getResource("cover.png"));
+            <br>
+    } catch (IOException e) {
+        e.printStackTrace();
+    }
+        </p>
+        <p id="text">
+To actually draw an image onto the window, we will use the g.drawImage function, for which you’ll need to link the image variable, a null, and its desired coordinates.
+        </p>
+        <p id="code">
+g.drawImage(table, 90, 250, null);
+            <br>
+    g.drawImage(kettle, 626, 243, null);
+    g.drawImage(coffeepot, 510, 193, null);<br>
+    g.drawImage(whisk, 159, 205, null);
+    g.drawImage(milk, 204, 230, null);<br>
+g.drawImage(back, 10, 10, null);
+g.drawImage(enter, 100, 10, null);
+        </p>
+        <p id="text">
+And finally, we get back to our cf service variable and put an according image and sign on the screen.
+        </p>
+        <p id="code">
+if(cf==0) {
+            <br>
+            g.drawImage(cvr, 416, 272, null);
+            <br>
+            g.drawString("                  ",400,50);
+            <br>
+        }
+            <br>
+        else if(cf==1) {
+            <br>
+            g.drawImage(wtr, 416, 305, null);
+            <br>
+            g.drawString("WATER",400,50);
+            <br>
+        } else if (cf==2) {
+            <br>
+            g.drawImage(esp, 416, 305, null);
+            <br>
+            g.drawString("ESPRESSO",375,50);
+            <br>
+        } else if (cf==3) {
+            <br>
+            g.drawImage(mlk, 416, 305, null);
+            <br>
+            g.drawString("MILK",400,50);
+            <br>
+        } else if(cf==4) {
+            <br>
+            g.drawImage(mf, 416, 305, null);
+            <br>
+            g.drawString("MILK FOAM",350,50);
+            <br>
+        } else if (cf==5) {
+            <br>
+            g.drawImage(dop, 416, 305, null);
+            <br>
+            g.drawString("DOPPIO",400,50);
+            <br>
+        } else if(cf==6){
+            <br>
+            g.drawString("BONBON",400,50);
+            <br>
+            g.drawImage(bb, 416, 305, null);
+            <br>
+        } else if (cf==7) {
+            <br>
+            g.drawString("MACHIATO",375,50);
+            <br>
+            g.drawImage(mct, 416, 305, null);
+            <br>
+        }
+    }
+}
+        </p>
+        <p id="text">
+Congratulations, you’ve made your own java desktop project! You can get the full code right here and feel like a true programmer with all this coffee right in front of you!
+        </p>
+        <div id="roof-b-s"></div>
+    </div>
+
+    <div id="bar">Code:Excelso</div>
+    <div id="sb_click_fix" onclick="sb()" s>
+        <div id="sb_click">
+            <div id="bar9uk" onmouseover="c()" onmouseout="h()">
+                <div id="bar9uk_1"></div>
+                <div id="bar9uk_2"></div>
+                <div id="bar9uk_3"></div>
+            </div>
+        </div>
+    </div>
+    <div id="sidebar" style="left:100vw;">
+        <div id="learn" onclick="lrn()">Tutorials
+            <div id="learn_desc">
+                <div id="learn_desc_fix">Learn more about interesting languges in a colorful way!</div>
+            </div>
+        </div>
+        <div id="tend" onclick="atc()">Articles
+            <div id="tend_desc">
+                <div id="tend_desc_fix">Read up about the tendencies of programming languages</div>
+            </div>
+        </div>
+        <div id="about">
+
+        </div>
+    </div>
+    <script>
+        function c() {
+            document.getElementById("bar9uk_1").style.backgroundColor = "palevioletred";
+            document.getElementById("bar9uk_2").style.backgroundColor = "palevioletred";
+            document.getElementById("bar9uk_3").style.backgroundColor = "palevioletred";
+        }
+
+        function h() {
+            document.getElementById("bar9uk_1").style.backgroundColor = "whitesmoke";
+            document.getElementById("bar9uk_2").style.backgroundColor = "whitesmoke";
+            document.getElementById("bar9uk_3").style.backgroundColor = "whitesmoke";
+        }
+
+        function lrn() {
+            window.open("index.html", "_self");
+        }
+
+        function atc() {
+            window.open("../articles/index.html", "_self");
+        }
+
+        function sb() {
+            if (document.getElementById("sidebar").style.left == "100vw") {
+                document.getElementById("sidebar").style.left = 0;
+            } else {
+                document.getElementById("sidebar").style.left = "100vw";
+            }
+        }
+    </script>
+</body>
+
+</html>

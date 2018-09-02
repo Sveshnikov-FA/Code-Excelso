@@ -1,0 +1,576 @@
+<!DOCTYPE html>
+<html>
+<meta charset="utf-8" ontent="width=device-width">
+
+<head>
+    <style>
+        @font-face {
+            font-family: soft;
+            src: url(../ssf.ttf);
+        }
+
+        @font-face {
+            font-family: rigid;
+            src: url(../reason.otf);
+        }
+
+        body {
+            background-color: #afeeee;
+            padding: 0;
+            overflow-x: hidden;
+        }
+
+        #sb_click {
+            position: absolute;
+            left: 100vw;
+            top: 0;
+            z-index: 2;
+            width: 5vh;
+            height: 5vh;
+            background-color: #661933;
+            z-index: 101;
+        }
+
+        #sb_click_fix {
+            position: absolute;
+            left: -5vh;
+            top: 0;
+        }
+
+        #bar {
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 100vw;
+            height: 5vh;
+            background-color: #661933;
+            color: #fff;
+            font-size: 3vh;
+            font-family: soft;
+            padding-top: 1vh;
+            padding-left: 1vh;
+            padding-bottom: 0;
+            z-index: 100;
+        }
+
+        #sidebar {
+            position: absolute;
+            z-index: 5;
+            left: 100vw;
+            top: 5vh;
+            width: 100vw;
+            height: 100vh;
+            background-color: #000000;
+            opacity: .75;
+            transition: left ease 1s;
+        }
+
+        #learn {
+            position: absolute;
+            top: 10vh;
+            left: 20vw;
+            text-transform: uppercase;
+            font-weight: 900;
+            font-size: 4vw;
+            color: white;
+            border-bottom: 3px solid #ff0000;
+        }
+
+        #tend {
+            position: absolute;
+            top: 10vh;
+            left: 60vw;
+            text-transform: uppercase;
+            font-size: 4vw;
+            font-weight: 900;
+            color: white;
+            opacity: 1;
+            border-bottom: 3px solid #ffa500;
+        }
+
+        #learn_desc {
+            position: absolute;
+            top: 1vh;
+            width: 100%;
+            font-size: 1.75vw;
+        }
+
+        #learn_desc_fix {
+            position: absolute;
+            top: 5vw;
+        }
+
+        #tend_desc {
+            position: absolute;
+            top: 1vh;
+            width: 100%;
+            font-size: 1.75vw;
+        }
+
+        #tend_desc_fix {
+            position: absolute;
+            top: 5vw;
+        }
+
+        #about {
+            border-top: 3px solid #ff0000;
+        }
+
+        #building {
+            background-color: #eee8aa;
+            width: 90vw;
+            height: auto;
+            position: absolute;
+            left: 0;
+            top: 5vh;
+        }
+
+        #roof-b-s {
+            position: absolute;
+            left: 0;
+            top: 1vh;
+            width: 90vw;
+            height: 2.5vh;
+            background-color: #e6dd7f;
+        }
+
+        #bar9uk {
+            position: absolute;
+            left: 0.75vh;
+        }
+
+        #bar9uk_1 {
+            position: absolute;
+            left: 0;
+            width: 25px;
+            height: 5px;
+            top: 0.75vh;
+            left: -0.25vw;
+            background-color: #f5f5f5;
+            border-radius: 5px;
+            transition: background-color 1s ease;
+        }
+
+        #bar9uk_2 {
+            position: absolute;
+            width: 25px;
+            height: 5px;
+            top: 2vh;
+            left: -0.25vw;
+            background-color: #f5f5f5;
+            border-radius: 5px;
+            transition: background-color 1s ease;
+        }
+
+        #bar9uk_3 {
+            position: absolute;
+            width: 25px;
+            height: 5px;
+            top: 3.35vh;
+            left: -0.25vw;
+            border-radius: 5px;
+            background-color: #f5f5f5;
+            transition: background-color 1s ease;
+        }
+
+        p {
+            font-family: soft;
+            color: palevioletred;
+            margin-left: 2vw;
+
+        }
+
+        #title_n {
+            font-size: 7vw;
+            margin-bottom: 2vw;
+            margin-top: 2vw;
+        }
+
+        #text {}
+
+        #code {
+            color: mediumvioletred;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="building">
+        <p id="title_n" style="margin-top:3vw">The Python tutorial</p>
+        <p id="text">
+        Hissssssssssssssssssssssss… That’s the language of pythons. But thereia also is a programming language called python and it has little to do with snake tongue. It was founded by N in N, and many consider it to be the perfect language. Its easy-to-understand syntax is what gets people interested, and its efficiency is what everyone sticks around for. For such a simplistic language it has a remarkably wide range of applications: from simple numeric operations to machine learning algorithms and to operation system development.
+        </p>
+        <p id="text">
+To start off, let’s download the compiler for Python, provided on the official website here. It’s platform-independent, so that’s one less thing to worry about. And on the IDE side, the IDEal choice would be the basic, but trusty one called PyCharm, which you can get here.
+        </p>
+        <p id="text">
+It’s a customary tradition to start learning to program in a certain language by printing out “Hello, World!” in the console. So let’s just jump right into it:
+        </p>
+        <p id="code">
+print “Hello, World!”
+        </p>
+        <p id="text">
+Pretty self-explanatory, isn’t it? One thing to note here is that, as you can see, in Python you don’t put semicolons at the end of the line of code, which sets it apart from the others. And in order to receive user input, use input():
+        </p>
+        <p id="code">
+variable = input()
+        </p>
+        <p id="text">
+Let’s talk variables now. Again, going against contrary standards, Python does not, in fact, have a particularily large set of them. The type is usually automatically set during definition, so all you need to declare a variable is just name = value
+In python there are a variety of different collections, or numbered arrays of values of the same type. The most basic and practical one is List, a dynamic instance of arrays, which means you can modify the size of it after the initial declaration. To directly address an element, put the index, or number, of the element in square brackets beside the list name. But remember, elements in arrays in every language are numbered starting from 0! To add an extra element, thus resizing the list, use the append() method, and to do the opposite, use the remove() method, like so:
+        </p>
+        <p id="code">
+thislist = ["apple", "blueberry", "cherry"]	
+        </p>
+        <p id="code">
+thislist[1] = "banana"
+        </p>
+        <p id="code">
+thislist.append("damson")
+        </p>
+        <p id="code">
+thislist.remove("banana")
+        </p><p id="text">
+        Conditionals are a huge part of programming. Every language has them, but, taking into account the amount of liberties Python’s syntax takes, it’s kind of weird they left them in. They are defined like this:</p>
+        <p id="code">
+if test1:
+        </p>
+        <p id="code">
+    state1
+        </p>
+        <p id="code">
+elif ((test2 and test3) or test4 or test5):
+        </p>
+        <p id="code">
+    state2
+        </p>
+        <p id="code">
+else:
+        </p>
+        <p id="code">
+    state3
+        </p>
+        <p id="text">
+As you can see, there are some unique things about these rather simple lines of code, which help capitalize on Pythons originality. First of all, the conditions themselves aren’t stated in brackets, but it’s advised to do so if there is more than one condition for the sake of readability. In python, the roles of logical and, or are played by, shocker, words and, or. But, going back to general syntax analysis, the colon is here to take the place of the curly brackets in other languages. Moreover, instead of else if, Python implements a more compact line elif which serves the same purpose: if test1 is not true then check if test2 is true.
+        </p>
+        <p id="text">
+	Let’s address the indentation in python, which you may have noticed in the if/else example. Unlike the other languages, in which it’s usually just a readability optimization practice, here it’s a very important part of the syntax. Whenever there are colons placed, to tell the compiler that this is the code that you want to be executed upon these conditions, you need to indent the needed code by pressing tab so the initial if statement is one tab to the left of the code. This rule is mandatory for every code block, whether it’s a conditional, a loop or a function.
+        </p><p id="text">
+Another important part of programming are loops. They make our life easier and our code more efficient. Python decided to keep the two common types of loops: for and while, but he did change up their definition in his usual style. 
+for x in range(25):
+        </p>
+        <p id="code">
+print x
+        </p>
+        <p id="code">
+while a <= b:
+            </p>
+            <p id="code">
+	print a
+        </p>
+        <p id="text">
+So, the first thing to address is the range operator in for. What is that, you might ask? Well, it is an operator that gives in the range in which the variable is going to be used. You can use other variables as limits, and you can also set the starting point of the range like this: range(1,5) ( if you don’t the compiler puts 0 in by default ). 
+        </p>
+        <p id="code">
+string = "Hello World"
+        </p>
+        <p id="code">
+for x in string:
+        </p>
+        <p id="code">
+print x
+        </p>
+        <p id="text">
+A function, also known as a void, is a block of code that’s only run when explicitly called. To declare one use the command word def, then the function name, then list the arguments, the values you choose to send as extra data to the void, in parentheses, then put the colon to mark the beginning of a function. The said block of code is to be placed with required indentation, as usual.
+        </p>
+        <p id="code">
+def my_function(value):
+        </p>
+        <p id="code">
+ 	print(“Hello, world”)
+        </p>
+        <p id="text">
+But what’s calling a function? Exactly what it means in the English language: you just call out its name, and if there are arguments to be sent, then it’s like calling someone by their full name.
+        </p>
+        <p id="code">
+my_function(5)
+        </p>
+        <p id="text">
+There is also a noteworthy thing such as default argument values, which means that if you declare the argument variable within the function definition, you’re allowed to not send any arguments when calling said void.
+        <br>
+To stop every function ever, you can use quit().
+        <br>
+Python’s packages cannot go unaddressed. The more well-known ones are numpy, which is the most extensive scientific computing and data analysis package out there, winsound, which can, well, make sound on windows machines when needed, and curses, which is a package for working with the terminal interface. Let’s go a bit more in-depth on the last two.
+        <br>
+            Winsound provides access to the basic sound-playing machinery provided by Windows platforms. To make a simple beep with the PCs speaker, you can use the winsound.Beep(freq, tl) function, but, of course, you’ll have to specify the frequency of the sound and the duration of the beep yourself. The PlaySound(sound,flags) function lets you play any sound you want: if you want to play your own audiofile, the flag must be winsound.SND_FILENAME and if you want to play a system sound (we’ll get back to those in a bit) use winsound.SND_ALIAS. And the MessageBeep(type) function lets you play a system sound directly. But what is a system sound in this case, you might ask? Well, a good example of one would be the Windows 10 notification noise that you might hear when Windows Defender is done trying its best. The sound in question will be played accordingly to the used constant, the full list of which goes like so: winsound.MB_OK, which is the default system sound, winsound.MB_ICONASTERISK, which is like MB_OK but not really, MB_ICONEXCLAMATION which plays a SystemExclamation sound, MB_ICONHAND, which plays the SystemHand sound, and MB_ICONQUESTION, which plays the SystemQuestion sound. To find out what these sound like, feel free to try them out yourself *ormayberightthereonthepagewherethiswillbebutidkreally* <br>
+Curses provide access to the terminal User Interface. With curses you can do fun things like make animations with ASCII characters, change the color of text in the terminal, and make games! Let’s initialize the library by using curses.initscr() and also reserve the space in the terminal. If we declare a variable that’s equal to intiscr, we can get the screen’s properties, like its height and width ( which is done inline using varname.getmaxyx() ). Going on with setting things up, let’s configure the cursor’s state, like if it;’s going to be visible or not, by using curses.curs_set(visibility_level), where vl can be set to 0, 1 or 2 and 2 is “very visible”, which means that the cursor will be shown as a large white block. To prepare curses for working with color, you need 2 lines of code: curses.start_color() and curses.use_default_colors(), the latter meaning we’ll address colors using the curses-provided constants. Moving on, let’s finish setting up the actual window by using newwin(lines, cols, y, x) where lines and cols are the height and width of the widow respectedly and y and x are the coordinates of the left-upper corner of it. Finally let’s set up user input in curses by using window.keypad(1). There’s also ways to refresh the window every once in a while using window.timeout(time) or window.refresh() (this one will not repeat by itself).
+        <br>
+Now that we’re finally done setting everything up, let’s start working with the window. You can add single characters at desired locations(within reason and bounds of the window) using addch(y, x, character) or even whole strings of them using addstr(y, x, string). But what if you don’t want to look up the needed character to paste it in just for the compilator to tell you that nothing works? Well, curses got you covered with their extensive constant collection of ASCII characters, which are initialized like this: curses.ACS_KEY. This should work, but it doesn’t look fancy enough. Well, we can change the color of the text, by adding a comma after the value and putting in curses.COLOR_colorname. Color too vibrant for you? You can mix colors here with curses.init_pair(id,color1,color2) and then reference the pair by curses.color_pair(id). Also worth mentioning that curses has its own input methods, where window.getch() receives a single input key, which, by the way, may not only be a letter or a number – it can be any key that you have on your keyboard, and window.getstr() receives a whole string. Going back to the whole keyboard input thing, curses still got you covered with their constant system, which, this time, contains names, by which you can reference non-character keys, like the Left-Arrow key, which is curses.KEY_LEFT in the constant library. If you, for whatever reason, want to stop curses, use curses.endwin().
+        <br>
+            Now let’s compile all the things we now know to create a python game. It’s just like snake, but the snake is blue. To generate random food locations, we’ll need a module with a very cryptic name “random”.</p>
+        <p id="code">
+import random
+            <br>
+import curses
+        <br>
+import winsound
+        </p>
+        <p id="text">
+Alright, now let’s initialize curses.
+        </p>
+        <p id="code">
+s = curses.initscr()
+        <br>
+curses.curs_set(0)
+<br>
+screenHeight, screenWidth = s.getmaxyx()
+            <br>
+curses.start_color()
+            <br>
+curses.use_default_colors()
+            <br>
+w = curses.newwin(screenHeight, screenWidth, 0, 0)
+            <br>
+w.keypad(1)
+            <br>
+w.timeout(100)
+        </p>
+        <p id="text">
+Now we create the snake itself. The coordinates of its head should be somewhere around here:
+        </p>
+        <p id="code">
+snek_x = int(screenWidth/4)
+            <br>
+snek_y = int(screenHeight/2)
+        </p>
+<p id="text">
+Let’s start off with the snake being 3 characters long, and create a list of coordinates which will be expanded when the snake eats something.
+        </p>
+        <p id="code">
+snek = [
+    [snek_y, snek_x],
+    [snek_y, snek_x-1],
+    [snek_y, snek_x-2]
+]
+        </p>
+        <p id="text">
+Now we put the first bit of food on screen and it will be exactly in the middle of the window. In this case we shall also create a list of coordinates for the food. Food will look like a diamond.
+        </p>
+        <p id="code">
+snek_food = [int(screenHeight/2), int(screenWidth/2)]
+            <br>
+w.addch(int(snek_food[0]), int(snek_food[1]), curses.ACS_DIAMOND)
+        </p>
+<p id="text">
+Now let’s initialize the last variables. The snake will be going right initially and will be dark blue.
+        </p>
+        <p id="code">
+key = curses.KEY_RIGHT
+        <br>
+curses.init_pair(1, curses.COLOR_BLUE, curses.COLOR_BLACK)
+        </p>
+        <p id="text">
+Now let’s make the snake move and read for keys using a function.
+        </p>
+        <p id="code">
+def mvmt(key):
+        </p>
+        <p id="text">
+As you remember, input is read using window.getch(), so:
+        </p>
+        <p id="code">
+    next_key = w.getch()
+        </p>
+        <p id="text">
+If nothing is input, getch() is equal to -1, so now we check if it is.
+        </p>
+        <p id="code">
+    key = key if next_key == -1 else next_key
+        </p>
+        <p id="text">
+Now let’s check if the snake hit its own bodypart:
+        </p>
+        <p id="code">
+    if snek[0][0] in [screenHeight, 0] or snek[0][1] in [0, screenWidth] or snek[0] in snek[1:]:
+            <br>
+        end_of_game()
+        </p>
+        <p id="text">
+Now we add an extra head in the front which shall lead the way for the rest of the body.
+        </p>
+        <p id="code">
+    new_head = [snek[0][0], snek[0][1]]
+        </p>
+        <p id="text">
+And then we analyze the input keys.
+        </p>
+        <p id="code">
+    if key == curses.KEY_DOWN:
+            <br>
+        new_head[0] += 1
+            <br>
+    if key == curses.KEY_UP:
+            <br>
+        new_head[0] -= 1
+            <br>
+    if key == curses.KEY_LEFT:
+            <br>
+        new_head[1] -= 1
+            <br>
+    if key == curses.KEY_RIGHT:
+            <br>
+        new_head[1] += 1
+            <br>
+    snek.insert(0, new_head)
+            <br>
+    return key
+        </p>
+        <p id="text">
+Now we’ll check whether the snake ate the food and if so we replace.
+        </p>
+        <p id="code">
+def replace_snek_food(snek_food):
+            <br>
+    if snek[0][0] == snek_food[0] and snek[0][1] == snek_food[1]:
+        </p>
+        <p id="text">
+Let’s get the PC to make a  sound when food is eaten using winsound.
+        </p>
+        <p id="code">winsound.Beep(2000,250)</p>
+        <p id="text">
+Now we refresh the food coordinates array and try to get new random coordinates using random.randInt(range) while snake food isn’t on the screen. 
+        </p>
+        <p id="code">
+        snek_food = None
+            <br>
+        while snek_food is None:
+            <br>
+            snek_food = [
+                random.randint(1, screenHeight-1),
+                random.randint(1, screenWidth-1)
+            ]
+        </p>
+        <p id="text">
+And now we finally put the food on screen again, with the new coordinates and everything.
+        </p>
+        <p id="code">
+        w.addch(int(snek_food[0]), int(snek_food[1]), curses.ACS_DIAMOND)
+            <br>
+    else:
+        </p>
+        <p id="text">
+And if the food wasn’t eaten, well, remember the additional head we created in the last function to get the snake to move? Well, it shouldn’t be there if we didn’t get the food, so we remove it and overwrite the last place where the new head was with a bank space.
+        </p>
+        <p id="code">
+        tail = snek.pop()
+            <br>
+        w.addch(int(tail[0]), int(tail[1]), ' ')
+            <br>
+    return snek_food
+        </p>
+<p id="text">
+Now, as you remember, we put end_of_game() in several places, we never addressed what it is. Well, it should be a function which we haven’t declared yet, so let’s do exactly that: create a function which ends the game, prints the score and makes a sad noise.
+        </p>
+        <p id="code">
+def end_of_game():
+            <br>
+    print("You scored " + str(len(snek)-3))
+            <br>
+    tl = 500
+            <br>
+    winsound.Beep(1500, tl)
+            <br>
+    winsound.Beep(750, tl)
+            <br>
+    curses.endwin()
+            <br
+    quit()
+                </p>
+            <p id="text">
+As you remember, we used timeout() above. While it does refresh the screen, we’re not refreshing the now written functions. That’s a shame. Let’s fix that with an infinite loop.
+        </p>
+        <p id="code">
+while True:
+            <br>
+    key = mvmt(key)
+            <br>
+    snek_food = replace_snek_food(snek_food)
+            <br>
+        </p>
+        <p id="text">
+Now, we finally have to reinitialize the first part of the snake. But if the snake hits the end of the screen, the program returns an error, which isn’t pretty. Let’s catch the error using try: except errorname: do the thing.
+        </p>
+        <p id="code">
+    try:
+            <br>
+        w.addch(int(snek[0][0]), int(snek[0][1]), 
+            <br>
+        curses.ACS_CKBOARD,curses.color_pair(1))
+            <br>
+    except curses.error:
+            <br>
+        end_of_game()
+        </p>
+        <p id="text">
+And that’s it. Using this rather simple set of tools we have created our first python game written in python. To put it simply, hisssssssssssssss. You should be able to understand this now. If not, then you just need to keep on learning and someday you’ll fully understand this.
+        </p>
+        <div id="roof-b-s"></div>
+    </div>
+
+    <div id="bar">Code:Excelso</div>
+    <div id="sb_click_fix" onclick="sb()" s>
+        <div id="sb_click">
+            <div id="bar9uk" onmouseover="c()" onmouseout="h()">
+                <div id="bar9uk_1"></div>
+                <div id="bar9uk_2"></div>
+                <div id="bar9uk_3"></div>
+            </div>
+        </div>
+    </div>
+    <div id="sidebar" style="left:100vw;">
+        <div id="learn" onclick="lrn()">Tutorials
+            <div id="learn_desc">
+                <div id="learn_desc_fix">Learn more about interesting languages in a colorful way!</div>
+            </div>
+        </div>
+        <div id="tend" onclick="atc()">Articles
+            <div id="tend_desc">
+                <div id="tend_desc_fix">Read up about the tendencies of programming languages</div>
+            </div>
+        </div>
+        <div id="about">
+
+        </div>
+    </div>
+    <script>
+        function c() {
+            document.getElementById("bar9uk_1").style.backgroundColor = "palevioletred";
+            document.getElementById("bar9uk_2").style.backgroundColor = "palevioletred";
+            document.getElementById("bar9uk_3").style.backgroundColor = "palevioletred";
+        }
+
+        function h() {
+            document.getElementById("bar9uk_1").style.backgroundColor = "whitesmoke";
+            document.getElementById("bar9uk_2").style.backgroundColor = "whitesmoke";
+            document.getElementById("bar9uk_3").style.backgroundColor = "whitesmoke";
+        }
+
+        function lrn() {
+            window.open("index.html", "_self");
+        }
+
+        function atc() {
+            window.open("../articles/index.html", "_self");
+        }
+
+        function sb() {
+            if (document.getElementById("sidebar").style.left == "100vw") {
+                document.getElementById("sidebar").style.left = 0;
+            } else {
+                document.getElementById("sidebar").style.left = "100vw";
+            }
+        }
+    </script>
+</body>
+
+</html>

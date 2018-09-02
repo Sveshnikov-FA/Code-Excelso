@@ -1,0 +1,527 @@
+<!DOCTYPE html>
+<html>
+<meta charset="utf-8" ontent="width=device-width">
+
+<head>
+    <style>
+        @font-face {
+            font-family: soft;
+            src: url(../ssf.ttf);
+        }
+
+        @font-face {
+            font-family: rigid;
+            src: url(../reason.otf);
+        }
+
+        body {
+            background-color: #afeeee;
+            padding: 0;
+            overflow-x: hidden;
+        }
+
+        #sb_click {
+            position: absolute;
+            left: 100vw;
+            top: 0;
+            z-index: 2;
+            width: 5vh;
+            height: 5vh;
+            background-color: #661933;
+            z-index: 101;
+        }
+
+        #sb_click_fix {
+            position: absolute;
+            left: -5vh;
+            top: 0;
+        }
+
+        #bar {
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 100vw;
+            height: 5vh;
+            background-color: #661933;
+            color: #fff;
+            font-size: 3vh;
+            font-family: soft;
+            padding-top: 1vh;
+            padding-left: 1vh;
+            padding-bottom: 0;
+            z-index: 100;
+        }
+
+        #sidebar {
+            position: absolute;
+            z-index: 5;
+            left: 100vw;
+            top: 5vh;
+            width: 100vw;
+            height: 100vh;
+            background-color: #000000;
+            opacity: .75;
+            transition: left ease 1s;
+        }
+
+        #learn {
+            position: absolute;
+            top: 10vh;
+            left: 20vw;
+            text-transform: uppercase;
+            font-weight: 900;
+            font-size: 4vw;
+            color: white;
+            border-bottom: 3px solid #ff0000;
+        }
+
+        #tend {
+            position: absolute;
+            top: 10vh;
+            left: 60vw;
+            text-transform: uppercase;
+            font-size: 4vw;
+            font-weight: 900;
+            color: white;
+            opacity: 1;
+            border-bottom: 3px solid #ffa500;
+        }
+
+        #learn_desc {
+            position: absolute;
+            top: 1vh;
+            width: 100%;
+            font-size: 1.75vw;
+        }
+
+        #learn_desc_fix {
+            position: absolute;
+            top: 5vw;
+        }
+
+        #tend_desc {
+            position: absolute;
+            top: 1vh;
+            width: 100%;
+            font-size: 1.75vw;
+        }
+
+        #tend_desc_fix {
+            position: absolute;
+            top: 5vw;
+        }
+
+        #about {
+            border-top: 3px solid #ff0000;
+        }
+
+        #building {
+            background-color: #eee8aa;
+            width: 90vw;
+            height: auto;
+            position: absolute;
+            left: 0;
+            top: 5vh;
+        }
+
+        #roof-b-s {
+            position: absolute;
+            left: 0;
+            top: 1vh;
+            width: 90vw;
+            height: 2.5vh;
+            background-color: #e6dd7f;
+        }
+
+        #bar9uk {
+            position: absolute;
+            left: 0.75vh;
+        }
+
+        #bar9uk_1 {
+            position: absolute;
+            left: 0;
+            width: 25px;
+            height: 5px;
+            top: 0.75vh;
+            left: -0.25vw;
+            background-color: #f5f5f5;
+            border-radius: 5px;
+            transition: background-color 1s ease;
+        }
+
+        #bar9uk_2 {
+            position: absolute;
+            width: 25px;
+            height: 5px;
+            top: 2vh;
+            left: -0.25vw;
+            background-color: #f5f5f5;
+            border-radius: 5px;
+            transition: background-color 1s ease;
+        }
+
+        #bar9uk_3 {
+            position: absolute;
+            width: 25px;
+            height: 5px;
+            top: 3.35vh;
+            left: -0.25vw;
+            border-radius: 5px;
+            background-color: #f5f5f5;
+            transition: background-color 1s ease;
+        }
+
+        p {
+            font-family: soft;
+            color: palevioletred;
+            margin-left: 2vw;
+
+        }
+
+        #title_n {
+            font-size: 7vw;
+            margin-bottom: 2vw;
+            margin-top: 2vw;
+        }
+
+        #text {}
+
+        #code {
+            color: mediumvioletred;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="building">
+        <p id="title_n" style="margin-top:3vw">The R tutorial</p>
+        <p id="text">R is a programming language developed in 1993 for the purpose of statistical computing and graphics. Despite the simple single-character name, R is capable of quite a wide variety of possibilities, from simple numerical operations to advanced Machine learning and Bio Science. It’s just so efficient and easy-to-use that its certain problems with syntax can be overlooked.
+        </p><p id="text">
+Before we get to writing code, we have to make sure we have everything installed. You’ll need a compiler, the necessary tool which tells the computer what to do with the code, that’s available on the official R project website. And you’ll also need an IDE, an environment to write, execute and debug code, the role of which can be served by RStudio, available for free download here. 
+        </p><p id="text">
+It’s a customary tradition for programmers to start their experience with a language by printing out the message “Hello, World!” in the console. So let’s just jump right into it.
+        </p><p id="code">
+print ("Hello, World!")
+        </p><p id="code">
+cat (“Also hello, but with variables”,var_x)
+        </p><p id="text">
+Even this simple string of code can tell us a lot about the language: you print out data with print and the data in question being in parentheses, you don’t put semicolons at the end of the line in this language. Cat is just like print, but it combines multiple items into a continuous print output, unlike print, which only prints a single item.
+        </p><p id="text">
+	Variables in R are questionable. There are the usual types, like integer, string and boolean. To declare one, you don’t have to specify the type, but there are three ways to assign values – with an equal, leftward and rightward operators.
+        </p>
+        <p id="code">
+var.1 = 5       
+        </p><p id="code">
+var.2 <- "R"   
+         </p>
+        <p id="code">
+TRUE -> var.3   
+        </p>
+        <p id="text">
+To read user input into a variable, just use the trusty readline() function.
+        </p><p id="code">
+my.name <- readline(prompt="")
+           </p>
+        <p id="text">
+Array declaration is rather simple in R. There are quite a lot of array-type data structures. To declare a vector, the basic array, you state the name, use the preferred assignment operator and then combine values with a c() function. To declare a list, an array type which can contain different types of variables, including vectors, you do the same as with vectors, but use list () instead of c ().
+        </p>
+        < p id="code">
+Vector_x <- c('red','green',"yellow")
+            </p><p id="code">
+list1 <- list(c(2,5,3),21.3)
+         </p>
+        <p id="text">
+Conditionals in R are easy to define. If a certain condition is true, an action is executed. Their syntax works just like this:
+        </p>
+        <p id="code">
+if (condition) {
+        </p>
+        <p id="code">
+ 	do a thing
+        </p>
+        <p id="code">
+} else if (condition && condition || condition) {
+        </p>
+        <p id="code">
+ 	do a thing
+        </p>
+        <p id="code">
+} else {
+        </p><p id="code">
+ 	do a thing
+        </p>
+        <p id="code">
+}
+        </p>
+        <p id="text">
+	Loops are great. They make our life easier, much like multiplication in maths. There are three types of loops: for, with which you can define the first and last value of the loop control variable, while, which goes on while certain statement is true and repeat, which is an infinite loop.
+        </p>
+        <p id="code">
+for(i in 1:10) {}
+        </p>
+        <p id="code">
+while (response!=42) {} 
+        </p>
+<p id="code">
+repeat {}
+        </p>
+        <p id="text">
+But why would you ever need an infinite loop? Well, they make sense, when you use if with loop control statements, which are next, which skips the rest of the loop and moves onto the next iteration (name of statement checks out), and break, which completely stops the execution of the loop.
+        </p>
+        <p id="text">
+Now onto the project.Considering the fact that R is most used for machine learning, let’s just do the hello world of ML: iris dataset analysis. It might sound scary for something to start off, but it's most definitrely not. Let's go!
+        </p><p id="text">
+        To load the dataset, simply define it and rename it for your project:
+        </p>
+        <p id="code">  
+# attach the iris dataset to the environment
+        </p>
+        <p id="code">
+data(iris)
+        </p>
+        <p id="code">
+# rename the dataset
+        </p>
+        <p id="code">
+dataset <- iris
+        </p>
+        <p id="text">
+To measure its dimensions, we can use the dim function:
+        </p>
+        <p id="code">
+dim(dataset)
+        </p>
+        <p id="text">
+To get the first 5 rows of the data in the set, use the head function:
+        </p>
+        <p id="code">
+head(dataset)
+        </p>
+        <p id="text">
+To get the percentage of each group in the dataset, use the code below: 
+        </p>
+        <p id="code">
+            percentage <- prop.table(table(dataset$Species)) * 100
+                          </p>
+            <p id="code">
+cbind(freq=table(dataset$Species), percentage=percentage)
+                </p>
+<p id="text">
+And to get an overall summary of the data in the set, such as the minimum and maximum value and the amount of each property in the set, use the function summary:
+        </p>
+        <p id="code">
+        summary(dataset)
+        </p>
+        <p id="text">
+To build a basic plot comparing properties of each kind of elements in the dataset, use the following code:
+        </p>
+        <p id="code">
+featurePlot(x=x, y=y, plot="box")
+        </p>
+        <p id="text">
+Now onto the learning part. We will use 10-fold crossvalidation to estimate accuracy.
+This will split our dataset into 10 parts, train in 9 and test on 1 and release for all combinations of train-test splits. We will also repeat the process 3 times for each algorithm with different splits of the data into 10 groups, in an effort to get a more accurate estimate. Train control is a function which trains a grid of particular parameters on slightly different data using a preferred algorithm.
+        </p>
+        <p id="code">
+control <- trainControl(method="cv", number=10)
+           </p>
+            <p id="code">
+metric <- "Accuracy"
+          </p>
+                <p id="text">
+Now we try to evaluate which algorithm is best for our task: Linear Discriminant Analysis (LDA) , Classification and Regression Trees (CART) , k-Nearest Neighbors (kNN), Support Vector Machines (SVM) or Random Forest (RF). The easiest way to find out is to test all of them: 
+        </p>
+        <p id="code">
+# a) linear algorithms
+        </p>
+        <p id="code">
+set.seed(7)
+        </p>
+        <p id="code">
+fit.lda <- train(Species~., data=dataset, method="lda", metric=metric, trControl=control)
+           </p>
+            <p id="code">
+# CART
+        </p>
+        <p id="code">
+set.seed(7)
+        </p>
+        <p id="code">
+fit.cart <- train(Species~., data=dataset, method="rpart", metric=metric, trControl=control)
+            </p>
+            <p id="code">
+            # kNN
+        </p>
+        <p id="code">
+set.seed(7)
+        </p>
+        <p id="code">
+fit.knn <- train(Species~., data=dataset, method="knn", metric=metric, trControl=control)
+           </p>
+            <p id="code">
+# SVM
+        </p><p id="code">
+set.seed(7)
+        </p>
+        <p id="code">
+fit.svm <- train(Species~., data=dataset, method="svmRadial", metric=metric, trControl=control)
+           </p>
+            <p id="code">
+# Random Forest
+        </p>
+        <p id="code">
+set.seed(7)
+        </p>
+        <p id="code">
+fit.rf <- train(Species~., data=dataset, method="rf", metric=metric, trControl=control)
+          </p>
+            <p id="text">
+The very noticeable and likely confusing set.seed(7) function is used because the train function uses sampling which is mostly dependant on RNG, which doesn’t work for the high-precision process of machine learning, whereas if we set the seed, the results are going to be more similar or even identical. Now we check our results by using the abovementioned summary function: 
+        </p>
+        <p id="code">
+	# summarize accuracy of models
+        </p>
+        <p id="code">
+results <- resamples(list(lda=fit.lda, cart=fit.cart, knn=fit.knn, svm=fit.svm, rf=fit.rf))
+           </p>
+            <p id="code">
+summary(results)
+        </p>
+        <p id="text">
+Or, if we want to see the difference properly, we can plot the results:
+        </p>
+        <p id="code">
+            dotplot(results)
+        </p>
+        <p id="text">
+If we look at the results we'll see that LDA is clearly the best one.
+Now we make predictions, the cornerstone of machine learning. Confusion Matrix is a table of observed and predicted classes and results based on the input data, it being validationSpecies here.
+        </p>
+        <p id="code">
+	predictions <- predict(fit.lda, validation)
+                   </p>
+            <p id="code">
+confusionMatrix(predictions, validation$Species)
+        </p>
+        <p id="text">
+And the output summarizes our data, just like this. 
+        </p>
+        <p id="code">
+Confusion Matrix and Statistics
+        </p>
+        <p id="code">
+            Reference
+        </p>
+        <p id="code">
+Prediction   setosa versicolor virginica
+        </p>
+        <p id="code">
+  setosa         10          0         0
+        </p>
+        <p id="code">
+  versicolor      0         10         0
+        </p>
+        <p id="code">
+  virginica       0          0        10
+        </p>
+        <p id="code"> 
+Overall Statistics
+        </p>
+        <p></p>
+            <p id="code">                   
+               Accuracy : 1        
+        </p>
+        <p id="code">
+                 95% CI : (0.8843, 1)
+        </p>
+        <p id="code">
+    No Information Rate : 0.3333     
+        </p>
+        <p id="code">
+    P-Value [Acc > NIR] : 4.857e-15  
+        </p>
+            <p id="code">                         
+                  Kappa : 1         
+        </p>
+        <p id="code">
+ Mcnemar's Test P-Value : NA   
+        </p>
+        <p id="code"> 
+Statistics by Class:
+        </p>
+        <p id="code">
+                     Class: setosa Class: versicolor Class: virginica
+Sensitivity                 1.0000            1.0000           1.0000
+Specificity                 1.0000            1.0000           1.0000
+Pos Pred Value              1.0000            1.0000           1.0000
+Neg Pred Value              1.0000            1.0000           1.0000
+Prevalence                  0.3333            0.3333           0.3333
+Detection Rate              0.3333            0.3333           0.3333
+Detection Prevalence        0.3333            0.3333           0.3333
+Balanced Accuracy           1.0000            1.0000           1.0000
+        </p>
+<p id="text">
+    And that’s it! You have now written your first ML program! If you didn’t understand something, don’t worry (..) If you type in ?FunctionName in the R console, you’ll be able to find out more about the needed function.
+        </p>
+        <div id="roof-b-s"></div>
+    </div>
+
+    <div id="bar">Code:Excelso</div>
+    <div id="sb_click_fix" onclick="sb()" s>
+        <div id="sb_click">
+            <div id="bar9uk" onmouseover="c()" onmouseout="h()">
+                <div id="bar9uk_1"></div>
+                <div id="bar9uk_2"></div>
+                <div id="bar9uk_3"></div>
+            </div>
+        </div>
+    </div>
+    <div id="sidebar" style="left:100vw;">
+        <div id="learn" onclick="lrn()">Tutorials
+            <div id="learn_desc">
+                <div id="learn_desc_fix">Learn more about interesting languges in a colorful way!</div>
+            </div>
+        </div>
+        <div id="tend" onclick="atc()">Articles
+            <div id="tend_desc">
+                <div id="tend_desc_fix">Read up about the tendencies of programming languages</div>
+            </div>
+        </div>
+        <div id="about">
+
+        </div>
+    </div>
+    <script>
+        function c() {
+            document.getElementById("bar9uk_1").style.backgroundColor = "palevioletred";
+            document.getElementById("bar9uk_2").style.backgroundColor = "palevioletred";
+            document.getElementById("bar9uk_3").style.backgroundColor = "palevioletred";
+        }
+
+        function h() {
+            document.getElementById("bar9uk_1").style.backgroundColor = "whitesmoke";
+            document.getElementById("bar9uk_2").style.backgroundColor = "whitesmoke";
+            document.getElementById("bar9uk_3").style.backgroundColor = "whitesmoke";
+        }
+
+        function lrn() {
+            window.open("index.html", "_self");
+        }
+
+        function atc() {
+            window.open("../articles/index.html", "_self");
+        }
+
+        function sb() {
+            if (document.getElementById("sidebar").style.left == "100vw") {
+                document.getElementById("sidebar").style.left = 0;
+            } else {
+                document.getElementById("sidebar").style.left = "100vw";
+            }
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html>
+<meta charset="utf-8" ontent="width=device-width">
+
+<head>
+    <style>
+        @font-face {
+            font-family: soft;
+            src: url(../ssf.ttf);
+        }
+
+        @font-face {
+            font-family: rigid;
+            src: url(../reason.otf);
+        }
+
+        body {
+            background-color: #afeeee;
+            padding: 0;
+            overflow-x: hidden;
+        }
+
+        #sb_click {
+            position: absolute;
+            left: 100vw;
+            top: 0;
+            z-index: 2;
+            width: 5vh;
+            height: 5vh;
+            background-color: #661933;
+            z-index: 101;
+        }
+
+        #sb_click_fix {
+            position: absolute;
+            left: -5vh;
+            top: 0;
+        }
+
+        #bar {
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 100vw;
+            height: 5vh;
+            background-color: #661933;
+            color: #fff;
+            font-size: 3vh;
+            font-family: soft;
+            padding-top: 1vh;
+            padding-left: 1vh;
+            padding-bottom: 0;
+            z-index: 100;
+        }
+
+        #sidebar {
+            position: absolute;
+            z-index: 5;
+            left: 100vw;
+            top: 5vh;
+            width: 100vw;
+            height: 100vh;
+            background-color: #000000;
+            opacity: .75;
+            transition: left ease 1s;
+        }
+
+        #learn {
+            position: absolute;
+            top: 10vh;
+            left: 20vw;
+            text-transform: uppercase;
+            font-weight: 900;
+            font-size: 4vw;
+            color: white;
+            border-bottom: 3px solid #ff0000;
+        }
+
+        #tend {
+            position: absolute;
+            top: 10vh;
+            left: 60vw;
+            text-transform: uppercase;
+            font-size: 4vw;
+            font-weight: 900;
+            color: white;
+            opacity: 1;
+            border-bottom: 3px solid #ffa500;
+        }
+
+        #learn_desc {
+            position: absolute;
+            top: 1vh;
+            width: 100%;
+            font-size: 1.75vw;
+        }
+
+        #learn_desc_fix {
+            position: absolute;
+            top: 5vw;
+        }
+
+        #tend_desc {
+            position: absolute;
+            top: 1vh;
+            width: 100%;
+            font-size: 1.75vw;
+        }
+
+        #tend_desc_fix {
+            position: absolute;
+            top: 5vw;
+        }
+
+        #about {
+            border-top: 3px solid #ff0000;
+        }
+
+        #building {
+            background-color: #eee8aa;
+            width: 90vw;
+            height: auto;
+            position: absolute;
+            left: 0;
+            top: 5vh;
+        }
+
+        #roof-b-s {
+            position: absolute;
+            left: 0;
+            top: 1vh;
+            width: 90vw;
+            height: 2.5vh;
+            background-color: #e6dd7f;
+        }
+
+        #bar9uk {
+            position: absolute;
+            left: 0.75vh;
+        }
+
+        #bar9uk_1 {
+            position: absolute;
+            left: 0;
+            width: 25px;
+            height: 5px;
+            top: 0.75vh;
+            left: -0.25vw;
+            background-color: #f5f5f5;
+            border-radius: 5px;
+            transition: background-color 1s ease;
+        }
+
+        #bar9uk_2 {
+            position: absolute;
+            width: 25px;
+            height: 5px;
+            top: 2vh;
+            left: -0.25vw;
+            background-color: #f5f5f5;
+            border-radius: 5px;
+            transition: background-color 1s ease;
+        }
+
+        #bar9uk_3 {
+            position: absolute;
+            width: 25px;
+            height: 5px;
+            top: 3.35vh;
+            left: -0.25vw;
+            border-radius: 5px;
+            background-color: #f5f5f5;
+            transition: background-color 1s ease;
+        }
+
+        p {
+            font-family: soft;
+            color: palevioletred;
+            margin-left: 2vw;
+
+        }
+
+        #title_n {
+            font-size: 7vw;
+            margin-bottom: 2vw;
+            margin-top: 2vw;
+        }
+
+        #text {}
+
+        #code {
+            color: mediumvioletred;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="building">
+        <p id="title_n" style="margin-top:3vw">The Scala tutorial</p>
+        <p id="text">
+        Scala was developed to combine object-oriented and functional programming into one high-level language. It’s mainly used for web and desktop applications and data analysis. You may have to Scala some mountain walls that are Scala’s learning curve, but it has a very readable syntax, and it’s pretty fast. What else could a language possibly need?
+        </p>
+        <p id="text">
+	To start programming with Scala, you’ll need to make sure you have all the necessary things installed, like the compiler, which is available on the official Scala website, and an IDE, which can be either Eclipse, but if you aren’t planning to use it for any other language, I’d recommend something less heavy-duty, like the official Scala IDE, available for free.
+        </p>
+        <p id="text">
+	It’s a common tradition for programmers to start off their experience with a language by printing out “Hello World” in the console. Let’s jump right in!
+        </p>
+        <p id="code">
+def main (args: Array[String]): Unit = {
+        </p>
+        <p id="code">
+    println("Hello, world!")
+        </p>
+        <p id="code">
+  }
+        </p>
+        <p id="text">
+Let’s break this code down. Def is the basic function definition syntax, main is its name, the arguments are listed in parentheses, and the block of function code is put in curly brackets. The main function is the one that is executed first in the project. Unit is the placeholder for the function’s return value, and in this case it simply means that the function doesn’t return anything. Println is the function that does the printing out, and you don’t put semicolons at the end of inline statements, unlike most languages.
+        </p>
+        <p id="text">
+	Now onto variables in Scala. A lot of more modern languages are moving on from type definition of variables, and Scala is doing so too. You can, of course, specify it anyways, but it’s by no means mandatory. Var declares a variable and val declares a constant. To define an array, which is a series of elements of the same type placed in certain memory locations, equate a variable to a new array as shown below. To access abovementioned memory locations, place the index of the element in square brackets right next to the array name.
+        </p>
+        <p id="code">
+var myVar = 10;
+        </p>
+        <p id="code">
+var myVar1 : String = "Foo"
+        </p>
+        <p id="code">
+var z = new Array[String](3)
+        </p>
+        <p id="text">
+User input is the main means of user – computer communication. The most modern way to accept user input in Scala is to use the trusty read*Type*() function like so:
+        </p>
+        <p id="code">
+var myVar = scala.io.StdIn.readInt()
+        </p>
+        <p id="code">
+var myV = scala.io.StdIn.readLine()
+        </p>
+        <p id="text">
+ 	Moving right onto conditionals. They’re mostly self-explanatory. If a certain condition is true, an action is performed, if not, a slightly different action is performed. The implementation of if statements into Scala looks like this:
+        </p>
+        <p id="code">
+if(condition) {
+        </p>
+        <p id="code">
+   do a thing
+        </p>
+            <p id="code">
+} else if (condition || condition) {
+        </p>
+        <p id="code">
+   do a thing
+        </p>
+        <p id="code">
+} else if (condition && condition) {
+        </p>
+        <p id="code">
+   do a thing
+        </p>
+        <p id="code">
+} else {
+        </p>
+        <p id="code">
+   do a thing
+        </p>
+        <p id="code">
+}
+        </p>
+        <p id="text">
+	Loops are great. They make our life easier time and time again. Wherever they’re implemented, be it an esoteric, practical or English language, they’re there to make things practical. In Scala, there are two kinds of loops – for and while. With for loops you can efficiently write a cycle that needs to be executed a specific number of times, depending on the set range, and with while loops cycle while given condition is true. There is a certain way to change the way the loop goes and that’s by using loop control statements, such as continue, which skips the rest of the loop and goes onto the next iteration, and break, which stops the execution of the cycle completely.
+        </p>
+        <p id="code">
+while(condition) {
+        </p>
+        <p id="code">
+	things to do
+        </p>
+        <p id="code">
+}
+        </p>
+        <p id="code">
+for( var x <- Range ){
+              </p>
+            <p id="code">
+	things to do
+        </p>
+        <p id="code">
+}
+        </p>
+              <p id="text">
+As you remember, the basic Julia program always has def main() as the main function or void. Let’s have a bit more in-depth look at functions in general. Def is the keyword that is like var for voids, then comes the name, then come the arguments, that are put in parentheses, which are values that are sent to the function from the caller. Then comes a colon and the type of data that the def is supposed to return. Then comes the = sign and then finally you put the actions that the function needs to perform in curly brackets. And that’s how functions are declared in Scala.
+        </p>
+              <p id="code">
+def addInt( a:Int, b:Int ) : Int = {
+        </p>
+    <p id="code">
+      var sum:Int = 0
+    </p>
+    <p id="code">
+      sum = a + b
+    </p>
+    <p id="code">
+      return sum
+    </p>
+    <p id="code">
+   }
+    </p>
+              <p id="text">Let’s make a project. A web project. We’re going to need lift, a scala framework for it. To start off type in sbt new lift/basic-app.g8 in your console. Then open up the html file in the webapp folder and the helloworld.scala file. Take a closer look a the latter. Then delete everything within the class because that’s how constructive and radical we are. To run a server and therefore get the script to work you have to run ~jetty:start in your sbt console. One of the most defining features of lift is setting css and innerHTML with one simple command. To get the HTML to change you’ll have to add a data-lift attribute  to the element with its contents being ClassName.MethodName. And in the said method you put “identifier” #> “new value” where identifier can be literally anything: a tag name, an id, a class, you name it! To change an attribute put its name in square brackets after the identifier, to remove the contents of it add an exclamation point to its name and to add add a plus sign.
+        </p>
+    <p id="text">
+And that’s all the important things you could possibly need to know about lift. Congratulations, you beat Scala!
+    </p>
+        <div id="roof-b-s"></div>
+    </div>
+
+    <div id="bar">Code:Excelso</div>
+    <div id="sb_click_fix" onclick="sb()" s>
+        <div id="sb_click">
+            <div id="bar9uk" onmouseover="c()" onmouseout="h()">
+                <div id="bar9uk_1"></div>
+                <div id="bar9uk_2"></div>
+                <div id="bar9uk_3"></div>
+            </div>
+        </div>
+    </div>
+    <div id="sidebar" style="left:100vw;">
+        <div id="learn" onclick="lrn()">Tutorials
+            <div id="learn_desc">
+                <div id="learn_desc_fix">Learn more about interesting languges in a colorful way!</div>
+            </div>
+        </div>
+        <div id="tend" onclick="atc()">Articles
+            <div id="tend_desc">
+                <div id="tend_desc_fix">Read up about the tendencies of programming languages</div>
+            </div>
+        </div>
+        <div id="about">
+
+        </div>
+    </div>
+    <script>
+        function c() {
+            document.getElementById("bar9uk_1").style.backgroundColor = "palevioletred";
+            document.getElementById("bar9uk_2").style.backgroundColor = "palevioletred";
+            document.getElementById("bar9uk_3").style.backgroundColor = "palevioletred";
+        }
+
+        function h() {
+            document.getElementById("bar9uk_1").style.backgroundColor = "whitesmoke";
+            document.getElementById("bar9uk_2").style.backgroundColor = "whitesmoke";
+            document.getElementById("bar9uk_3").style.backgroundColor = "whitesmoke";
+        }
+
+        function lrn() {
+            window.open("index.html", "_self");
+        }
+
+        function atc() {
+            window.open("../articles/index.html", "_self");
+        }
+
+        function sb() {
+            if (document.getElementById("sidebar").style.left == "100vw") {
+                document.getElementById("sidebar").style.left = 0;
+            } else {
+                document.getElementById("sidebar").style.left = "100vw";
+            }
+        }
+    </script>
+</body>
+
+</html>

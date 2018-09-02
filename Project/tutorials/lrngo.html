@@ -1,0 +1,580 @@
+<!DOCTYPE html>
+<html>
+<meta charset="utf-8" ontent="width=device-width">
+
+<head>
+    <style>
+        @font-face {
+            font-family: soft;
+            src: url(../ssf.ttf);
+        }
+
+        @font-face {
+            font-family: rigid;
+            src: url(../reason.otf);
+        }
+
+        body {
+            background-color: #afeeee;
+            padding: 0;
+            overflow-x: hidden;
+        }
+
+        #sb_click {
+            position: absolute;
+            left: 100vw;
+            top: 0;
+            z-index: 2;
+            width: 5vh;
+            height: 5vh;
+            background-color: #661933;
+            z-index: 101;
+        }
+
+        #sb_click_fix {
+            position: absolute;
+            left: -5vh;
+            top: 0;
+        }
+
+        #bar {
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 100vw;
+            height: 5vh;
+            background-color: #661933;
+            color: #fff;
+            font-size: 3vh;
+            font-family: soft;
+            padding-top: 1vh;
+            padding-left: 1vh;
+            padding-bottom: 0;
+            z-index: 100;
+        }
+
+        #sidebar {
+            position: absolute;
+            z-index: 5;
+            left: 100vw;
+            top: 5vh;
+            width: 100vw;
+            height: 100vh;
+            background-color: #000000;
+            opacity: .75;
+            transition: left ease 1s;
+        }
+
+        #learn {
+            position: absolute;
+            top: 10vh;
+            left: 20vw;
+            text-transform: uppercase;
+            font-weight: 900;
+            font-size: 4vw;
+            color: white;
+            border-bottom: 3px solid #ff0000;
+        }
+
+        #tend {
+            position: absolute;
+            top: 10vh;
+            left: 60vw;
+            text-transform: uppercase;
+            font-size: 4vw;
+            font-weight: 900;
+            color: white;
+            opacity: 1;
+            border-bottom: 3px solid #ffa500;
+        }
+
+        #learn_desc {
+            position: absolute;
+            top: 1vh;
+            width: 100%;
+            font-size: 1.75vw;
+        }
+
+        #learn_desc_fix {
+            position: absolute;
+            top: 5vw;
+        }
+
+        #tend_desc {
+            position: absolute;
+            top: 1vh;
+            width: 100%;
+            font-size: 1.75vw;
+        }
+
+        #tend_desc_fix {
+            position: absolute;
+            top: 5vw;
+        }
+
+        #about {
+            border-top: 3px solid #ff0000;
+        }
+
+        #building {
+            background-color: #eee8aa;
+            width: 90vw;
+            height: auto;
+            position: absolute;
+            left: 0;
+            top: 5vh;
+        }
+
+        #roof-b-s {
+            position: absolute;
+            left: 0;
+            top: 1vh;
+            width: 90vw;
+            height: 2.5vh;
+            background-color: #e6dd7f;
+        }
+
+        #bar9uk {
+            position: absolute;
+            left: 0.75vh;
+        }
+
+        #bar9uk_1 {
+            position: absolute;
+            left: 0;
+            width: 25px;
+            height: 5px;
+            top: 0.75vh;
+            left: -0.25vw;
+            background-color: #f5f5f5;
+            border-radius: 5px;
+            transition: background-color 1s ease;
+        }
+
+        #bar9uk_2 {
+            position: absolute;
+            width: 25px;
+            height: 5px;
+            top: 2vh;
+            left: -0.25vw;
+            background-color: #f5f5f5;
+            border-radius: 5px;
+            transition: background-color 1s ease;
+        }
+
+        #bar9uk_3 {
+            position: absolute;
+            width: 25px;
+            height: 5px;
+            top: 3.35vh;
+            left: -0.25vw;
+            border-radius: 5px;
+            background-color: #f5f5f5;
+            transition: background-color 1s ease;
+        }
+
+        p {
+            font-family: soft;
+            color: palevioletred;
+            margin-left: 2vw;
+
+        }
+
+        #title_n {
+            font-size: 7vw;
+            margin-bottom: 2vw;
+            margin-top: 2vw;
+        }
+
+        #text {}
+
+        #code {
+            color: mediumvioletred;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="building">
+        <p id="title_n" style="margin-top:3vw">The Go! tutorial</p>
+        <p id="text">
+        	Go, or GoLang, is a programming language developed by a team at Google when they needed to simplify network interactions and make software development more efficient. Apt for the name, the development team just keeps going further in trying to find ways to make the language better, and they constantly update at such a rate that they are already planning to release Go v2.0. This particular article works with version 1.10 of the language. It’s mainly used for system and numeric coding and server-side programming. While aesthetically and practically syntax-wise it might turn some people off, but you just have to try it for yourself to properly find out whether this language is for you or not. Considering the fact that this language is backed by none other than Google, you can be sure that it’s not going to fade away and become irrelevant any time soon. To be fair, there are many reasons to like this language: it’s very efficient performance-wise, it has an active community which keeps making external packages, and it’s easy to use.
+        <br>
+	Before we get to code in Go, we need to install all the necessary things, like the Go compiler, available on the official Go Website, and the IDE, the best-suiting being GoLand by JetBrains, available for free.
+	It’s customary for programmers to start learning a programming language by printing out “Hello World” in the console, so let’s just do exactly that.
+        </p>
+        <p id="code">
+import “fmt”
+<br>
+func main() {	
+            <br>
+         fmt.Println(“Hello World”)
+            <br>
+}
+        </p>
+        <p id="text">
+Let’s break this code down.  Import “importname” is the way to import external libraries to access functions or data structures which aren’t in Go by default. Fmt is the library which helps with console output in go. Func is the basic definition of a function in Go, main being its name and arguments, variables that to send from the initial function being put in parentheses, but since main is, as the name says, an obligatory main function, from which the execution of the code actually starts, the argument list is to be always left empty. Println is the method which does the printing of the lines or variables. As you might know, the ln in the end means that the content printed is going to appear on a new line. Another thing to note is that statements in Go are left without any semicolons at the end, unlike many languages do.
+To get user input you need to import bufio and os, and then define the reader, the thing that will get input. Then you read the type like so:
+        </p>
+        <p id="code">
+import (
+        <br>
+    "bufio"
+        <br>
+    "fmt"
+            <br>
+    "os"
+            <br>
+)
+        <br>
+func main() {
+            <br>
+    reader := bufio.NewReader(os.Stdin)
+            <br>
+    text, _ := reader.ReadString('\n')
+            <br>
+}
+        </p>
+        <p id="text">
+In Go variables are explicitly declared with var, with little to no type specification or you can go back to the good old days of Pascal and declare variables without var using the := syntax, but you can only declare multiple variables inline using var
+        </p>
+        <p id="code">
+Var a = “init”
+            <br>
+Var b = 1
+            <br>
+var h,I = 5, 25
+            <br>
+var g int
+            <br>
+C := “init”
+            <br>
+d := 5
+        </p>
+        <p id="text">
+Also to note, Go is really progressive in its own way: if you declare a variable and specify the type with var but don’t specify the value, Go automatically gives it a value of either 0 or “”, depending on the type. In the code above, g is equal to 0.
+Conditionals in Go are rather straightforward. 
+        </p>
+        <p id="code">
+if condition {
+            <br>
+        thing
+            <br>
+    } else if (condition2 && condition3) {
+            <br>
+        thing
+            <br>
+    } else {
+            <br>
+        thing
+            <br>
+    }
+        </p>
+        <p id="text">
+Just like in any language you might be familiar with. Well, there is something different: parentheses for conditions are not mandatory.
+            <br>
+Loops are really useful in general. They do operations over and over for us. Go takes an interesting approach to these constructs by having just one single construct: for. But there are many variations of for, making Go’s instance really stand out. At times you can define the loop variable and step in the loop declaration, and you can do that outside, and if you want to execute an infinite loop, just don’t put anything after for. 
+        </p>
+        <p id="code">
+I:=1
+            <br>
+for I <= 3 {
+         <br>
+thing
+            <br>
+I = I + 1
+            <br>
+}
+            <br>
+For j:=7; j<=9; j ++ {
+               <br>
+thing to repeat
+            <br>
+}
+            <br>
+for {
+            <br>
+thing 
+            <br>
+break
+            <br>
+}
+        </p>
+        <p id="text">
+Infinite loops would just break the program without loop control statements, which alter the normal loop execution. There are two kinds of those: break, which completely stops the execution of the loop, and continue, which skips over the rest of the rest of the below code and goes right to the next iteration.
+            <br>
+In Go, an array is a numbered sequence of elements of a specific length. We define arrays like so:
+        </p>
+        <p id="code">
+var a [5]int
+            <br>
+b := [5]int{1, 2, 3, 4, 5}
+        </p>
+        <p id="text">
+,where 5 is the size of the array, int is the type of the elements in the array, and in curly brackets we define the elements themselves. To also note, elements in arrays are numbered starting from 0. To access an element you put the index of it in curly brackets beside the array. To get the array length, you use the built-in len method.
+        </p>
+        <p id="code">
+            Len(arr)
+            <br>
+arr[2]
+        </p>
+        <p id="text">
+Now let’s move onto the project-making part. The project we’re going to write with Go is going to be a simple pong game, and it’s also going to be served, and to do that we’re going to use the GopherJS compiler and the GoDOM library, which was created to make the former easier-to-use and add some features to make working with it less different from working with JavaScript by itself. Notice how I said GopherJS was a compiler. Well, that means that you write some code in Go, then you go build it all, and then, during the building process the compiler converts the code you’ve written into JS code and drops a file in the project folder. Mind-blowing, I know. Now onto the project: let’s start off by creating a basic page, on which the actual game will be located. On it we should have the two racquets (or just blocks), a ball, a divider and the scoreboard. They will be created as div elements. Also, don’t forget to link the automatically-generated JS file for our script to actually work. So, the 'body' part of the HTML file should look something like this:
+            </p>
+        <p id="code">
+< div id="block">< /div>
+    <br>
+< div id="block_r">< /div>
+    <br>
+< div id="ball">< /div>
+    <br>
+< div id="container_1">
+    <br>
+	< div id="score">0< /div>
+        <br>
+	< div id="score_r">0< /div>
+        <br>
+< /div>
+    <br>
+< div id="divider">< /div>
+    <br>
+< script src="script.js">< /script>
+    </p>
+    <p id="text">
+As any self-respecting and totally professional web developer would do, I wrote an additional script which fixes the right block in place. 
+    </p>
+    <p id="code">
+        < script>
+    <br>
+    var b = document.getElementById("block_r");
+    <br>
+    setInterval(function () {
+        <br>
+        b.style.left = window.innerWidth - 35 + "px";
+        <br>
+    },100)
+<br>
+    < /script>
+    </p>
+        <p id="text">
+And finally, add a link to a stylesheet, located in main.css in the head element like so:
+    </p>
+  <p id="code">      
+< link rel="stylesheet" href="main.css">
+    </p>
+        <p id="text">
+Moving onto the script-writing phase. First of all, we should declare some variables that are going to be frequently used in func main(), like the dimensions of the screen and ball coordinates.
+        </p>
+        <p id="code">
+var iw, ih= js.Global.Get("innerWidth").Int(), js.Global.Get("innerHeight").Int()
+            <br>
+var left, top= iw/2, ih/2
+<br>
+ball := Document.QuerySelector("#ball")
+            <br>
+f := Document.QuerySelector("#block")
+            <br>
+g := Document.QuerySelector("#block_r")
+            <br>
+scA := Document.QuerySelector("#score")
+            <br>
+scB := Document.QuerySelector("#score_r")
+            <br>
+scoreA := scA.Get("innerHTML").Int()
+            <br>
+scoreB := scB.Get("innerHTML").Int()
+            <br>
+dir := 1
+            <br>
+dirY := 1
+            <br>
+var iter= false
+        </p>
+        <p id="text">
+To break the questionable parts of this down, js.Global is exactly the same as document.body in JavaScript. But then what is Document here? Well, it’s also document.body, but the former is the vanilla GopherJS syntax and the latter is the GoDOM syntax, which might be confusing, but it’s for the better, trust me. QuerySelector the GJS version of document.getElementBbyId(), the difference between those being that QS works on classes and tag names as well. The scoreA and B variables were created to keep track of the current score and are equal to the contents of the according elements, which is what innerHTML is for. The dir variables are going to be used to control the direction of the ball’s movement, and iter is a placeholder boolean which will help rid us of unnecessary actions.
+            <br>
+	Now we have to set up a function which will run periodically, but will not impede the execution of code. To do that we’re going to use goroutines, which are a lot like your regular functions, but with a small difference: these at the same time as the next function, in the background. Then we’ll put an infinite loop inside of it, and if it wasn’t for goroutines, the code after this loop would never be executed. 
+        </p>
+        <p id="code">
+go func() {
+            <br>
+   for true {
+        </p>
+        <p id="text">
+	First thing that we’re going to have to do is update our variables, namely the screen dimensions, the positions of blocks. We’re also going to update the ball’s position variables but only after the first cycle of the loop.
+        </p>
+        <p id="code">
+iw = js.Global.Get("innerWidth").Int()
+            <br>
+ih = js.Global.Get("innerHeight").Int()
+            <br>
+topA := f.Get("style").Get("top").Int()
+            <br>
+topB := g.Get("style").Get("top").Int()
+            <br>
+if iter {
+            <br>
+   left = ball.Get("style").Get("left").Int()
+            <br>
+   top = ball.Get("style").Get("top").Int()
+            <br>
+}
+        </p>
+        <p id="text">
+Now we work on the logic of the game. If our ball hits the border of the screen or a racquet, it should move in a different direction and if it hit a wall, the score should change accordingly.
+        </p>
+        <p id="code">
+if left > iw-23 || left < 0 || (left <= 32 && top >= topA-5 && top <= topA+125) || (left >= iw-45 && top >= topB-10 && top <= topB+125) {
+        <br>
+   if left <= 0 {
+              <br>
+      scoreB = scoreB + 1
+            <br>
+      scB.SetInnerHTML(strconv.Itoa(scoreB))
+            <br>
+   } else if left >= iw-23 {
+            <br>
+      scoreA = scoreA + 1
+            <br>
+      scA.SetInnerHTML(strconv.Itoa(scoreA))
+            <br>
+   }
+            <br>
+   dir = dir * -1
+            <br>
+}
+            </p>
+            <p id="text">
+And, of course, don’t forget to tell the ball to change its direction when it hit the top or the bottom border.
+        </p>
+        <p id="code">
+if (top > ih-23 || top < 0) {
+                           <br>
+   dirY = dirY * -1
+            <br>
+}
+                           </p>
+        <p id="text">
+You probably noticed that earlier on, I added .Int() after using innerHTML, and now there’s this strconv string, which I never addressed. Well, innerHTML comes in the form of a string, and since I want to add to score variables, I have to convert the received value to string. The strconv library, using the Itoa method can do the exact opposite.
+Now we work on how the ball moves. That’s when our direction variables really come into play. To move the ball we just add the value of the dir variables which can be either 1 or -1.
+        </p>
+        <p id="code">
+ball.Get("style").Set("left", strconv.Itoa(left+dir))
+            <br>
+ball.Get("style").Set("top", strconv.Itoa(top+dirY))
+        </p>
+        <p id="text">
+            Then we set iter to true so we can update the ball’s position during the next cycle and put a small delay for smoother processing using the time library and its Sleep method.
+        </p>
+        <p id="code">
+iter = true
+            <br>
+time.Sleep(time.Nanosecond)
+            <br>
+}
+            <br>
+}()
+        </p>
+<p id="text">
+Now we make the blocks move when we press the arrow keys and W and S keys. We’re going to do that using an event listener which runs a function whenever an action is performed, in this case the action being a key press. To perform actions upon pressing these exact keys we’re going to need their key codes, which are 38, 40, 87 and 83 accordingly. We also need to consider the fact that our blocks shouldn’t move when they are too low or too high, so we have to check if their position allows for that.
+        </p>
+        <p id="code">
+Document.AddEventListener("keydown", func(e Event) {
+            <br>
+         var tp= f.Get("style").Get("top").Int()
+            <br>
+         var tp1= g.Get("style").Get("top").Int()
+            <br>
+         if e.KeyCode() == 38 && tp > -5 {
+            <br>
+            f.Get("style").Set("top", (strconv.Itoa(tp-10) + "px"))
+            <br>
+         }
+            <br>
+         if e.KeyCode() == 40 && tp < (ih-125) {
+                                              <br>
+            f.Get("style").Set("top", (strconv.Itoa(tp+10) + "px"))
+            <br>
+         }
+            <br>
+         if e.KeyCode() == 87 && tp1 > -5 {
+            <br>
+            g.Get("style").Set("top", (strconv.Itoa(tp1-10) + "px"))
+            <br>
+         }
+            <br>
+         if e.KeyCode() == 83 && tp1 < (ih-125) {
+                                               <br>
+            g.Get("style").Set("top", (strconv.Itoa(tp1+10) + "px"))
+            <br>
+         }
+            <br>
+      })
+            <br>
+}
+                                               </p>
+        <p id="text">
+And that’s the end of our script. Now we just have to build it and we’ll have a ready-to-run JS file created with the power of Zeus, gopherJS and our code. Now you have created your first full-on Go project for the web!
+            <br>
+I also decided to make our pong game a bit fancier and used a square font, which you can get here and added some styles to the elements, which you can customize in this main.css file, which, as you remember, we linked in our index.html file. Maybe I just like web design too much.
+        </p>
+        <div id="roof-b-s"></div>
+    </div>
+
+    <div id="bar">Code:Excelso</div>
+    <div id="sb_click_fix" onclick="sb()" s>
+        <div id="sb_click">
+            <div id="bar9uk" onmouseover="c()" onmouseout="h()">
+                <div id="bar9uk_1"></div>
+                <div id="bar9uk_2"></div>
+                <div id="bar9uk_3"></div>
+            </div>
+        </div>
+    </div>
+    <div id="sidebar" style="left:100vw;">
+        <div id="learn" onclick="lrn()">Tutorials
+            <div id="learn_desc">
+                <div id="learn_desc_fix">Learn more about interesting languges in a colorful way!</div>
+            </div>
+        </div>
+        <div id="tend" onclick="atc()">Articles
+            <div id="tend_desc">
+                <div id="tend_desc_fix">Read up about the tendencies of programming languages</div>
+            </div>
+        </div>
+        <div id="about">
+
+        </div>
+    </div>
+    <script>
+        function c() {
+            document.getElementById("bar9uk_1").style.backgroundColor = "palevioletred";
+            document.getElementById("bar9uk_2").style.backgroundColor = "palevioletred";
+            document.getElementById("bar9uk_3").style.backgroundColor = "palevioletred";
+        }
+
+        function h() {
+            document.getElementById("bar9uk_1").style.backgroundColor = "whitesmoke";
+            document.getElementById("bar9uk_2").style.backgroundColor = "whitesmoke";
+            document.getElementById("bar9uk_3").style.backgroundColor = "whitesmoke";
+        }
+
+        function lrn() {
+            window.open("index.html", "_self");
+        }
+
+        function atc() {
+            window.open("../articles/index.html", "_self");
+        }
+
+        function sb() {
+            if (document.getElementById("sidebar").style.left == "100vw") {
+                document.getElementById("sidebar").style.left = 0;
+            } else {
+                document.getElementById("sidebar").style.left = "100vw";
+            }
+        }
+    </script>
+</body>
+
+</html>
