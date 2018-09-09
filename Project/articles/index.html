@@ -204,9 +204,13 @@
 
 <body>
     <div id="building">
-        <p onclick="chosen_article()" id="hha">A history lesson about programming languages</p>
-        <p id="ah" onclick="chosen_article()">Don't know what language to learn? This article is here to help with that!</p>
-        <p id="ay">More content coming soon! [the rest is a very rough draft]</p>
+        <p onclick="chosen_article()" id="hha">A new beginning</p>
+        <p id="ah" onclick="chosen_article()">What do these even do?</p>
+        <p onclick="chosen_article_1()" id="hha">A history lesson about programming languages</p>
+        <p id="ah" onclick="chosen_article_1()">How to find ships that don't sink</p>
+        <p onclick="chosen_article_2()" id="hha">Burning out</p>
+        <p id="ah" onclick="chosen_article_2()">Have you even slept in the past year?</p>
+        
         <div id="roof-b-s"></div>
     </div>
 
@@ -238,7 +242,13 @@
     <script>
  function main() { window.open("../index.html","_self"); }
         function chosen_article() {
+            window.open("a_3.html","_self");
+        } 
+        function chosen_article_1() {
             window.open("a_1.html","_self");
+        } 
+        function chosen_article_2() {
+            window.open("a_2.html","_self");
         } 
         function c() {
             document.getElementById("bar9uk_1").style.backgroundColor = "palevioletred";
