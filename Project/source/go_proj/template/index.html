@@ -1,0 +1,26 @@
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+        <title>Go[lang]!</title>
+        <link rel="stylesheet" href="main.css">
+    </head>
+    <body>
+        <div id="ok">
+        <div id="block"></div>
+        <div id="block_r"></div>
+        <div id="ball"></div>
+        <div id="fix_1">
+            <div id="score">0</div>
+            <div id="score_r">0</div>
+        </div>
+            <div id="divider"></div>
+        </div>
+        <script src="script.js"></script>
+        <script>
+            var b = document.getElementById("block_r");
+            setInterval(function () {
+                b.style.left = window.innerWidth - 35 + "px";
+            },100)
+        </script>
+    </body>
+</html>

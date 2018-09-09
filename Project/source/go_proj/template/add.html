@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        body {
+            overflow: hidden;
+        }
+        @font-face {
+            font-family:mont;
+            src: url("mont.otf");
+        }
+        @font-face {
+            font-family:ctr;
+            src: url("ctr.otf");
+        }
+        img {
+            position: absolute;
+            top:-2vh;
+            left:-2vw;
+            width: 110vw;
+            height: 110vh;
+            filter: blur(20px);
+            z-index: -1;
+        }
+        #fix_n {
+            position: absolute;
+            left:51vw;
+            top:36vh;
+            z-index: 100;
+        }
+        #go {
+            position: absolute;
+            top:0;
+            left:-25vh;
+            color:ghostwhite;
+            font-family: ctr;
+            letter-spacing: -15px;
+            font-size:15vh;
+            width:100vw;
+        }
+        #desc{
+            position: absolute;
+            top:12px;
+            left:159px;
+            color:ghostwhite;
+            font-family: ctr;
+            letter-spacing: 1px;
+            font-size:15px;
+        }
+        #start{
+            position: absolute;
+            top:110px;
+            left:100px;
+            color:ghostwhite;
+            font-family: ctr;
+            letter-spacing: 1px;
+            font-size:15px;
+            transition: color 1s ease;
+            z-index: 150;
+        }
+        #start:hover {
+            color:dimgray;
+            cursor: pointer;
+        }
+    </style>
+    <meta charset="UTF-8">
+    <title>Start</title>
+</head>
+<body>
+<img src="https://i.imgur.com/bKXyN.gif">
+<div id="fix_n">
+    <div id="go">
+        GOPONG
+        <div id="desc">
+            spaghetticode done right
+        </div>
+        <div id="start" onclick="myfunc()">
+            Start
+        </div>
+    </div>
+
+</div>
+<script>
+    function myfunc() {
+        window.open("index.html","_self");
+    }
+</script>
+</body>
+</html>
