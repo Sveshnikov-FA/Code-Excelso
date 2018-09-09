@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html>
+<meta charset="utf-8" ontent="width=device-width">
+
+<head>
+    <style>
+        @font-face {
+            font-family: soft;
+            src: url(../ssf.ttf);
+        }
+
+        @font-face {
+            font-family: rigid;
+            src: url(../reason.otf);
+        }
+
+        body {
+            background-color: #afeeee;
+            padding: 0;
+            overflow-x: hidden;
+        }
+
+        #sb_click {
+            position: absolute;
+            left: 100vw;
+            top: 0;
+            z-index: 2;
+            width: 5vh;
+            height: 5vh;
+            background-color: #661933;
+            z-index: 101;
+        }
+
+        #sb_click_fix {
+            position: absolute;
+            left: -5vh;
+            top: 0;
+        }
+
+        #bar {
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 100vw;
+            height: 5vh;
+            background-color: #661933;
+            color: #fff;
+            font-size: 3vh;
+            font-family: soft;
+            padding-top: 1vh;
+            padding-left: 1vh;
+            padding-bottom: 0;
+            z-index: 100;
+        }
+
+        #sidebar {
+            position: absolute;
+            z-index: 5;
+            left: 100vw;
+            top: 5vh;
+            width: 100vw;
+            height: 100vh;
+            background-color: #000000;
+            opacity: .75;
+            transition: left ease 1s;
+        }
+
+        #learn {
+            position: absolute;
+            top: 10vh;
+            left: 20vw;
+            text-transform: uppercase;
+            font-weight: 900;
+            font-size: 4vw;
+            color: white;
+            border-bottom: 3px solid #ff0000;
+        }
+
+        #tend {
+            position: absolute;
+            top: 10vh;
+            left: 60vw;
+            text-transform: uppercase;
+            font-size: 4vw;
+            font-weight: 900;
+            color: white;
+            opacity: 1;
+            border-bottom: 3px solid #ffa500;
+        }
+
+        #learn_desc {
+            position: absolute;
+            top: 1vh;
+            width: 100%;
+            font-size: 1.75vw;
+        }
+
+        #learn_desc_fix {
+            position: absolute;
+            top: 5vw;
+        }
+
+        #tend_desc {
+            position: absolute;
+            top: 1vh;
+            width: 100%;
+            font-size: 1.75vw;
+        }
+
+        #tend_desc_fix {
+            position: absolute;
+            top: 5vw;
+        }
+
+        #about {
+            border-top: 3px solid #ff0000;
+        }
+
+        #building {
+            background-color: #eee8aa;
+            width: 90vw;
+            height: auto;
+            position: absolute;
+            left: 0;
+            top: 5vh;
+        }
+
+        #roof-b-s {
+            position: absolute;
+            left: 0;
+            top: 1vh;
+            width: 90vw;
+            height: 2.5vh;
+            background-color: #e6dd7f;
+        }
+
+        #bar9uk {
+            position: absolute;
+            left: 0.75vh;
+        }
+
+        #bar9uk_1 {
+            position: absolute;
+            left: 0;
+            width: 25px;
+            height: 5px;
+            top: 0.75vh;
+            left: -0.25vw;
+            background-color: #f5f5f5;
+            border-radius: 5px;
+            transition: background-color 1s ease;
+        }
+
+        #bar9uk_2 {
+            position: absolute;
+            width: 25px;
+            height: 5px;
+            top: 2vh;
+            left: -0.25vw;
+            background-color: #f5f5f5;
+            border-radius: 5px;
+            transition: background-color 1s ease;
+        }
+
+        #bar9uk_3 {
+            position: absolute;
+            width: 25px;
+            height: 5px;
+            top: 3.35vh;
+            left: -0.25vw;
+            border-radius: 5px;
+            background-color: #f5f5f5;
+            transition: background-color 1s ease;
+        }
+        #text {
+            color: palevioletred;
+            font-family: soft;
+            margin: 2vw;
+            font-size: 2vw;
+        }
+        #title_n {
+            color: palevioletred;
+            font-family: soft;
+            margin: 2vw;
+            font-size: 2vw;
+            font-size: 7vw;
+            margin-bottom: 2vw;
+            margin-top: 2vw;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="building">
+        <p id="title_n">A New Beginning</p>
+        <p id="text">
+        The world of programming languages is vast. When you get exposed to their busy realm, it’s easy to get swept away and swirled around in this whirlpool to the point of disorientation. To avoid this state of utter confusion, make sure to organize your learning routine.
+            <br>
+	I started my journey with Java. At the time, the technology and the incredible possibilities open to me which I never really used were mind-blowing. I went on to experiment more with it and created many a desktop application. The point I’m making here has nothing to do with bad MS Paint art I did for my games written in Java, but with the fact that to start off you need a framework to use. Knowing basic Java syntax has really helped me learn new languages and if you want to experiment with something new, it’s great to be able to just pick up a language and say: “Alright, this might take some getting used to, but I can pick this up just like that”. And while knowing how to code in Java is a useful skill, I’d recommend to start off with something more general, like C++, perhaps.
+            <br>
+	After you make a couple of projects on your own in your framework language, at some point comes the time to finally let go and take a look at other languages. But here’s the problem: which one do you choose? Surely, considering the fact that I’m blowing this whole process out of proportion so much, it must be important, right? Well, it actually is important, just not as dramatically as one would imagine. So, to make the process even more simple, I went on to classify languages by application. (note: the classification is based on personal or widespread preferences) To start off, you have the general-purpose, very well-known and probably good for making apps on desktop, like the classic Java, the world-famous Python or the numeric C++. These also happen to be very good second or third languages to pick up before you go full-on industrial. If you’re still very new to programming, then you should learn these first, go at your own pace and not fill your head with these peculiar names listed below: after all these languages stand pretty well on their own. Then there’s languages that are good for mobile development, like the Java-bettering Kotlin and Scala or Swift, which is largely avoided by doctors. There are more industrial and scientific languages, like the useful for writing systems software Rust, the brave and new Julia, which is good for data analysis and plot building, the machine-school of a language that is R, the go-to analysis and calculation language F#. Another group of languages is a web-based one: the oh-so-convenient Ruby, the loud and proud Dart, the fast and fresh Golang, or the sophisticated Elixir. There are also languages for Game Development, like the simple GML or the formal and jacket-wearing C# or the flashy ActionScript. There are even languages for writing music composition, like ChucK or Reaktor.
+            <br>
+	So, now that you’ve opened up the documentation, rolled up your sleeves, cracked your knuckles a few times, and dig in, the question will soon hit you: Now what? Well, while the more sophisticated languages are a challene to learn already, the more simple ones go better with a set of tasks to set for yourself. Quite a few good ones come from the 99-problems GitHub repo and many other similar ones, where you can find exercises ranging from pretty simple to rather difficult.
+	In conclusion, programming can be hard. Starting from scratch is even harder. But if you have even a distant idea of what you want to achieve, it’s…
+actually still going to be hard, but you’ll have a better time doing it!
+
+        </p>
+        <div id="roof-b-s"></div>
+    </div>
+
+    <div id="bar">Code:Excelso</div>
+    <div id="sb_click_fix" onclick="sb()" s>
+        <div id="sb_click">
+            <div id="bar9uk" onmouseover="c()" onmouseout="h()">
+                <div id="bar9uk_1"></div>
+                <div id="bar9uk_2"></div>
+                <div id="bar9uk_3"></div>
+            </div>
+        </div>
+    </div>
+    <div id="sidebar" style="left:100vw;">
+        <div id="learn" onclick="lrn()">Tutorials
+            <div id="learn_desc">
+                <div id="learn_desc_fix">Learn more about interesting languges in a colorful way!</div>
+            </div>
+        </div>
+        <div id="tend" onclick="atc()">Articles
+            <div id="tend_desc">
+                <div id="tend_desc_fix">Read up about the tendencies of programming languages</div>
+            </div>
+        </div>
+        <div id="about">
+
+        </div>
+    </div>
+    <script>
+        function c() {
+            document.getElementById("bar9uk_1").style.backgroundColor = "palevioletred";
+            document.getElementById("bar9uk_2").style.backgroundColor = "palevioletred";
+            document.getElementById("bar9uk_3").style.backgroundColor = "palevioletred";
+        }
+
+        function h() {
+            document.getElementById("bar9uk_1").style.backgroundColor = "whitesmoke";
+            document.getElementById("bar9uk_2").style.backgroundColor = "whitesmoke";
+            document.getElementById("bar9uk_3").style.backgroundColor = "whitesmoke";
+        }
+
+        function lrn() {
+            window.open("index.html", "_self");
+        }
+
+        function atc() {
+            window.open("../articles/index.html", "_self");
+        }
+
+        function sb() {
+            if (document.getElementById("sidebar").style.left == "100vw") {
+                document.getElementById("sidebar").style.left = 0;
+            } else {
+                document.getElementById("sidebar").style.left = "100vw";
+            }
+        }
+    </script>
+</body>
+
+</html>

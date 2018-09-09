@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html>
+<meta charset="utf-8" ontent="width=device-width">
+
+<head>
+    <style>
+        @font-face {
+            font-family: soft;
+            src: url(../ssf.ttf);
+        }
+
+        @font-face {
+            font-family: rigid;
+            src: url(../reason.otf);
+        }
+
+        body {
+            background-color: #afeeee;
+            padding: 0;
+            overflow-x: hidden;
+        }
+
+        #sb_click {
+            position: absolute;
+            left: 100vw;
+            top: 0;
+            z-index: 2;
+            width: 5vh;
+            height: 5vh;
+            background-color: #661933;
+            z-index: 101;
+        }
+
+        #sb_click_fix {
+            position: absolute;
+            left: -7vh;
+            top: 0;
+        }
+
+        #bar {
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 100vw;
+            height: 5vh;
+            background-color: #661933;
+            color: #fff;
+            font-size: 3vh;
+            font-family: soft;
+            padding-top: 1vh;
+            padding-left: 1vh;
+            padding-bottom: 0;
+            z-index: 100;
+        }
+
+        #sidebar {
+            position: absolute;
+            z-index: 5;
+            left: 100vw;
+            top: 5vh;
+            width: 100vw;
+            height: 100vh;
+            background-color: #000000;
+            opacity: .75;
+            transition: left ease 1s;
+        }
+
+        #learn {
+            position: absolute;
+            top: 10vh;
+            left: 20vw;
+            text-transform: uppercase;
+            font-weight: 900;
+            font-size: 4vw;
+            color: white;
+            border-bottom: 3px solid #ff0000;
+        }
+
+        #tend {
+            position: absolute;
+            top: 10vh;
+            left: 60vw;
+            text-transform: uppercase;
+            font-size: 4vw;
+            font-weight: 900;
+            color: white;
+            opacity: 1;
+            border-bottom: 3px solid #ffa500;
+        }
+
+        #learn_desc {
+            position: absolute;
+            top: 1vh;
+            width: 100%;
+            font-size: 1.75vw;
+        }
+
+        #learn_desc_fix {
+            position: absolute;
+            top: 5vw;
+        }
+
+        #tend_desc {
+            position: absolute;
+            top: 1vh;
+            width: 100%;
+            font-size: 1.75vw;
+        }
+
+        #tend_desc_fix {
+            position: absolute;
+            top: 5vw;
+        }
+
+        #about {
+            border-top: 3px solid #ff0000;
+        }
+
+        #building {
+            background-color: #eee8aa;
+            width: 90vw;
+            height: auto;
+            position: absolute;
+            left: 0;
+            top: 5vh;
+        }
+
+        #roof-b-s {
+            position: absolute;
+            left: 0;
+            top: 1vh;
+            width: 90vw;
+            height: 2.5vh;
+            background-color: #e6dd7f;
+        }
+
+        #bar9uk {
+            position: absolute;
+            left: 0.75vh;
+        }
+
+        #bar9uk_1 {
+            position: absolute;
+            left: 0;
+            width: 25px;
+            height: 5px;
+            top: 0.75vh;
+            left: -0.25vw;
+            background-color: #f5f5f5;
+            border-radius: 5px;
+            transition: background-color 1s ease;
+        }
+
+        #bar9uk_2 {
+            position: absolute;
+            width: 25px;
+            height: 5px;
+            top: 2vh;
+            left: -0.25vw;
+            background-color: #f5f5f5;
+            border-radius: 5px;
+            transition: background-color 1s ease;
+        }
+
+        #bar9uk_3 {
+            position: absolute;
+            width: 25px;
+            height: 5px;
+            top: 3.35vh;
+            left: -0.25vw;
+            border-radius: 5px;
+            background-color: #f5f5f5;
+            transition: background-color 1s ease;
+        }
+        #text {
+            color: palevioletred;
+            font-family: soft;
+            margin: 2vw;
+            font-size: 2vw;
+        }
+        #title_n {
+            color: palevioletred;
+            font-family: soft;
+            margin: 2vw;
+            font-size: 2vw;
+            font-size: 7vw;
+            margin-bottom: 2vw;
+            margin-top: 2vw;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="building">
+        <p id="title_n">Burning out</p>
+        <p id="text">
+        Your journey within the realm of programming languages continues, as you tread along the internet streets. It’s been a long time since you’ve picked up programming and you’ve learned many new things. At the moment you’re working on an important project, which you know you have to rush to finish. As sleepless nights pass, days start becoming a blur, you begin to think you’re going to melt down like an ice cube right in the middle of your commute. At some point you start thinking: “What’s even the point?” and it’s at this moment in time that you realize that you’re burnt out.
+            <br>
+While obviously, this isn’t necessarily a programmers’ issue, many still struggle with burnout and ruts, and I’ll make sure to give some basic advice on how to avoid them.
+Everyone experienced burnout in some shape or form at least once in their lives. But what is it? Well, burnout has three main defining features: it gives a sense that you’re not in control of yourself anymore, you feel emotionally drained and you don’t feel that you’ve achieved something in the end. Imagine getting like 20 assignments in school due the next day. You come home in the evening and the work begins. Of course, you could put in no effort and finish all of them in an hour, but that’s not what you’re about, the end result has to be perfect! The sun rises and you’ve finally finished your task, you’re proud of yourself, you get to the teacher, hand your work in… And then he announces that this task will not be graded, and moves on to the next topic, and the next 10 assignments, which are also due tomorrow. These are the most widespread causes of burnout: excessive workloads, not enough recognition, perfectionism and workaholism. And there are also ruts, creative or working ones, which come hand in hand with burnout. You get into this state after doing the same thing over and over again, like working with databases or creating excessively working with responsive web design, or just back-end programming in general. 
+            <br>
+	Burnout however, is treatable. The most general advice that could be given in these situations is to have some time for yourself: take a breather, try to relax with some good coffee or music of choice. Distract yourself from work, let worries slip away one by one with each deep breath. Another good general advice would be to improve your sleeping schedule. Now, it would be hypocritical of me to give out advice like “Go to bed at 11 pm at max” mainly because I’m currently writing this at 1 am. But any change in that direction is positive: try to pull less all-nighters and slowly move your sleeping time closer to the unreachable ideal of 11 pm. This particular point has helped me a lot in recent months. But if you feel overworked, it’s almost like you don’t have time for long walks. Well, relaxation can be done on 15 minute breaks. In the end, you’ll be more productive if you took a short break than you would be if you didn’t. Another piece of advice I can give out in this case is to brighten up your life. Pick up an unusual hobby that would be easy to integrate into your everyday routine, and it doesn’t have to be anything groundbreaking, it can be something as simple as getting a new brand of groceries every time you go shopping, or collecting trinkets from coffee shops, like these small packets of sugar. It doesn’t have to be just focused on buying something, just get some simple task for yourself that would be different every time you do it, and it will stand out of the blur that are days of all-nighters and overworking. If you’re stuck in a rut and struggle to find any motivation or ideas for your programs, a change of pace is a treatment that works every time. During a break, look up growing and loved languages on stackoverflow and try to write a simple program in it and finish a small game project which shouldn’t normally take longer than a few hours to complete. Exceptionally radical change, like switching from desktop to web or data analysis, can provide exceptionally good results. Same goes for artists: you have so many mediums to choose from – so pick the one that you find the hardest to do and give yourself a bit of a challenge: it’s always good to switch things up every once in a while!    
+            <br>
+	In conclusion, burning out and getting stuck in a creative rut is pretty bad. But even the smallst changes can lighten up the situation. After all, everything is going to be just fine, just keep making steps in the right direction and change things up accordingly to your current situation. 
+
+        </p>
+        <div id="roof-b-s"></div>
+    </div>
+
+    <div id="bar">Code:Excelso</div>
+    <div id="sb_click_fix" onclick="sb()" s>
+        <div id="sb_click">
+            <div id="bar9uk" onmouseover="c()" onmouseout="h()">
+                <div id="bar9uk_1"></div>
+                <div id="bar9uk_2"></div>
+                <div id="bar9uk_3"></div>
+            </div>
+        </div>
+    </div>
+    <div id="sidebar" style="left:100vw;">
+        <div id="learn" onclick="lrn()">Tutorials
+            <div id="learn_desc">
+                <div id="learn_desc_fix">Learn more about interesting languges in a colorful way!</div>
+            </div>
+        </div>
+        <div id="tend" onclick="atc()">Articles
+            <div id="tend_desc">
+                <div id="tend_desc_fix">Read up about the tendencies of programming languages</div>
+            </div>
+        </div>
+        <div id="about">
+
+        </div>
+    </div>
+    <script>
+        function c() {
+            document.getElementById("bar9uk_1").style.backgroundColor = "palevioletred";
+            document.getElementById("bar9uk_2").style.backgroundColor = "palevioletred";
+            document.getElementById("bar9uk_3").style.backgroundColor = "palevioletred";
+        }
+
+        function h() {
+            document.getElementById("bar9uk_1").style.backgroundColor = "whitesmoke";
+            document.getElementById("bar9uk_2").style.backgroundColor = "whitesmoke";
+            document.getElementById("bar9uk_3").style.backgroundColor = "whitesmoke";
+        }
+
+        function lrn() {
+            window.open("index.html", "_self");
+        }
+
+        function atc() {
+            window.open("../articles/index.html", "_self");
+        }
+
+        function sb() {
+            if (document.getElementById("sidebar").style.left == "100vw") {
+                document.getElementById("sidebar").style.left = 0;
+            } else {
+                document.getElementById("sidebar").style.left = "100vw";
+            }
+        }
+    </script>
+</body>
+
+</html>
