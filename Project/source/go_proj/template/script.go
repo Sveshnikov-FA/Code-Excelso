@@ -61,7 +61,7 @@ func main() {
 			if e.KeyCode() == 87 && tp1 > -5 {
 				g.Get("style").Set("top", (strconv.Itoa(tp1-10) + "px"))
 			}
-			if e.KeyCode() == 83 && tp1 < (ih-125) {
+			if e.KeyCode() == 83 && tp1 < (ih-125) { 
 				g.Get("style").Set("top", (strconv.Itoa(tp1+10) + "px"))
 			}
 		})
