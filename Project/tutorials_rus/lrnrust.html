@@ -466,7 +466,7 @@
             top: 1vh;
             z-index: 0;
             left: 10vh;
-            width: 12vh;
+            width: 14vh;
             height: 3.4vh;
             font-family: soft;
             text-align: center;
@@ -548,14 +548,14 @@
             position: absolute;
             top: 0;
             left: 0;
-            width: 75%;
+            width: 85.5%;
             height: 57%;
             z-index: 2;
             color: white;
             background-color: black;
             opacity: 0;
             transition: 1s ease opacity;
-            padding-left: 5vh;
+            padding-left: 3vh;
             padding-top: 8.5vh;
             font-family: soft;
         }
@@ -1142,13 +1142,13 @@
     </div>
     <div id="building">
         <p id="text" style="margin-top:25vh">
-            Rust is something that appears on metal after a certain period of erosion, usually on objects that were around for a long time and served their purpose properly. Well, Rust is also a name of a programming language, which too is, coincidentally, trusty and heavily industrial. Most of the time it’s used for developing systems software and complex numeric operations. There are many ways to use this language, but if readability is an important factor for your coding experience, this language is not for you. Rust is, indeed, notorious for its syntax, but it definitely makes up for it with its efficiency (in terms of code length to result).
-            <br> To start working with Rust you have to make sure you have all the necessary things installed, like the compiler, which you can get on the official Rust website and an IDE, for the role of which IntelliJ IDEa will suffice.
+            Rust – ржавчина с английского. Она появляется на металле через какое-то время, как правило, на вещах, которые уже давно и успешно выполняют своё назначение. Rust это также название языка программирования, который является долговечным, надёжным и промышленным, как и тяжёлый металл, столь сильно подверженный воздействию ржавчины. В основном он используется для разработки системных приложений и выполнения сложных математических действий. В более комплексных программах синтаксис языка становится трудным для чтения, но это восполняется его эффективностью, если рассматривать соотношение длины программы к полученному результату.
+            <br> Для того, чтобы начать работать с Rust, необходимо убедиться, что у нас установлено всё необходимое, как например, компилятор, который можно скачать на официальном сайте языка, и среда разработки, роль которой может выполнить IntelliJ IDEa.
         </p>
         <div id="dl-links">
             <div id="dl-cont">
                 <div id="dl-link-comp" onclick="window.location.assign('https://www.rust-lang.org/ru-RU/install.html');">
-                    <div id="cv">Compiler</div>
+                    <div id="cv">Компилятор</div>
                     <div id="rust">R</div>
                 </div>
                 <div id="dl-link-ide" cursor="pointer" onclick="window.location.assign('https://www.jetbrains.com/idea/');">
@@ -1158,11 +1158,11 @@
             </div>
         </div>
         <p id="text">
-            It’s a customary tradition for programmers to start learning a new language off by printing out “Hello, World!” in the console, so let’s get right to it!
+            Стало традицией начинать программировать на новом языке с выведения “Hello, World!” в консоль. Приступим же!
         </p>
         <div id="tabs">
-            <div id="ch-code" onclick="cd(0)">Code</div>
-            <div id="ch-rezz" onclick="rz(0)">Results</div>
+            <div id="ch-code" onclick="cd(0)">Код</div>
+            <div id="ch-rezz" onclick="rz(0)">Результат</div>
         </div>
         <div id="code-text_0">
             fn main() {
@@ -1170,8 +1170,8 @@
             <br> }
         </div>
         <p id="text">
-            It’s quite easy to break this code down: fn is the basic definition of a function or void in this language, main() being the – you guessed it – main function, the one where all the magic happens, the parameters for functions are defined in parentheses, the contains of the functions are put in curly brackets, to print things out you can use println! And put the thing you want to print out in parentheses and the string of text in brackets. Also it’s important to note the necessary semicolon at the end of the line.
-            <br> This might come as a shock, but you can also declare variables to print out in Rust. To be fair, there really aren’t any types to remember: all variable declarations start with code word let, whether it’s a real, floating point number, string or boolean. To declare an array of elements you make it changeable and set the type of elements and its size in square brackets and assign it elements, also in square brackets. Basic numeric operations work as follows:
+            Как мы видим, всё достаточно просто: fn –обозначение функции, где main() это – правильно – главная функция, где происходит вся суть. Параметры функций помещены в скобки, а содержимое функций – в фигурные скобки. Для вывода в консоль используется стандартная функция println! Не забываем об обязательной точке с запятой в конце строки с командой!
+            <br> Невероятно: в Rust также можно объявлять переменные. Типов нет, все объявления начинаются с кодового слова let. Неважно, строка это, или число. Однако, значение таких переменных впоследствии нельзя изменить. Для объявления изменяемых переменных необходимо написать после let. Для объявления набора однотипных элементов, массива, необходимо уточнить его размер, тип элементов и их базовое значение в квадратных скобках, как показано ниже.
         </p>
         <p id="code">
             fn main() {
@@ -1179,14 +1179,14 @@
             <br> }
         </p>
         <p id="text">
-            To get user input, use read_line, the one we know and love since the pascal times, with stdin() like this:
+            Для считывания данных из консоли, используем read_line с stdin() вот так:
         </p>
         <p id="code">
             let mut s;
             <br> stdin().read_line(&mut s;)
         </p>
         <p id="text">
-            Rust, just like any other language, has loops (or cycles), which are simple to understand: for, which is the cycle in which you have to directly set the range and step of the loop iterator and while, which works under the condition that a certain statement is true, where ranges and statements are defined in parentheses. But you have most likely never seen the mysteriously called loop loop, which is an official implementation of an infinite loop. They work as shown below:
+            В Rust, также есть циклы, суть которых проста: есть for, дял использования которого необходимо задать диапазон значений итератора, переменной, от значения которой зависит, выполняется цикл или нет, и шаг, что позволяет выполнять код в цикле конкретное количество раз, while, который продолжает выполняться, пока выполняется заданное условие, и loop, который работает вечно.
         </p>
         <p id="code">
             loop {
@@ -1201,8 +1201,8 @@
                 <br> }
         </p>
         <p id="text">
-            The concept of an infinite loop might seem pointless to you, but let me introduce you to break and continue statements. Break stops the cycle completely moving onto the next line of code, and continue moves on to the next iteration of the cycle.
-            <br> Conditionals are the universal way to complete action if statement is true. There are also ways to execute certain functions if said statement is false by using the code word else like this:
+            Сначала смысл бесконечного цикла может быть неясен: как же тогда закончить выполнение программы? Для этого есть утверждения break и continue. Break прекращает работу цикла полностью, а continue просто переходит к следующей итерации, игнорируя код после него.
+            <br> Условия – универсальный способ выполнения действий под условием. В Rust они работают следующим образом:
         </p>
         <p id="code">
             if n
@@ -1215,7 +1215,7 @@
                 <br> }
         </p>
         <p id="text">
-            And that's all the basic Rust knowledge you need to go on to create a whole new project on your own. Just don't let your knowledge rust and your coding experience will be great!
+            Это все базовые знания, о Rust, которые нужны для создания собственного проекта. Просто не дайте своим знаниям заржаветь, и ваш опыт программирования будет отличным!
         </p>
     </div>
 
@@ -1230,20 +1230,20 @@
         </div>
     </div>
     <div id="sidebar" style="left:100vw;">
-        <div id="learn" onclick="lrn()">Tutorials
+        <div id="learn" onclick="lrn()">О языках
             <div id="learn_desc">
-                <div id="learn_desc_fix">Learn more about interesting languages in a colorful way!</div>
+                <div id="learn_desc_fix">Узнайте больше о языках на красочных страницах!</div>
             </div>
         </div>
-        <div id="tend" onclick="atc()">Articles
+        <div id="tend" onclick="atc()">Статьи
             <div id="tend_desc">
-                <div id="tend_desc_fix">Read up about the tendencies of programming languages</div>
+                <div id="tend_desc_fix">Прочтите пару полезных статей для программистов!</div>
             </div>
         </div>
         <div id="lang-pos">
             <div id="lang">
-                <div id="rus" onclick="window.location.assign('../tutorials_rus/index.html')">Russian</div>
-                <div id="eng" onclick="window.location.assign('index.html')">English</div>
+                <div id="rus" onclick="window.location.assign('index.html')">Russian</div>
+                <div id="eng" onclick="window.location.assign('../tutorials/index.html')">English</div>
             </div>
         </div>
         <div id="about">

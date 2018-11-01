@@ -352,7 +352,7 @@
             top: 1vh;
             z-index: 0;
             left: 10vh;
-            width: 12vh;
+            width: 14vh;
             height: 3.4vh;
             font-family: soft;
             text-align: center;
@@ -415,14 +415,14 @@
             position: absolute;
             top: 0;
             left: 0;
-            width: 75%;
+            width: 85.5%;
             height: 57%;
             z-index: 2;
             color: white;
             background-color: black;
             opacity: 0;
             transition: 1s ease opacity;
-            padding-left: 5vh;
+            padding-left: 3vh;
             padding-top: 8.5vh;
             font-family: soft;
         }
@@ -647,11 +647,11 @@
         <div id="building">
             <div id="hmb">
                 <p id="text">
-                    Julia is a rather common name. You might know a Julia yourself, but did you know that there is a programming language called that? Yes, indeed, Julia is a scientific, fast, new and fresh language mainly for numeric computing, but it’s also really good for general-purpose programming as well! It has a smooth learning curve, a friendly-looking syntax and a performance comparable to C. It takes the best qualities from some languages and meshes them together with numerical accuracy and an extensive mathematical function library, thus creating a language that’s ideal for data science.
-                    <br> To start working with Julia on your PC, you need, as always, make sure you have the compiler, a program that translates the written code into machine code, installed. You can download Julia for your OS here: </p>
+                    Julia – достаточно нередкое имя. Возможно среди ваших знакомых есть Julia, но знали ли вы, что существует такой язык программирования? Да-да, именно так, Julia – это научный, новый и быстрый язык программирования, в основном используемый для комплексных математических вычислений. Он достаточно легко учится, синтаксис удобен для чтения, а скорость выполнения программ сравнима с С. Он берёт лучшие качества различных языков и собирает их воедино с широчайшими математическими дополнениями, таким образом получая идеальный язык для анализа данных. Ну, во всяком случае, это ожидается от языка.
+                    <br> Для того, чтобы начать работать с Julia, нам понабится компилятор, доступный для скачивания для всех платформ на официальном сайте. </p>
                 <div id="dl-links">
                     <div id="dl-link-comp">
-                        <div id="cv" cursor="pointer" onclick="window.location.assign('https://julialang.org/downloads/')">Compiler</div>
+                        <div id="cv" cursor="pointer" onclick="window.location.assign('https://julialang.org/downloads/')">Компилятор</div>
                         <div id="julia">
                             <div id="circ1">
                                 <div id="circ1-1"></div>
@@ -666,30 +666,30 @@
                     </div>
                 </div>
                 <p id="text">
-                    And then follow the instructions provided <a href="https://julialang.org/downloads/platform.html" style="color:darkslateblue">here</a>. To install Julia onto Jupyter Notebook, go to the Julia prompt that will pop up after proper installation, and type in:
+                    Для установки Julia в Jupyter Notebook, нужно зайти в терминал Julia, который появится после установки, и ввести:
                 </p>
                 <p id="code">
                     Pkg.add(“IJulia”)
                 </p>
                 <p id="text">
-                    You can use the same line of code to install other external Julia packages, except instead of IJulia you type in the name of the desired library.
-                    <br> It’s a customary tradition when learning a new language for the first program to be the output of a sentence “Hello, World!” In Julia it’s rather self-explanatory.
+                    Подобный код используется для установки дополнений и библиотек.
+                    <br> Для программистов уже стало традицией начинать программировать на новом языке с вывода в консоль сообщения “Hello, World!”. Здесь всё достаточно понятно.
                 </p>
                 <div id="tabs">
-                    <div id="ch-code" onclick="cd(0)">Code</div>
-                    <div id="ch-rezz" onclick="rz(0)">Results</div>
+                    <div id="ch-code" onclick="cd(0)">Код</div>
+                    <div id="ch-rezz" onclick="rz(0)">Результат</div>
                 </div>
                 <div id="code-text_0">
                     println("Hello, World!")
                 </div>
                 <p id="text">
-                    As you might notice, there is no semicolon in the end of the line, which is a rule we shall follow. User input is the main means of user-program communication. There are many a way to get user input with Julia, but it is usually recommended to use the input() function. With input it’s also possible to send a prompt to the user, which should be placed in brackets, as shown below.
+                    Стоит заметить, что в конце строки нет точки с запятой. Теперь о принятии пользовательского ввода. Есть много разных способов это сделать, но рекомендуется использовать функцию input(), с помощью которой также можно выводить сообщения перед вводом, вот так.
                 </p>
                 <p id="code">
                     name = input("What is your name? ");
                 </p>
                 <p id="text">
-                    Variables are not a problem when learning Julia, considering the fact that there aren’t that many of them. When defining a new variable, you don’t need to declare a type, meaning you only need to type in the name of it and its value. The language knows what the variable type is, though, and to find it out you can use the function typeof(something).
+                    Переменные при изучении Julia не должны стать проблемой, учитывая тот факт, что их почти нет. При объявлении новой, необязательно уточнять тип. Сам компилятор знает, о каком типе речь, и его можно узнать с помощью функции typeof().
                 </p>
                 <div id="tabs">
                     <div id="ch-code" onclick="cd(1)">Code</div>
@@ -700,29 +700,29 @@
                     <br> typeof(a)
                 </div>
                 <p id="text">
-                    Same goes for declaring arrays, where you put its elements in square brackets.
+                    Так же объявляются и массивы, в случае с которыми элементы ставятся в квадратные скобки.
                 </p>
                 <p id="code">
                     data = [1, 2, 3, 4, 5]
                 </p>
                 <p id="text">
-                    To go a little further, to define a dynamic array, the size of which you can modify after declaration, you should specify the type like:
+                    Копнём чуть глубже и объявим динамический массив, размер которого можно изменить после объявления. Здесь тип всё-таки уточняется.
                 </p>
                 <p id="code">
                     data = Int64[];
                 </p>
                 <p id="text">
-                    and to add an element you use push!(arrname, data).
+                    А для того, чтобы добавить элемент, испльзуем push!(arrname, data).
                 </p>
                 <div id="tabs">
-                    <div id="ch-code" onclick="cd(2)">Code</div>
-                    <div id="ch-rezz" onclick="rz(2)">Result</div>
+                    <div id="ch-code" onclick="cd(2)">Код</div>
+                    <div id="ch-rezz" onclick="rz(2)">Результат</div>
                 </div>
                 <div id="code-text_2">
                     push!(data, 1)
                 </div>
                 <p id="text">
-                    Let’s talk conditionals now. The general purpose of conditionals in programming is to perform an action if a certain set of conditions is met. The syntax in Julia for them works as follows:
+                    Теперь поговорим об условиях. Их основное назначение – выполнить действие если выполняется условие. Работают они следующим образом.:
                 </p>
                 <p id="code">
                     if condition
@@ -734,9 +734,9 @@
                     <br> end
                 </p>
                 <p id="text">
-                    Yes, elseif is a separate operator in Julia, it works just like else if does, but the latter is to be used as the final part of the conditional. && is used as logical and, and || is used as logical or.
-                    <br> You probably noticed the odd way actions are placed. That’s because of something called Indentation, which is a very important part of the Julia syntax. Because the curly brackets aren’t used in this programming language, the borders of code blocks are specified by the indentation from the left, one tab key press being equal to one level of indentation. To handle errors, it is recommended to add end at the end of the code block. Its proper application can be seen in the code snippets on this page.
-                    <br> Loops are great. They make our life better, our code more readable and our coffee stronger. While that last part may or may not be true, loops help improve our quality of code by iterating the necessary code on certain conditions. There are two types of loops: while, which iterates the code while a condition is true, and for which iterates the code a specific amount of times.
+                    Да, elseif – отдельный оператор в Julia, и работает он как else if. && используется как логическое «И», а || - как логическое «ИЛИ».
+                    <br> Действия, кстати, так размещены не просто так. Всё из-за правила о пробелах слева. Из-за того, что здесь не используются фигурные скобки для обозначения блоков кода, его границы уточняются этими пробелами. Один таб = один уровень. Во избежание ошибок рекомендется ставить end в конце каждого блока.
+                    <br> Теперь о такой прекрасной вещи как циклы. Они делают нашу жизнь проще, код – лучше, а кофе - крепче. Ну, насчёт последней части это у кого как, но удобство чтения и качество кода они точно улучшают. Есть 2 типа циклов: while, который выполняет код, пока выполняется соответствующее условие, и for, который выполняет код конкретное заданное количество раз.
                 </p>
                 <p id="code">
                     while condition
@@ -747,7 +747,7 @@
                     <br> end
                 </p>
                 <p id="text">
-                    Just like with the conditionals, when defining the bounds or conditions for loops, you do so by simply typing them in after the declaring word. Also to note: instead of defining a whole new variable, and its bounds you can simply put in the range of the int in the loop, the starting and finishing points divided by a semicolon. In Julia, a function is an object that maps argument values to return something back. The basic syntax for defining functions in Julia is as follows, indentation rules still apply:
+                    Стоит заметить, что в примере с for двоеточием разделены начальная и конечная значения диапазона. В Julia, функции объявляется таким образом (правила о пробелах слева по-прежнему применяются):
                 </p>
                 <p id="code">
                     function f(x, y)
@@ -755,7 +755,7 @@
                     <br> end
                 </p>
                 <p id="text">
-                    While this doesn’t have an explicit return statement, upon execution, the function does return the final result. But you can put a return statement to specify what you want to return in the end.
+                    Для того, чтобы функция возвращала что-либо, не нужно менять кодовое слово. Достаточно просто добавить утверждение return в конце блока.
                 </p>
                 <p id="code">
                     function g(x, y)
@@ -764,7 +764,7 @@
                     <br> end
                 </p>
                 <p id="text">
-                    Despite how new it is, Julia already has a vast amount of libraries and frameworks you can play around with. So I wish you good luck with your coding experience, because it is definitely needed in this particular case.
+                    Несмотря на то, насколько недавно был выпущен этот язык, у Julia уже достаточно большое количество доступных библиотек и фреймворков, с которыми можно поэкспериментировать. Поэтому я желаю удачи в дальнейшем программировании, потому что она здесь точно пригодится.
                 </p>
             </div>
         </div>
@@ -780,20 +780,20 @@
         </div>
     </div>
     <div id="sidebar" style="left:100vw;">
-        <div id="learn" onclick="lrn()">Tutorials
+        <div id="learn" onclick="lrn()">О языках
             <div id="learn_desc">
-                <div id="learn_desc_fix">Learn more about interesting languages in a colorful way!</div>
+                <div id="learn_desc_fix">Узнайте больше о языках на красочных страницах!</div>
             </div>
         </div>
-        <div id="tend" onclick="atc()">Articles
+        <div id="tend" onclick="atc()">Статьи
             <div id="tend_desc">
-                <div id="tend_desc_fix">Read up about the tendencies of programming languages</div>
+                <div id="tend_desc_fix">Прочтите пару полезных статей для программистов!</div>
             </div>
         </div>
         <div id="lang-pos">
             <div id="lang">
-                <div id="rus" onclick="window.location.assign('../tutorials_rus/index.html')">Russian</div>
-                <div id="eng" onclick="window.location.assign('index.html')">English</div>
+                <div id="rus" onclick="window.location.assign('index.html')">Russian</div>
+                <div id="eng" onclick="window.location.assign('../tutorials/index.html')">English</div>
             </div>
         </div>
         <div id="about">

@@ -3,7 +3,10 @@
 <meta charset="utf-8" ontent="width=device-width">
 
 <head>
+    <link rel="icon" href="../coffee.png">
+    <title>Languages - Code:Excelso</title>
     <style>
+        
         @font-face {
             font-family: soft;
             src: url(../ssf.ttf);
@@ -117,19 +120,103 @@
         }
 
         #building {
+            padding-top: 20vh;
             background-color: #eee8aa;
-            width: 90vw;
+            width: 80vw;
             height: auto;
             position: absolute;
             left: 0;
-            top: 5vh;
+            top: 75vh;
+        }
+
+        #roof-b {
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 81.5vw;
+            height: 5vh;
+            background-color: #661933;
+        }
+
+        #img {
+            position: absolute;
+            left: -15vw;
+            top: 75vh;
+            width: 100%;
+            height: auto;
+            z-index: 1;
+        }
+
+        #img_pos {
+            position: absolute;
+            top: -45vw;
+            left: 5vh;
+            width: 100%;
+            height: 100%;
+        }
+
+        #img_again {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 2vw;
+        }
+
+        #h1 {
+            position: absolute;
+            width: 1.4vw;
+            height: 50vh;
+            left: 17vw;
+            top: 70vh;
+            z-index: 0;
+            background-color: #a9a9a9;
+        }
+
+        #h1_sh {
+            position: absolute;
+            width: 1.4vw;
+            height: 3vh;
+            left: 0;
+            top: 0.25vh;
+            z-index: 101;
+            background-color: #696969;
+        }
+
+        #h1_pos {
+            position: absolute;
+            top: -1vh;
+        }
+
+        #h2 {
+            position: absolute;
+            width: 1.4vw;
+            height: 50vh;
+            left: 57vw;
+            top: 70vh;
+            z-index: 0;
+            background-color: #a9a9a9;
+        }
+
+        #h2_sh {
+            position: absolute;
+            width: 1.4vw;
+            height: 3vh;
+            left: 0;
+            top: 0;
+            z-index: 101;
+            background-color: #696969;
+        }
+
+        #h2_pos {
+            position: absolute;
+            top: -1vh;
         }
 
         #roof-b-s {
             position: absolute;
             left: 0;
-            top: 1vh;
-            width: 90vw;
+            top: 5vh;
+            width: 80vw;
             height: 2.5vh;
             background-color: #e6dd7f;
         }
@@ -176,42 +263,211 @@
         p {
             font-family: soft;
             color: palevioletred;
-            margin-left: 16vw;
+            margin-left: 5vh;
 
         }
-        
+
         #title {
-            font-size:3vw;
-            margin-bottom:2vw;
-            margin-top:2vw;
+            font-size: 5vh;
+            margin-bottom: 2vw;
+            margin-top: 2vw;
         }
-        
+
         #desc {
-            font-size:1.5vw;
-            width:55vw;
+            width: 55vw;
         }
-        
+
+        #sun {
+            position: absolute;
+            left: 75vw;
+            top: 10vh;
+            width: 25vh;
+            height: 25vh;
+            z-index: -3;
+            background-color: #f0d6ac;
+            border-radius: 100%;
+            overflow: hidden;
+        }
+
+        #sun2 {
+            position: absolute;
+            left: 8vh;
+            top: -16vh;
+            width: 31vh;
+            height: 31vh;
+            background-color: #f5e3c8;
+            border-radius: 100%;
+        }
+
+        #cloud1_1 {
+            position: absolute;
+            left: 84px;
+            top: 65px;
+            width: 100px;
+            height: 35px;
+            background-color: #ffffff;
+            border-top-right-radius: 360px;
+            border-top-left-radius: 360px;
+        }
+
+        #cloud1_2 {
+            position: absolute;
+            left: 44px;
+            top: 27.5px;
+            width: 100px;
+            height: 72.5px;
+            background-color: #ffffff;
+            border-top-right-radius: 360px;
+            border-top-left-radius: 360px;
+        }
+
+        #cloud1_3 {
+            position: absolute;
+            left: 0;
+            top: 50px;
+            width: 100px;
+            height: 50px;
+            background-color: #ffffff;
+            border-top-right-radius: 360px;
+            border-top-left-radius: 360px;
+        }
+
+        #cloud1 {
+            position: absolute;
+            top: 5vh;
+            left: 10vh;
+            transform: scale(3.5);
+            z-index: -1;
+            animation: cloud1 100s ease infinite alternate;
+        }
+
+        #cloud2 {
+            position: absolute;
+            top: 30vh;
+            left: 70vh;
+            transform: scale(4.7);
+            z-index: 2;
+            animation: cloud2 100s ease infinite alternate;
+        }
+
+        @keyframes cloud1 {
+            from {
+                left: 5vh;
+            }
+            to {
+                left: 30vw;
+            }
+        }
+
+        @keyframes cloud2 {
+            from {
+                left: 80vw;
+            }
+            to {
+                left: 50vw;
+            }
+        }
+
+        #lang {
+            position: absolute;
+            left: -12vh;
+            top: 90vh;
+            width: 100%;
+            text-transform: uppercase;
+            color: white;
+            font-size: 2vh;
+            font-weight: bold;
+        }
+
+        #lang-pos {
+            position: absolute;
+            width: 100%;
+            top: 0;
+            left: 52vw;
+        }
+
+        #rus {
+            position: absolute;
+            padding-right: 1.5vh;
+            border-right: .5vh solid #ff0000;
+        }
+
+        #eng {
+            position: absolute;
+            left: 12.25vh;
+        }
     </style>
 </head>
 
 <body>
+    <div id="sun">
+        <div id="sun2"></div>
+    </div>
+    <div id="cloud1">
+        <div id="cloud1_1"></div>
+        <div id="cloud1_2"></div>
+        <div id="cloud1_3"></div>
+    </div>
+    <div id="cloud2">
+        <div id="cloud1_1"></div>
+        <div id="cloud1_2"></div>
+        <div id="cloud1_3"></div>
+    </div>
+    <div id="img_again">
+        <div id="img_pos">
+            <img id="img" src='../coffee.png' draggable="false">
+        </div>
+    </div>
+    <div id="h1_pos">
+        <div id="h1">
+            <div id="h1_sh"></div>
+        </div>
+    </div>
+    <div id="h2_pos">
+        <div id="h2">
+            <div id="h2_sh"></div>
+        </div>
+    </div>
     <div id="building">
-        <p style="margin-top:5vh" id="title">Julia</p>
-        <p id="desc">• Numerical Computing • Algorithms • Scientific applications • Server-side programming • 2D Game Programming • Phone application development</p>
-        <p id="title">GO!</p>
-        <p id="desc">• Server-side programming • Cloud computing Scala Applications: • Web-applications • Data analysis • Software development • Machine Learning</p>
-        <p id="title">Kotlin</p>
-        <p id="desc">• App development • JS development • Software development</p>
+        <div onclick="window.location.assign('lrncpp.html')">
         <p id="title">C++</p>
         <p id="desc">• Numeric computing • GUI-based applications • Game development • Web development • DB Software • Operation Systems</p>
+        </div>
+        <div onclick="window.location.assign('lrngo.html')">
+        <p id="title">GO!</p>
+        <p id="desc">• Server-side programming • Cloud computing • Web-applications
+        </p>
+        </div>
+        <div onclick="window.location.assign('lrnktln.html')">
+        <p id="title">Kotlin</p>
+        <p id="desc">• App development • JS development • Software development</p>
+        </div>
+        <div onclick="window.location.assign('lrnjava.html')">
+        <p id="title">Java</p>
+        <p id="desc">• Mobile apps • Desktop GUI applications • Web applications • Numeric operations • Scientific applications</p>
+        </div>
+        <div onclick="window.location.assign('lrnjul.html')">
+        <p style="margin-top:5vh" id="title">Julia</p>
+        <p id="desc">• Numerical Computing • Algorithms • Scientific applications • Server-side programming • 2D Game Programming • Phone application development</p>
+        </div>
+        <div onclick="window.location.assign('lrnpy.html')">
         <p id="title">Python</p>
         <p id="desc">• Numerical computing • Web development • Desktop GUIs and Software development in general • Game development • Operation Systems</p>
+        </div>
+        <div onclick="window.location.assign('lrnr.html')">
         <p id="title">R</p>
         <p id="desc">• Numeric operations • Data analysis • Machine learning • Bio Science</p>
+        </div>
+        <div onclick="window.location.assign('lrnrust.html')">
         <p id="title">Rust</p>
         <p id="desc">• Systems software development • Numeric operations • Web applications</p>
-        <p id="title">Java</p>
-        <p id="desc">• Mobile apps • Desktop GUI applications • Web applications • Numeric    operations • Scientific applications</p>
+        </div>
+            <div onclick="window.location.assign('lrnsc.html')">
+        <p id="title">Scala</p>
+        <p id="desc">
+            • Web-applications • Data analysis • Software development • Machine Learning</p>
+        </div>
+        <div id="roof-b"></div>
         <div id="roof-b-s"></div>
     </div>
 
@@ -228,12 +484,18 @@
     <div id="sidebar" style="left:100vw;">
         <div id="learn" onclick="learn_pg()">Tutorials
             <div id="learn_desc">
-                <div id="learn_desc_fix">Learn more about interesting languages in a colorful way!</div>
+                <div id="learn_desc_fix">Learn more about interesting languges in a colorful way!</div>
             </div>
         </div>
         <div id="tend" onclick="article_pg()">Articles
             <div id="tend_desc">
                 <div id="tend_desc_fix">Read up about the tendencies of programming languages</div>
+            </div>
+        </div>
+        <div id="lang-pos">
+            <div id="lang">
+                <div id="rus" onclick="window.location.assign('../tutorials_rus/index.html')">Russian</div>
+                <div id="eng" onclick="window.location.assign('index.html')">English</div>
             </div>
         </div>
         <div id="about">
@@ -276,7 +538,6 @@
                 document.getElementById("sidebar").style.left = "100vw";
             }
         }
-
     </script>
 </body>
 

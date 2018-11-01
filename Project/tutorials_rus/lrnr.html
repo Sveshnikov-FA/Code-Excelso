@@ -448,7 +448,7 @@
             top: 1vh;
             z-index: 0;
             left: 10vh;
-            width: 12vh;
+            width: 14vh;
             height: 3.4vh;
             font-family: soft;
             text-align: center;
@@ -532,14 +532,14 @@
             position: absolute;
             top: 0;
             left: 0;
-            width: 75%;
+            width: 85.5%;
             height: 55%;
             z-index: 2;
             color: white;
             background-color: black;
             opacity: 0;
             transition: 1s ease opacity;
-            padding-left: 5vh;
+            padding-left: 3vh;
             padding-top: 9vh;
             font-family: soft;
         }
@@ -1062,13 +1062,13 @@
         </div>
     </div>
     <div id="building">
-        <p id="text" style="margin-top:10vh">R is a programming language developed in 1993 for the purpose of statistical computing and graphics. Despite the simple single-character name, R is capable of quite a wide variety of possibilities, from simple numerical operations to advanced Machine learning and Bio Science. It’s just so efficient and easy-to-use that its certain problems with syntax can be overlooked.
-            <br> Before we get to writing code, we have to make sure we have everything installed. You’ll need a compiler, the necessary tool which tells the computer what to do with the code, that’s available on the official R project website. And you’ll also need an IDE, an environment to write, execute and debug code, the role of which can be served by RStudio, available for free download here.
+        <p id="text" style="margin-top:10vh">R – это язык программирования, разработанный в 1993 для статистического и графического программирования. Несмотря на то, что его название состоит из одной буквы, R способен на очень многое, от простых математических вычислений к комплексным программам по машинному обучению и биоинформатике. Его синтаксис столь эффективен и прост, что любые его недостатки уходят на второй план.
+            <br> Перед тем, как начать писать код, мы должны убедиться, что у нас установлено всё необходимое. Нам будут нужны компилятор, который можно скачать на официальном сайте языка, и среда разработки, роль которой может выполнять RStudio.
         </p>
         <div id="dl-links">
             <div id="dl-cont">
                 <div id="dl-link-comp" cursor="pointer" onclick="window.location.assign('https://cran.r-project.org/mirrors.html');">
-                    <div id="cv">Compiler</div>
+                    <div id="cv">Компилятор</div>
                     <div id="r">
                         <div id="contour">
                             <div id="blank"></div>
@@ -1083,18 +1083,18 @@
             </div>
         </div>
         <p id="text">
-            It’s a customary tradition for programmers to start their experience with a language by printing out the message “Hello, World!” in the console. So let’s just jump right into it.
+            Для программистов уже стало традицией начинать программировать на новом языке с вывода в консоль сообщения “Hello, World!”. Приступим же к делу.
         </p>
         <div id="tabs">
-            <div id="ch-code" onclick="cd(0)">Code</div>
-            <div id="ch-rezz" onclick="rz(0)">Result</div>
+            <div id="ch-code" onclick="cd(0)">Код</div>
+            <div id="ch-rezz" onclick="rz(0)">Результат</div>
         </div>
         <div id="code-text_0">
-            print ("Hello, World!")
+            print ("Hello, World!")<br> cat (“Also hello, but with variables”,var_x)
         </div>
         <p id="text">
-            Even this simple string of code can tell us a lot about the language: you print out data with print and the data in question being in parentheses, you don’t put semicolons at the end of the line in this language. Cat is just like print, but it combines multiple items into a continuous print output, unlike print, which only prints a single item.
-            <br> Variables in R are questionable. There are the usual types, like integer, string and boolean. To declare one, you don’t have to specify the type, but there are three ways to assign values – with an equal, leftward and rightward operators.
+            Даже эти столь простые строки кода могут многое нам сказать о языке: данные печатаются с помощью функции print, а сами данные в скобках и кавычках. Точки с запятой в конце строк не ставятся. Cat – почти то же самое, что и print, но эта функция собирает несколько типов данных и переменных в один вывод, в то время как print печатает только одну строку.
+            <br> На переменные в R стоит обратить особенное внимание. Типы обыкновенные – целое и действительное число, строка, и булева переменная. Есть три возможных способа объявить переменную и присвоить ей значение: с помощью операторов равно, лево и право.
         </p>
         <p id="code">
             var.1 = 5
@@ -1102,13 +1102,13 @@
             <- "R" <br>
                 TRUE -> var.3</p>
         <p id="text">
-            To read user input into a variable, just use the trusty readline() function.
+            Чтобы считать пользовательский ввод в переменную, мы используем функцию readline() с параметром prompt, означающим вывод строки рядом с местом ввода вот так:
         </p>
         <p id="code">
             my.name
             <- readline(prompt="" ) </p>
                 <p id="text">
-                    Array declaration is rather simple in R. There are quite a lot of array-type data structures. To declare a vector, the basic array, you state the name, use the preferred assignment operator and then combine values with a c() function. To declare a list, an array type which can contain different types of variables, including vectors, you do the same as with vectors, but use list () instead of c ().
+                    Объявление массивов в R предельно просто. Единственная сложность – это поиск отличий между массивоподобными структурами данных. Vector – обычный массив, для объявления которого нужно лишь уточнить его название, использовать оператор присвоения и перечислить элементы, объединённые функцией с(). Однако размер такого массива не меняется до конца выполнения программы. В случае с list его содержимое может отличаться по типу между собой, его размер можно изменить, и частью его содержимого может быть вектор. Для объединения элементов используем функцию list ().
                 </p>
                 <p id="code">
                     Vector_x
@@ -1116,7 +1116,7 @@
                         list1
                         <- list(c(2,5,3),21.3) </p>
                             <p id="text">
-                                Conditionals in R are easy to define. If a certain condition is true, an action is executed. Their syntax works just like this:
+                                Условия в R работают так же просто. Если некоторое условие выполняется, выполняется соответствующее действие.
                             </p>
                             <p id="code">
                                 if (condition) {
@@ -1128,7 +1128,7 @@
                                 <br> }
                             </p>
                             <p id="text">
-                                Loops are great. They make our life easier, much like multiplication in maths. There are three types of loops: for, with which you can define the first and last value of the loop control variable, while, which goes on while certain statement is true and repeat, which is an infinite loop.
+                                Циклы – отличная вещь. Они делают нашу жизнь проще, прямо как умножение в математике. Есть 3 типа циклов: for, с которым можно уточнить, сколько именно раз будет выполняться цикл; while, который продолжает выполняться пока выполняется некоторое условие; и repeat, бесконечный цикл.
                             </p>
                             <p id="code">
                                 for(i in 1:10) {}
@@ -1136,43 +1136,42 @@
                                 <br> repeat {}
                             </p>
                             <p id="text">
-                                But why would you ever need an infinite loop? Well, they make sense, when you use if with loop control statements, which are next, which skips the rest of the loop and moves onto the next iteration (name of statement checks out), and break, which completely stops the execution of the loop.
-                                <br> Now onto the project.Considering the fact that R is most used for machine learning, let’s just do the hello world of ML: iris dataset analysis. Datasets are the cornerstone of machine learning. They are, quite literally, sets of data that is put in a table with corresponding values. The Iris dataset consists of 50 different samples of species of the Iris flower, with features such as length and with of the sepals and petals, and, of course, the names of the 3 species. This project might sound scary to start off, but it's most definitrely not. Let's go!
-                                <br> To load the dataset, simply define it and rename it for your project:
+                                Зачем нам бесконечный цикл, спросите вы? Ну, они имеют смысл, когда мы используем утверждения контроля циклов next, который пропускает оставшийся в цикле код и переходит на следующий круг, и break, который полностью прекращает дальнейшее выполнение цикла.
+                                <br> Теперь перейдём к созданию проекта. Учитывая, что R часто используют для машинного обучения, давайте же сделаем hello world машинного обучения: анализ датасета ирисов. Датасеты – буквально наборы данных, собранных в таблицу с соответствующими значениями. Он состоит из 50 разных результатов анализов 3 видов цветка ириса, со столбцами со значениями о длине и ширине пестика и лепестков и соответствующими названиями видов. Этот проект может показаться несколько страшным для начала, но на самом деле это далеко не так. Поехали! Для того, чтобы загрузить датасет, достаточно объявить его в переменной и переименовать для удобства:
                             </p>
                             <p id="code">
-                                # installing neccessary packages install.packages("caret")
-                                <br> # attach the iris dataset to the environment
+                                #подключаем необходимую библиотеку install.packages("caret")
+                                <br> # подключение датасета к среде
                                 <br> data(iris)
-                                <br> # rename the dataset
+                                <br> # переименовываем датасет
                                 <br> dataset
                                 <- iris </p>
                                     <p id="text">
-                                        To measure its dimensions, we can use the dim function:
+                                        Для получения его размеров, используем функцию dim:
                                     </p>
                                     <div id="tabs">
-                                        <div id="ch-code" onclick="cd(1)">Code</div>
-                                        <div id="ch-rezz" onclick="rz(1)">Result</div>
+                                        <div id="ch-code" onclick="cd(1)">Код</div>
+                                        <div id="ch-rezz" onclick="rz(1)">Результат</div>
                                     </div>
                                     <div id="code-text_1">
                                         dim(dataset)
                                     </div>
                                     <p id="text">
-                                        To get the first 5 rows of the data in the set, use the head function:
+                                        Для получения первых 5 рядов таблицы, используем функцию head:
                                     </p>
                                     <div id="tabs">
-                                        <div id="ch-code" onclick="cd(2)">Code</div>
-                                        <div id="ch-rezz" onclick="rz(2)">Result</div>
+                                        <div id="ch-code" onclick="cd(2)">Код</div>
+                                        <div id="ch-rezz" onclick="rz(2)">Результат</div>
                                     </div>
                                     <div id="code-text_2">
                                         head(dataset)
                                     </div>
                                     <p id="text">
-                                        To get the percentage of each group in the dataset, use the code below:
+                                        Для получения процентного соотношения каждой группы датасета, напишем следующий код:
                                     </p>
                                     <div id="tabs">
-                                        <div id="ch-code" onclick="cd(3)">Code</div>
-                                        <div id="ch-rezz" onclick="rz(3)">Result</div>
+                                        <div id="ch-code" onclick="cd(3)">Код</div>
+                                        <div id="ch-rezz" onclick="rz(3)">Результат</div>
                                     </div>
                                     <div id="code-text_3">
                                         percentage
@@ -1180,17 +1179,17 @@
                                             cbind(freq=table(dataset$Species), percentage=percentage)
                                     </div>
                                     <p id="text">
-                                        The cbind function used above is what creates the table of contents with two columns: freq(the species) and percentage with values according to the data from the Iris set.<br> And to get an overall summary of the data in the set, such as the minimum and maximum value and the amount of each property in the set, use the function summary:
+                                        Функция cbind, использованная выше, отвечает за создание таблицы с двумя столбцами: freq, то есть вид ириса и процентное соотношение данных из каждого последующего столбца.<br> А для получения общего отчёта о датасете,как например, среднее, максимальное и минимальные значения ряда, используем функцию summary:
                                     </p>
                                     <div id="tabs">
-                                        <div id="ch-code" onclick="cd(4)">Code</div>
-                                        <div id="ch-rezz" onclick="rz(4)">Result</div>
+                                        <div id="ch-code" onclick="cd(4)">Код</div>
+                                        <div id="ch-rezz" onclick="rz(4)">Результат</div>
                                     </div>
                                     <div id="code-text_4">
                                         summary(dataset)
                                     </div>
                                     <p id="text">
-                                        Now onto the learning part. We will use 10-fold crossvalidation to estimate accuracy. This will split our dataset into 10 parts, train in 9 and test on 1 and release for all combinations of train-test splits. We will also repeat the process 3 times for each algorithm with different splits of the data into 10 groups, in an effort to get a more accurate estimate. Train control is a function which trains a grid of particular parameters on slightly different data using a preferred algorithm.
+                                        Теперь к обучению. Мы будем использовать 10-ступенчатую кроссвалидацию для получения максимальной точности. Сложные слова, я знаю. Проще говоря, мы разделим наш датасет на 10 частей: анализируем и обучим на девяти, а в одну выведем полученное предсказание данных. Мы повторим процесс 3 раза для каждого алгоритма, с различным рвзделением и тестированием данных на 10 частей, чтобы получить более точный результат. TrainСontrol – функция, которая обучает набор параметров, используя выбранный алгоритм.
                                     </p>
                                     <p id="code">
                                         control
@@ -1199,7 +1198,7 @@
                                                 metric
                                                 <- "Accuracy" </p>
                                                     <p id="text">
-                                                        Now we try to evaluate which algorithm is best for our task: Linear Discriminant Analysis (LDA) , Classification and Regression Trees (CART) , k-Nearest Neighbors (kNN), Support Vector Machines (SVM) or Random Forest (RF). The easiest way to find out is to test all of them:
+                                                        Теперь мы вычисляем, какой алгоритм работает лучше всего. Выбираем из: Linear Discriminant Analysis (LDA) , Classification and Regression Trees (CART) , k-Nearest Neighbors (kNN), Support Vector Machines (SVM) или Random Forest (RF). Самый очевидный способ - протестировать их все:
                                                     </p>
                                                     <p id="code">
                                                         # a) linear algorithms
@@ -1219,11 +1218,11 @@
                                                                         <br> fit.rf
                                                                         <- train(Species~., data=dataset, method="rf" , metric=metric, trControl=control) </p>
                                                                             <p id="text">
-                                                                                A lot of things here may seem confusing, but they're relly not. The fit method isThe very noticeable and likely confusing set.seed(7) function is used because the train function uses sampling which is mostly dependant on RNG, which doesn’t work for the high-precision process of machine learning, whereas if we set the seed, the results are going to be more similar or even identical. Now we check our results by using the abovementioned summary function and combine it wityh the resample function which returns the overall statistics of the predictions:
+                                                                                Заметная строка set.seed(7) используется для обновления процесса, что в свою очередь, обеспечивает генерацию более похожих между собой чисел, используемых для тестирования алгоритма. Сверим полученные результаты с помощью функции summary:
                                                                             </p>
                                                                             <div id="tabs">
-                                                                                <div id="ch-code" onclick="cd(5)">Code</div>
-                                                                                <div id="ch-rezz" onclick="rz(5)">Result</div>
+                                                                                <div id="ch-code" onclick="cd(5)">Код</div>
+                                                                                <div id="ch-rezz" onclick="rz(5)">Результат</div>
                                                                             </div>
                                                                             <div id="code-text_5">
                                                                                 results
@@ -1231,17 +1230,17 @@
                                                                                     summary(results)
                                                                             </div>
                                                                             <p id="text">
-                                                                                If we look at the results we'll see that LDA is clearly the best one. Now we make predictions, the cornerstone of machine learning. Confusion Matrix is a table of observed and predicted classes and results based on the input data, it being validationSpecies here.And the output summarizes our data, just like this.
+                                                                                Теперь будем делать предсказания данных. В этом вся суть машинного обучения. Выведем же матрицу ConfusionMatrix, или, проще говоря, таблицу анализированных и предсказанных классов и результатов, основанных на полученных данных из датасета.
                                                                             </p>
                                                                             <div id="tabs">
-                                                                                <div id="ch-code" onclick="cd(6)">Code</div>
-                                                                                <div id="ch-rezz" onclick="rz(6)">Results</div>
+                                                                                <div id="ch-code" onclick="cd(6)">Код</div>
+                                                                                <div id="ch-rezz" onclick="rz(6)">Результат</div>
                                                                             </div>
                                                                             <div id="code-text_6">
                                                                                 predictions
                                                                                 <- predict(fit.lda, validation) </div>
                                                                                     <p id="text">
-                                                                                        And that’s it! You have now written your first ML program! If you didn’t understand something, don’t worry! If you type in ?FunctionName in the R console, you’ll be able to find out more about the needed function.
+                                                                                        Вот и всё! Первая программа по машинному обучению позади! Если что-то было непонятным, не стоит переживать! Если написать ?НазваниеФункции в консоли R, можно узнать больше о нужной функции.
                                                                                     </p>
                                                                                     <div id="roof-b-s"></div>
                                                                             </div>
@@ -1257,20 +1256,20 @@
                                                                                 </div>
                                                                             </div>
                                                                             <div id="sidebar" style="left:100vw;">
-                                                                                <div id="learn" onclick="lrn()">Tutorials
+                                                                                <div id="learn" onclick="lrn()">О языках
                                                                                     <div id="learn_desc">
-                                                                                        <div id="learn_desc_fix">Learn more about interesting languges in a colorful way!</div>
+                                                                                        <div id="learn_desc_fix">Узнайте больше о языках на красочных страницах!</div>
                                                                                     </div>
                                                                                 </div>
-                                                                                <div id="tend" onclick="atc()">Articles
+                                                                                <div id="tend" onclick="atc()">Статьи
                                                                                     <div id="tend_desc">
-                                                                                        <div id="tend_desc_fix">Read up about the tendencies of programming languages</div>
+                                                                                        <div id="tend_desc_fix">Прочтите пару полезных статей для программистов!</div>
                                                                                     </div>
                                                                                 </div>
                                                                                 <div id="lang-pos">
                                                                                     <div id="lang">
-                                                                                        <div id="rus" onclick="window.location.assign('../tutorials_rus/index.html')">Russian</div>
-                                                                                        <div id="eng" onclick="window.location.assign('index.html')">English</div>
+                                                                                        <div id="rus" onclick="window.location.assign('index.html')">Russian</div>
+                                                                                        <div id="eng" onclick="window.location.assign('../tutorials/index.html')">English</div>
                                                                                     </div>
                                                                                 </div>
                                                                                 <div id="about">

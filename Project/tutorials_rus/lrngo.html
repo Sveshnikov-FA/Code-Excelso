@@ -209,7 +209,7 @@
             top: 1vh;
             z-index: 0;
             left: 10vh;
-            width: 12vh;
+            width: 14vh;
             height: 3.4vh;
             font-family: soft;
             text-align: center;
@@ -670,14 +670,14 @@
             position: absolute;
             top: 0;
             left: 0;
-            width: 75%;
+            width: 85.5%;
             height: 57%;
             z-index: 102;
             color: white;
             background-color: black;
             opacity: 0;
             transition: 1s ease opacity;
-            padding-left: 5vh;
+            padding-left: 3vh;
             padding-top: 8.5vh;
             font-family: soft;
         }
@@ -790,7 +790,7 @@
 
         #im-plane {
             position: absolute;
-            top: -90vh;
+            top: -75vh;
             left: 90vw;
             transform: scale(0.04);
             filter: opacity(50%);
@@ -929,13 +929,13 @@
     </div>
     <div id="building">
         <p id="title_n" style="margin-top:15vh"></p>
-        <p id="text">&nbsp;&nbsp;&nbsp; Go, or GoLang, is a programming language developed by a team at Google when they needed to simplify network interactions and make software development more efficient. Apt for the name, the development team just keeps going further in trying to find ways to make the language better, and they constantly update at such a rate that they are already planning to release Go v2.0. This particular article works with version 1.10 of the language. It’s mainly used for system and numeric coding and server-side programming. While aesthetically and practically syntax-wise it might turn some people off, but you just have to try it for yourself to properly find out whether this language is for you or not. Considering the fact that this language is backed by none other than Google, you can be sure that it’s not going to fade away and become irrelevant any time soon. To be fair, there are many reasons to like this language: it’s very efficient performance-wise, it has an active community which keeps making external packages, and it’s easy to use.
-            <br> Before we get to code in Go, we need to install all the necessary things, like the Go compiler, available on the official Go Website, and the IDE, the best-suiting being GoLand by JetBrains, available for free.
+        <p id="text">&nbsp;&nbsp;&nbsp; Go, или GoLang – язык программирования, разработанная командой из Google, когда они захотели упростить сообщения между сетями и сделать разработку приложений более простой, а сами приложения – производительнее. Как следует из названия, команда разработчиков продолжает двигаться вперёд и постоянно ищет способы сделать язык лучше. Здесь мы будем работать с версией 1.10 языка. В основном язык используется для вычислений, серверного и десктоп- программирования. У него есть свои минусы, как местами путанный синтаксис, и свои плюсы, как лёгкость в изучении. Если можно сказать что-то точно, то учитывая тот факт, что этот язык поддерживается никем иным, как Google, можно точно сказать, что этот язык в ближайшее время не потеряет свою актуальность.
+            <br> Перед тем, как мы начнём программировать на Go, мы должны убедиться, что у нас установлено всё необходимое, как компилятор, доступный для скачивания на официальном сайте, и среда разработки, наиболее подходящей из них может быть GoLand, доступный для скачивания на сайте JetBrains.
         </p>
         <div id="dl-links">
             <div id="dl-cont">
                 <div id="dl-link-comp" onclick="window.location.assign('https://golang.org/dl/');">
-                    <div id="cv">Compiler</div>
+                    <div id="cv">Компилятор</div>
                     <div id="logo">GO</div>
                 </div>
                 <div id="dl-link-ide" cursor="pointer" onclick="window.location.assign('https://www.jetbrains.com/go/');">
@@ -945,11 +945,11 @@
             </div>
         </div>
         <p id="text">
-            <br> It’s customary for programmers to start learning a programming language by printing out “Hello World” in the console, so let’s just do exactly that.
+            <br> Для программистов уже стало традицией начинать изучать новый язык с вывода в консоль “Hello World”. Приступим же!
         </p>
         <div id="tabs">
-            <div id="ch-code" onclick="cd_0()">Code</div>
-            <div id="ch-rezz" onclick="rz_0()">Result</div>
+            <div id="ch-code" onclick="cd_0()">Код</div>
+            <div id="ch-rezz" onclick="rz_0()">Результат</div>
         </div>
         <div id="code-text_0">
             import “fmt”
@@ -959,7 +959,7 @@
         </div>
         <div id="rezz_0"></div>
         <p id="text">
-            Let’s break this code down. Import “importname” is the way to import external libraries to access functions or data structures which aren’t in Go by default. Fmt is the library which helps with console output in go. Func is the basic definition of a function in Go, main being its name and arguments, variables that to send from the initial function being put in parentheses, but since main is, as the name says, an obligatory main function, from which the execution of the code actually starts, the argument list is to be always left empty. Println is the method which does the printing of the lines or variables. As you might know, the ln in the end means that the content printed is going to appear on a new line. Another thing to note is that statements in Go are left without any semicolons at the end, unlike many languages do.<br> To get user input you need to import bufio and os, and then define the reader, the thing that will get input. Then you read the type like so:
+            Разберём же этот код. С помощью Import мы импортируем внешние библиотеки и модули. Fmt – библиотека, отвечающая за вывод в консоль в Go. Func – кодовое слово для объявления функций в Go, где main – её название, а аргументы, значения пересылаемые в функцию, помещены в скобки (в данном случае их нет). С функции main начинается выполнение кода. Println – метод, отвечающий за вывод в консоль. Также стоит заметить, что в конце строк в go точка с запятой не ставится.<br> Для принятия пользовательского ввода мы должны импортировать bufio и os, а затем объявить считыватель. Должно получиться следующее:
         </p>
         <p id="code">
             import (
@@ -973,7 +973,7 @@
             <br> }
         </p>
         <p id="text">
-            In Go variables are explicitly declared with var, with little to no type specification or you can go back to the good old days of Pascal and declare variables without var using the := syntax, but you can only declare multiple variables inline using var
+            В Go переменные объявляются с помощью var, почти без объявления типов. Также можно вернуться к временам паскаля и объявлять переменные с помощью оператора := .
         </p>
         <p id="code">
             Var a = “init”
@@ -984,7 +984,7 @@
             <br> d := 5
         </p>
         <p id="text">
-            Also to note, Go is really progressive in its own way: if you declare a variable and specify the type with var but don’t specify the value, Go automatically gives it a value of either 0 or “”, depending on the type. In the code above, g is equal to 0.<br> Conditionals in Go are rather straightforward.
+            Также стоит заметить, что Go крайне прогрессивен со своими переменными: если уточнён тип переменной, но не значение, то компилятор автоматически ставит им значение 0 или «». То есть в коде выше, g = 0.<br>Условия в Go достаточно прямолинейны.
         </p>
         <p id="code">
             if condition {
@@ -996,8 +996,8 @@
             <br> }
         </p>
         <p id="text">
-            Just like in any language you might be familiar with. Well, there is something different: parentheses for conditions are not mandatory.
-            <br> Loops are really useful in general. They do operations over and over for us. Go takes an interesting approach to these constructs by having just one single construct: for. But there are many variations of for, making Go’s instance really stand out. At times you can define the loop variable and step in the loop declaration, and you can do that outside, and if you want to execute an infinite loop, just don’t put anything after for.
+            Прямо как в любом другом языке, с которым вы можете быть знакомы. Единственная разница – скобки для условий необязательны.
+            <br> Циклы – полезная вещь. Они выполняют код снова и снова за нас. Go вновь продвигает инновации: здесь есть только 1 вид циклов: for. Но у этого вида много разных вариантов применений:
         </p>
         <p id="code">
             I:=1
@@ -1016,22 +1016,22 @@
                     <br> }
         </p>
         <p id="text">
-            Infinite loops would just break the program without loop control statements, which alter the normal loop execution. There are two kinds of those: break, which completely stops the execution of the loop, and continue, which skips over the rest of the rest of the below code and goes right to the next iteration.
-            <br> In Go, an array is a numbered sequence of elements of a specific length. We define arrays like so:
+            Бесконечные циклы просто ломают код. Точнее, ломали бы, если бы не было утверждений контроля циклов. Есть два вида: break, которое полностью прекращает выполнение цикла, continue, которое просто пропускает оставшийся код цикла и сразу идёт на следующий круг.
+            <br> В Go, массив – пронумерованный набор элементов соответствующей длины. Объявляются они так:
         </p>
         <p id="code">
             var a [5]int
             <br> b := [5]int{1, 2, 3, 4, 5}
         </p>
         <p id="text">
-            Where 5 is the size of the array, int is the type of the elements in the array, and in curly brackets we define the elements themselves. To also note, elements in arrays are numbered starting from 0. To access an element you put the index of it in curly brackets beside the array. To get the array length, you use the built-in len method.
+            Где 5 - длина массива, int – тип элементов, а в фигурных скобках – сами элементы. Для получения соответствующего элемента нужно поместить его порядковый номер в квадратные скобки рядом с названием массива, а для получения длины массива используем метод len.
         </p>
         <p id="code">
             Len(arr)
             <br> arr[2]
         </p>
         <p id="text">
-            Now let’s move onto the project-making part. The project we’re going to write with Go is going to be a simple pong game, and it’s also going to be served, and to do that we’re going to use the GopherJS compiler and the GoDOM library, which was created to make the former easier-to-use and add some features to make working with it less different from working with JavaScript by itself. Notice how I said GopherJS was a compiler. Well, that means that you write some code in Go, then you go build it all, and then, during the building process the compiler converts the code you’ve written into JS code and drops a file in the project folder. Mind-blowing, I know. Now onto the project: let’s start off by creating a basic page, on which the actual game will be located. On it we should have the two racquets (or just blocks), a ball, a divider and the scoreboard. They will be created as div elements. Also, don’t forget to link the automatically-generated JS file for our script to actually work. So, the 'body' part of the HTML file should look something like this:
+            Теперь соберём полученные знания и создадим проект. Пусть это будет простая игра в понг, и она будет размещена на сервере. Для этого нам понадобится компилятор GopherJS и библиотека GoDOM, которая была создана для упрощения работы с перым и добавления некоторых функций, которые имеют больше общего с JS. Заметьте, что я сказал, что GopherJS – компилятор. Это означает, что мы просто пишем немного кода на Go, а затем во время сборки кода компилятор конвертирует написанное в JS-файл. Но начнём же делать сам проект: создадим базовую страницу, на которой и будет размещена наша игра. На ней должно быть два блока, мяч, разделитель и очки. Не забудьте оставить ссылку на автоматически сгенерированный файл JS, чтобы наша игра вообще работала. Так должен выглядеть наш HTML-код:
         </p>
         <p id="code">
             < div id="block">
@@ -1060,7 +1060,7 @@
                                                                         < /script>
         </p>
         <p id="text">
-            I also wrote an additional script which fixes the right block in place, because that's practical.
+            Я таже добавил отдельный скрипт, который удерживает правый блок на месте:
         </p>
         <p id="code">
             < script>
@@ -1072,7 +1072,7 @@
                 < /script>
         </p>
         <p id="text">
-            And finally, add a link to a stylesheet, located in main.css in the head element like so:
+            Теперь перейдём к написанию кода на Go. Для начала объявим все необходимые переменные:
         </p>
         <p id="code">
             < link rel="stylesheet" href="main.css">
@@ -1095,8 +1095,8 @@
             <br> var iter= false
         </p>
         <p id="text">
-            To break the questionable parts of this down, js.Global is exactly the same as document.body in JavaScript. But then what is Document here? Well, it’s also document.body, but the former is the vanilla GopherJS syntax and the latter is the GoDOM syntax, which might be confusing, but it’s for the better, trust me. QuerySelector the GJS version of document.getElementBbyId(), the difference between those being that QS works on classes and tag names as well. The scoreA and B variables were created to keep track of the current score and are equal to the contents of the according elements, which is what innerHTML is for. The dir variables are going to be used to control the direction of the ball’s movement, and iter is a placeholder boolean which will help rid us of unnecessary actions.
-            <br> Now we have to set up a function which will run periodically, but will not impede the execution of code. To do that we’re going to use goroutines, which are a lot like your regular functions, but with a small difference: these at the same time as the next function, in the background. Then we’ll put an infinite loop inside of it, and if it wasn’t for goroutines, the code after this loop would never be executed.First thing that we’re going to have to do is update our variables, namely the screen dimensions, the positions of blocks. We’re also going to update the ball’s position variables but only after the first cycle of the loop.
+            Разберём же некоторые части этого кода. js.Global - то же самое, что и document.body в JavaScript. А что тогда значит Document? Это тоже document.body, просто первое – это синтаксис GopherJS, а последнее – GoDOM. Я знаю, несколько запутанно, но так будет лучше, поверьте. QuerySelector для GJS – то же самое, что и document.getElementBbyId(), лишь с той разницей, что QS работает и на тэгах, и на классах, и на id. Переменные scoreA и B были созданы для того, чтобы следить за очками в игре. Переменные dir отвечают за направление движения мяча.
+            <br> Теперь создадим функцию, работающую периодически, и которая не помешает правильнову выполнению кода, идущему после неё. Для этого нам понадобятся goroutines, которые имеют много общего с обычными функциями, но эти выполняются одновременно с кодом, идущим после неё, как бы на втором плане. Затем мы помещаем в неё бесконечный цикл, и если бы не goroutines, код после этого не был бы выполнен никогда. Первым делом обновим наши переменные, а именно размеры экрана, координаты мяча и блоков.
         </p>
         <p id="code">
             go func() {
@@ -1111,7 +1111,7 @@
             <br> }
         </p>
         <p id="text">
-            Now we work on the logic of the game. If our ball hits the border of the screen or a racquet, it should move in a different direction and if it hit a wall, the score should change accordingly.
+            Теперь поработаем с логикой игры. Если мяч ударился о границу окна или блок, то он должен поменять направление движения, и очки должны начислиться соответственно.
         </p>
         <p id="code">
             if left > iw-23 || left
@@ -1130,7 +1130,7 @@
                             <br> }
         </p>
         <p id="text">
-            And, of course, don’t forget to tell the ball to change its direction when it hit the top or the bottom border.
+            Не стоит забывать и о верхних границах!
         </p>
         <p id="code">
             if (top > ih-23 || top
@@ -1139,14 +1139,14 @@
                 <br> }
         </p>
         <p id="text">
-            You probably noticed that earlier on, I added .Int() after using innerHTML, and now there’s this strconv string, which I never addressed. Well, innerHTML comes in the form of a string, and since I want to add to score variables, I have to convert the received value to int. The strconv library, using the Itoa method can do the exact opposite. <br> Now we work on how the ball moves. That’s when our direction variables really come into play. To move the ball we just add the value of the dir variables which can be either 1 or -1.
+            Возможно вы заметили, что чуть ранее я добавил .Int() после использованияinnerHTML, а теперь ещё и какой-то strconv появился. Дело в том, что innerHTML приходит в скрипт в виде строки, а так как мне нужно складывать и вычитать эти значения, я должен конвертировать эти значения в число. При пересылке обратно мы должны сделать обратное, с чем нам и помогает библиотека strconv. <br> Теперь проработаем движение мяча. Вот здесь-то нам и пригодились переменные dir! Для перемещения мяча мы просто прибавляем их к его нынешним соответствующим координатам, а переменные могут быть равны только либо 1, либо -1.
         </p>
         <p id="code">
             ball.Get("style").Set("left", strconv.Itoa(left+dir))
             <br> ball.Get("style").Set("top", strconv.Itoa(top+dirY))
         </p>
         <p id="text">
-            Then we set iter to true so we can update the ball’s position during the next cycle and put a small delay for smoother processing using the time library and its Sleep method.
+            Затем мы меняем значение iter для дальнейшего обновления координат мяча, и ставим небольшую задержку для лучшего движения с помощью метода sleep.
         </p>
         <p id="code">
             iter = true
@@ -1155,7 +1155,7 @@
             <br> }()
         </p>
         <p id="text">
-            Now we make the blocks move when we press the arrow keys and W and S keys. We’re going to do that using an event listener which runs a function whenever an action is performed, in this case the action being a key press. To perform actions upon pressing these exact keys we’re going to need their key codes, which are 38, 40, 87 and 83 accordingly. We also need to consider the fact that our blocks shouldn’t move when they are too low or too high, so we have to check if their position allows for that.
+            Наконец, мы должны сделать так, чтобы блоки двигались, когда мы нажимаем клавиши “W” “S”, “вверх ”и “вниз” с помощью функции, выполняемой каждый раз, когда нажата клавиша на клавиатуре. Для проверки нам понадобятся коды клавиш - 87, 83, 38 и 40 соответственно. Также нужно проверить, не слишком ли низко или высоко расположен блок: если да, то двигаться он не должен.
         </p>
         <div id="tabs">
             <div id="ch-code" onclick="cd_1()">Code</div>
@@ -1183,8 +1183,7 @@
                     <br> }
         </div>
         <p id="text">
-            And that’s the end of our script. Now we just have to build it and we’ll have a ready-to-run JS file created with the power of Zeus, gopherJS and our code. Now you have created your first full-on Go project for the web!
-            <br> I also decided to make our pong game a bit fancier and used a square font, which you can get here and added some styles to the elements, which you can customize in this main.css file, which, as you remember, we linked in our index.html file. You can get all the project files <a style="color:#df916d" href="../CE_Go-project.rar">here</a>. Maybe I just like web design too much.
+            Вот и конец нашего скрипта. Теперь осталось собрать его, и вуаля – у нас появится готовый файл javascript! Скачать получившийся код можно <a style="color:#df916d" href="../CE_Go-project.rar">здесь</a>. Разумеется, нужно настроить CSS-оформление нашей игры, но это уже можно делать на свой вкус!
         </p>
 
         <div id="dl-link-code">
@@ -1203,20 +1202,20 @@
         </div>
     </div>
     <div id="sidebar" style="left:100vw;">
-        <div id="learn" onclick="lrn()">Tutorials
+        <div id="learn" onclick="lrn()">О языках
             <div id="learn_desc">
-                <div id="learn_desc_fix">Learn more about interesting languges in a colorful way!</div>
+                <div id="learn_desc_fix">Узнайте больше о языках на красочных страницах!</div>
             </div>
         </div>
-        <div id="tend" onclick="atc()">Articles
+        <div id="tend" onclick="atc()">Статьи
             <div id="tend_desc">
-                <div id="tend_desc_fix">Read up about the tendencies of programming languages</div>
+                <div id="tend_desc_fix">Прочтите пару полезных статей для программистов!</div>
             </div>
         </div>
         <div id="lang-pos">
             <div id="lang">
-                <div id="rus" onclick="window.location.assign('../tutorials_rus/index.html')">Russian</div>
-                <div id="eng" onclick="window.location.assign('index.html')">English</div>
+                <div id="rus" onclick="window.location.assign('index.html')">Russian</div>
+                <div id="eng" onclick="window.location.assign('../tutorials/index.html')">English</div>
             </div>
         </div>
         <div id="about">

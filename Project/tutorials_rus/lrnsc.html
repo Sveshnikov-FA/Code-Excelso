@@ -436,7 +436,7 @@
             top: 1vh;
             z-index: 0;
             left: 10vh;
-            width: 12vh;
+            width: 14vh;
             height: 3.4vh;
             font-family: soft;
             text-align: center;
@@ -504,14 +504,14 @@
             position: absolute;
             top: 0;
             left: 0;
-            width: 75%;
+            width: 85.5%;
             height: 55%;
             z-index: 2;
             color: white;
             background-color: black;
             opacity: 0;
             transition: 1s ease opacity;
-            padding-left: 5vh;
+            padding-left: 3vh;
             padding-top: 9vh;
             font-family: soft;
         }
@@ -934,7 +934,6 @@
             font-size: 7vh;
             position: absolute;
             left: -39vh;
-            top:.5vh;
             z-index: 1;
         }
 
@@ -1111,13 +1110,13 @@
     </div>
     <div id="building">
         <p id="text" style="margin-top:15vh">
-            Scala was developed to combine object-oriented and functional programming into one high-level language. It’s mainly used for web and desktop applications and data analysis. You may have to Scala some mountain walls that are Scala’s learning curve, but it has a very readable syntax, and it’s pretty fast. What else could a language possibly need?
-            <br> To start programming with Scala, you’ll need to make sure you have all the necessary things installed, like the compiler, which is available on the official Scala website, and an IDE, which can be either Eclipse, but if you aren’t planning to use it for any other language, I’d recommend something less heavy-duty, like the official Scala IDE, available for free.
+            Scala была разработан для того, чтобы объединить объектно-ориентированное и функциональное программирование в один язык высокого уровня. В основном она используется для разработки веб- и десктоп- приложений, а также для анализа данных. Возможно, сначала может показаться, что её освоение столь же достижимо, как покорение крутой скалистой горы, но это того стоит: синтаксис Scala легко читаем, и к тому же, она достаточно быстра. Чего ещё можно хотеть от подобного языка?
+            <br> Для того, чтобы начать работать со Scala, необходимо убедиться, что установлено всё необходимое, как например, компилятор, который можно скачать на официальном сайте языка, и среду разработки, роль которой может выполнить Eclipse.
         </p>
         <div id="dl-links">
             <div id="dl-cont">
                 <div id="dl-link-comp" cursor="pointer" onclick="window.location.assign('https://www.oracle.com/technetwork/java/javase/downloads/index.html');">
-                    <div id="cv">Compiler</div>
+                    <div id="cv">Компилятор</div>
                     <div id="scala">
                         <div id="skew_1"></div>
                         <div id="skew_2"></div>
@@ -1135,11 +1134,11 @@
             </div>
         </div>
         <p id="text">
-            It’s a common tradition for programmers to start off their experience with a language by printing out “Hello World” in the console. Let’s jump right in!
+            Уже стало традицией начинать свой опыт с языком выводом сообщения “Hello World” в консоль. Приступим же!
         </p>
         <div id="tabs">
-            <div id="ch-code" onclick="cd(0)">Code</div>
-            <div id="ch-rezz" onclick="rz(0)">Result</div>
+            <div id="ch-code" onclick="cd(0)">Код</div>
+            <div id="ch-rezz" onclick="rz(0)">Результат</div>
         </div>
         <div id="code-text_0">
             def main (args: Array[String]): Unit = {
@@ -1147,8 +1146,8 @@
             <br> }
         </div>
         <p id="text">
-            Let’s break this code down. Def is the basic function definition syntax, main is its name, the arguments are listed in parentheses, and the block of function code is put in curly brackets. The main function is the one that is executed first in the project. Unit is the placeholder for the function’s return value, and in this case it simply means that the function doesn’t return anything. Println is the function that does the printing out, and you don’t put semicolons at the end of inline statements, unlike most languages.
-            <br> Now onto variables in Scala. A lot of more modern languages are moving on from type definition of variables, and Scala is doing so too. You can, of course, specify it anyways, but it’s by no means mandatory. Var declares a variable and val declares a constant. To define an array, which is a series of elements of the same type placed in certain memory locations, equate a variable to a new array as shown below. To access abovementioned memory locations, place the index of the element in square brackets right next to the array name.
+            Разберём же код. Def – это стандартный способ объявления функций, о которых мы поговорим позже, main – это просто её название, аргументы перечислены в скобках, и её содержимое помещено в фигурные скобки. Функция main выполняется первой в программе. Unit – лишь базовое значение переменной, которую возвращает подобная функция, то есть ничего. Println – функция, которая вопреки ожиданиям… а, нет, всё-таки она отвечает лишь за вывод данных в консоль. Но стоит заметить, что в конце строк в Scala, в отличие от некоторых языков программирования, не ставится точка с запятой.
+            <br> Теперь о переменных. Многие более современные языки программирования уходят от правил необходимости уточнения типа переменной, и Scala – не исключение. Разумеется, при желании это можно сделать, но это ни в коем случае не обязательно. Var используется для объявления переменных, а val – для объявления констант. Для того, чтобы создать массив, то есть набор однотипных элементов, помещённых в выделенные ячейки памяти, достаточно приравнять новую переменную к новому массиву, с уточнением размера и типа данных, как показано ниже. Для того, чтобы получить доступ к элементам нужно поместить его порядковый номер в массиве в квадратные скобки рядом с названием искомого массива.
         </p>
         <p id="code">
             var myVar = 10;
@@ -1156,14 +1155,14 @@
             <br> var z = new Array[String](3)
         </p>
         <p id="text">
-            User input is the main means of user – computer communication. The most modern way to accept user input in Scala is to use the trusty read*Type*() function like so:
+            Ввод данных пользователем – это основной способ обмена информации клиент - компьютер. Самый удобный способ получить его в Scala – использовать всеми любимый метод read*тип*() вот так:
         </p>
         <p id="code">
             var myVar = scala.io.StdIn.readInt()
             <br> var myV = scala.io.StdIn.readLine()
         </p>
         <p id="text">
-            Moving right onto conditionals. They’re mostly self-explanatory. If a certain condition is true, an action is performed, if not, a slightly different action is performed. The implementation of if statements into Scala looks like this:
+            Переходим к условиям. Они достаточно понятны сами по себе: если условие выполняется, то выполняется и соответствующее действие. Выглядит это приблизительно так:
         </p>
         <p id="code">
             if(condition) {
@@ -1177,7 +1176,7 @@
             <br> }
         </p>
         <p id="text">
-            Loops are great. They make our life easier time and time again. Wherever they’re implemented, be it an esoteric, practical or English language, they’re there to make things practical. In Scala, there are two kinds of loops – for and while. With for loops you can efficiently write a cycle that needs to be executed a specific number of times, depending on the set range, and with while loops cycle while given condition is true. There is a certain way to change the way the loop goes and that’s by using loop control statements, such as continue, which skips the rest of the loop and goes onto the next iteration, and break, which stops the execution of the cycle completely.
+            Циклы – отличная вещь. Они делают нашу жизнь проще снова и снова. В каком бы языке, серьёзном, практичном, или литературном они ни были бы введены, они делают всё практичнее. В Scala существуют два типа циклов – for и while. С циклами for мы можем написать код, который должен быть выполнен конкретное количество раз, а с циклами while код будет выполняться пока выполняется заданное условие. Разумеется, есть способ изменить ход работы цикла, а именно – контрольные объявления, как например, continue, с котоым можно пропустить код, идущий после этого в цикле, и перейти к следующей итерации, и break, с которым выполнение цикла полностью прекращается.
         </p>
         <p id="code">
             while(condition) {
@@ -1189,7 +1188,7 @@
                 <br> }
         </p>
         <p id="text">
-            As you remember, the basic Scala program always has def main() as the main function or void. Let’s have a bit more in-depth look at functions in general. Def is the keyword that is like var for voids, then comes the name, then come the arguments, that are put in parentheses, which are values that are sent to the function from the caller. Then comes a colon and the type of data that the def is supposed to return. Then comes the = sign and then finally you put the actions that the function needs to perform in curly brackets. And that’s how functions are declared in Scala.
+            Как мы помним, в любой, даже самой простой программе есть главная функция def main(). Давайте же рассмотрим функции поподробнее. Def – это ключевое слово, как var, для объявления функций, затем идёт название, затем – аргументы, значения переменных из внешего источника, посылаемые в данную функцию и принимающие соответствующее название переменной, помещённые в скобки. Теперь мы уточняем тип возвращаемых в место вызова данных через двоеточие. Потом идёт знак = , и только теперь, в фигурных скобках, мы пишем действия, которые мы хотим, чтобы функция выполняла.
         </p>
         <p id="code">
             def addInt( a:Int, b:Int ) : Int = {
@@ -1198,10 +1197,10 @@
             <br> return sum
             <br> }
         </p>
-        <p id="text">Let’s make a project. A web project. We’re going to need lift, a scala framework for it. To start off type in sbt new lift/basic-app.g8 in your console. Then open up the html file in the webapp folder and the helloworld.scala file. Take a closer look a the latter. Then delete everything within the class because that’s how constructive and radical we are. To run a server and therefore get the script to work you have to run ~jetty:start in your sbt console. One of the most defining features of lift is setting css and innerHTML with one simple command. To get the HTML to change you’ll have to add a data-lift attribute to the element with its contents being ClassName.MethodName. And in the said method you put “identifier” #> “new value” where identifier can be literally anything: a tag name, an id, a class, you name it! To change an attribute put its name in square brackets after the identifier, to remove the contents of it add an exclamation point to its name and to add add a plus sign.
+        <p id="text">Давайте же сделаем проект. Веб-проект. Для этого нам понадобится lift, веб-фреймворк для scala. Для начала, введём sbt new lift/basic-app.g8 в консоль. Теперь откроем же файл .html в папке webapp, а также файл helloworld.scala. Посмотрим на последний внимательно. Теперь самое конструктивное в данной ситуации – это удалить всё содержимое класса. Так и поступим. Для запуска сервера, а соответственно, и для правильной работы сценариев страницы (которые мы только что удалили) достаточно ввести ~jetty:start в нашей sbt консоли. Одна из важнейших возможностей lift это возможность задать значение css и содержимого innerHTML элемента одной командой. Для получения значения HTML, которое нужно изменить, добавим атрибут data-lift к элементу со значением НазваниеКлассаВТомФайле.НазваниеФункцииКоторойНуженДоступКДанным. А в этот метод мы пишем “идентификатор” #> “Новое_значение”, где идентификатор может быть чем угодно: названием элемента, id, класс, и так далее! Для изменения атрибута, поместим его название в квадратные скобки после идентификатора in, для добавления к заданному значению поставим + после названия, и ! для удаления.
         </p>
         <p id="text">
-            And that’s all the important things you could possibly need to know about lift. Congratulations, you beat Scala!
+            Это всё самое важное, что нужно знать о lift для начала. Поздравляю, мы покорили эту Скалу!
         </p>
         <div id="roof-b-s"></div>
     </div>
@@ -1217,20 +1216,20 @@
         </div>
     </div>
     <div id="sidebar" style="left:100vw;">
-        <div id="learn" onclick="lrn()">Tutorials
+        <div id="learn" onclick="lrn()">О языках
             <div id="learn_desc">
-                <div id="learn_desc_fix">Learn more about interesting languges in a colorful way!</div>
+                <div id="learn_desc_fix">Узнайте больше о языках на красочных страницах!</div>
             </div>
         </div>
-        <div id="tend" onclick="atc()">Articles
+        <div id="tend" onclick="atc()">Статьи
             <div id="tend_desc">
-                <div id="tend_desc_fix">Read up about the tendencies of programming languages</div>
+                <div id="tend_desc_fix">Прочтите пару полезных статей для программистов!</div>
             </div>
         </div>
         <div id="lang-pos">
             <div id="lang">
-                <div id="rus" onclick="window.location.assign('../tutorials_rus/index.html')">Russian</div>
-                <div id="eng" onclick="window.location.assign('index.html')">English</div>
+                <div id="rus" onclick="window.location.assign('index.html')">Russian</div>
+                <div id="eng" onclick="window.location.assign('../tutorials/index.html')">English</div>
             </div>
         </div>
         <div id="about">

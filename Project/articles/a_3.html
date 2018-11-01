@@ -3,6 +3,8 @@
 <meta charset="utf-8" ontent="width=device-width">
 
 <head>
+    <link rel="icon" href="../coffee.png">
+    <title>A new Beginning - Code:Excelso</title>
     <style>
         @font-face {
             font-family: soft;
@@ -14,7 +16,13 @@
             src: url(../reason.otf);
         }
 
+        html {
+            height: 100%;
+        }
+
         body {
+            height: 100%;
+            background-image: linear-gradient(#f5d6e0, #e699b2);
             background-color: #afeeee;
             padding: 0;
             overflow-x: hidden;
@@ -118,20 +126,11 @@
 
         #building {
             background-color: #eee8aa;
-            width: 90vw;
+            width: 100vw;
             height: auto;
             position: absolute;
             left: 0;
-            top: 5vh;
-        }
-
-        #roof-b-s {
-            position: absolute;
-            left: 0;
-            top: 1vh;
-            width: 90vw;
-            height: 2.5vh;
-            background-color: #e6dd7f;
+            top: 90vh;
         }
 
         #bar9uk {
@@ -172,40 +171,885 @@
             background-color: #f5f5f5;
             transition: background-color 1s ease;
         }
+
         #text {
             color: palevioletred;
             font-family: soft;
-            margin: 2vw;
-            font-size: 2vw;
+            margin: 2vh;
         }
+
+        #hm {
+            position: absolute;
+            left: 15vh;
+            top: 55vh;
+            width: 70vh;
+            height: 35vh;
+            background-color: #b33434;
+            border-top: 1vh solid #a63030;
+        }
+
+        #hm-r {
+            position: absolute;
+            left: -1.5vh;
+            top: -4.25vh;
+            width: 73vh;
+            height: 2.5vh;
+            border-top: .75vh solid #8c2d3a;
+            background: repeating-linear-gradient( to right,
+            #8c2d3a,
+            #8c2d3a 20px,
+            floralwhite 20px,
+            floralwhite 35.5px);
+        }
+
+        #hm-r-1 {
+            position: absolute;
+            left: 9vh;
+            top: -8vh;
+            width: 1.5vh;
+            height: 7.25vh;
+            z-index: 1;
+            background-color: darkgray;
+        }
+
+        #hm-r-2 {
+            position: absolute;
+            left: 16vh;
+            top: -8vh;
+            z-index: 1;
+            width: 1.5vh;
+            height: 7.25vh;
+            background-color: darkgray;
+        }
+
+        #hm-d {
+            position: absolute;
+            left: 51.5vh;
+            top: 8vh;
+            width: 12.5vh;
+            height: 25vh;
+            background-color: #8c2d3a;
+            border: 1vh solid floralwhite;
+            border-bottom: none;
+        }
+
+        #hm-do {
+            position: absolute;
+            left: 1vh;
+            top: 9.5vh;
+            width: 1vh;
+            height: 4vh;
+            background-color: floralwhite;
+            border-radius: 2px;
+        }
+
+        #hm-1 {
+            position: absolute;
+            width: 40vh;
+            height: 22vh;
+            background-color: #00a1d8;
+            left: 5vh;
+            top: 4.5vh;
+            border: 1vh solid floralwhite;
+        }
+
+        #hm-1r {
+            position: absolute;
+            width: 40vh;
+            height: 22vh;
+            background-color: #00a1d8;
+            left: 5vh;
+            z-index: 2;
+            top: 4.5vh;
+            border: 1vh solid floralwhite;
+            opacity: .45;
+        }
+
+        #hm-1-1 {
+            position: absolute;
+            width: 100%;
+            height: 10.5vh;
+            overflow: hidden;
+            left: -1vh;
+            top: -1vh;
+            border: 1vh solid floralwhite;
+        }
+
+        #hm-1-2 {
+            position: absolute;
+            width: 100%;
+            height: 10.5vh;
+            left: -1vh;
+            top: 10.5vh;
+            overflow: hidden;
+            border: 1vh solid floralwhite;
+            transform: rotateY(180deg);
+        }
+
+        #hm-1-1bo {
+            position: absolute;
+            width: 1.25vh;
+            height: 7vh;
+            background-color: #bd5b68;
+            top: 3.5vh;
+            left: .2vh;
+        }
+
+        #hm-1-2bo {
+            position: absolute;
+            width: 1.5vh;
+            height: 7.5vh;
+            background-color: #801c49;
+            top: 3vh;
+            left: 1.45vh;
+        }
+
+        #hm-1-3bo {
+            position: absolute;
+            width: 1vh;
+            height: 6.75vh;
+            background-color: #b32766;
+            top: 3.75vh;
+            left: 3vh;
+        }
+
+        #hm-1-4bo {
+            position: absolute;
+            width: 1.25vh;
+            height: 6.8vh;
+            background-color: #ce0000;
+            top: 3.7vh;
+            left: 4vh;
+        }
+
+        #hm-1-5bo {
+            position: absolute;
+            width: 1.25vh;
+            height: 6.8vh;
+            background-color: #c5266b;
+            top: 3.75vh;
+            left: 5.8vh;
+            transform: rotateZ(-10deg);
+        }
+
+        #hm-1-6bo {
+            position: absolute;
+            width: 1.75vh;
+            height: 7.25vh;
+            background-color: #d2434e;
+            top: 3.75vh;
+            left: 8.25vh;
+            transform: rotateZ(-30deg);
+        }
+
+        #hm-1-7bo {
+            position: absolute;
+            width: 1.5vh;
+            height: 7vh;
+            background-color: #d14b37;
+            top: 6.3vh;
+            left: 14.25vh;
+            transform: rotateZ(90deg);
+        }
+
+        #hm-1-7bo {
+            position: absolute;
+            width: 1.25vh;
+            height: 7vh;
+            background-color: #b3402e;
+            top: 6.5vh;
+            left: 14.25vh;
+            transform: rotateZ(90deg);
+        }
+
+        #hm-1-8bo {
+            position: absolute;
+            width: 1vh;
+            height: 7.5vh;
+            background-color: darkred;
+            top: 5.2vh;
+            left: 15vh;
+            transform: rotateZ(90deg);
+        }
+
+        #hm-1-9bo {
+            position: absolute;
+            width: 1.25vh;
+            height: 6.9vh;
+            background-color: #e9a6a0;
+            top: 4.4vh;
+            left: 14.1vh;
+            transform: rotateZ(90deg);
+        }
+
+        #hm-1-10bo {
+            position: absolute;
+            width: 1vh;
+            height: 7.1vh;
+            background-color: #e57096;
+            top: 3.3vh;
+            left: 14.1vh;
+            transform: rotateZ(90deg);
+        }
+
+        #hm-1-11bo {
+            position: absolute;
+            width: 1.2vh;
+            height: 7vh;
+            background-color: #bd5b68;
+            top: 3.925vh;
+            left: 19vh;
+            transform: rotateZ(-35deg);
+        }
+
+        #hm-1-12bo {
+            position: absolute;
+            width: 1.4vh;
+            height: 6.75vh;
+            background-color: #2fa8ab;
+            top: 3.925vh;
+            left: 23.4vh;
+            transform: rotateZ(25deg);
+        }
+
+        #hm-1-13bo {
+            position: absolute;
+            width: 1.4vh;
+            height: 7.5vh;
+            background-color: indianred;
+            top: 3vh;
+            left: 26.05vh;
+        }
+
+        #hm-1-14bo {
+            position: absolute;
+            width: 1.25vh;
+            height: 7.15vh;
+            background-color: #a6353e;
+            top: 3.4vh;
+            left: 27.45vh;
+        }
+
+        #hm-1-15bo {
+            position: absolute;
+            width: 1.4vh;
+            height: 7.35vh;
+            background-color: darkred;
+            top: 3.15vh;
+            left: 28.7vh;
+        }
+
+        #hm-1-16bo {
+            position: absolute;
+            width: 2vh;
+            height: 6.9vh;
+            background-color: indianred;
+            top: 3.6vh;
+            left: 30.1vh;
+        }
+
+        #hm-1-17bo {
+            position: absolute;
+            width: 1.6vh;
+            height: 7vh;
+            background-color: #e5523c;
+            top: 3.55vh;
+            left: 33.3vh;
+            transform: rotateZ(-20deg);
+        }
+
+        #hm-1-18bo {
+            position: absolute;
+            width: 1.3vh;
+            height: 7.25vh;
+            background-color: #c4362a;
+            top: 3.55vh;
+            left: 35vh;
+            z-index: 1;
+            transform: rotateZ(-20deg);
+        }
+
+        #hm-1-19bo {
+            position: absolute;
+            width: 1.3vh;
+            height: 6.6vh;
+            background-color: #c5266b;
+            top: 4.2vh;
+            left: 37.1vh;
+            transform: rotateZ(-35deg);
+        }
+
+        #hmb1 {
+            position: absolute;
+            width: 5.5vh;
+            height: 2vh;
+            z-index: 2;
+            background-color: #8c2d3a;
+            left: 4vh;
+            top: 30vh;
+            border-radius: 3px;
+        }
+
+        #hmb2 {
+            position: absolute;
+            width: 5.5vh;
+            height: 2vh;
+            z-index: 2;
+            background-color: #8c2d3a;
+            left: 53vh;
+            top: 1.5vh;
+            border-radius: 3px;
+        }
+
+        #hmb3 {
+            position: absolute;
+            width: 5.5vh;
+            height: 2vh;
+            z-index: 2;
+            background-color: #8c2d3a;
+            left: 56vh;
+            top: 4vh;
+            border-radius: 3px;
+        }
+
+        #hm-c-1 {
+            position: absolute;
+            width: 18.5vh;
+            height: 26vh;
+            top: 15vh;
+            z-index: 2;
+            left: 38.25vh;
+            background-color: #cc3b3b;
+            transform: rotateZ(-20deg)skewY(-15deg)skewX(5deg);
+            border: 1vh solid #992c2c;
+            border-top-right-radius: 5px;
+            border-left: none;
+            border-left: 1vh solid #e54343;
+            border-bottom-right-radius: 5px;
+        }
+
+        #hm-root {
+            position: absolute;
+            left: 34vh;
+            top: 20.5vh;
+            width: 0;
+            height: 2.5vh;
+            border-radius: 100%;
+            border-top-right-radius: 100%;
+            border-bottom-right-radius: 100%;
+            background-color: transparent;
+            border-right: 1vh solid navajowhite;
+            border-left: .5vh #992c2c solid;
+            transform: rotateZ(20deg);
+
+        }
+
+        #hm-c-2 {
+            position: absolute;
+            width: 19.5vh;
+            height: 26vh;
+            top: 12.4vh;
+            z-index: 0;
+            left: 38.75vh;
+            background-color: darkgray;
+            transform: rotateZ(-20deg)skewY(-17.5deg)skewX(5deg);
+            border: 1vh solid #992c2c;
+            border-top-right-radius: 5px;
+            border-left: none;
+            border-bottom-right-radius: 5px;
+        }
+
+        #hm-pg1 {
+            position: absolute;
+            background-color: floralwhite;
+            width: 18.25vh;
+            height: 1.75vh;
+            top: 15.2vh;
+            left: 33.6vh;
+            border-bottom-left-radius: 10px;
+            z-index: 1;
+            transform: rotateZ(-10deg)skewY(-27.5deg)skewX(-45deg);
+        }
+
+        #hm-pg1c {
+            position: absolute;
+            background-color: transparent;
+            width: .5vh;
+            height: 2vh;
+            top: 33vh;
+            left: 61.4vh;
+            border-top-left-radius: 0%;
+            border-bottom-left-radius: 100%;
+            border-left: 1vh solid #f5d6e0;
+            z-index: 1;
+            transform: rotateZ(-5deg)skewY(-27.5deg)skewX(-45deg);
+        }
+
+        #hm-pg2 {
+            position: absolute;
+            background-color: floralwhite;
+            width: 20.5vh;
+            height: 2.75vh;
+            top: 20.4vh;
+            left: 46.3vh;
+            z-index: 0;
+            transform: rotateZ(104.75deg)skewY(-40deg)skewX(45deg);
+        }
+
+        #hm-pg2-1 {
+            position: absolute;
+            left: 0;
+            top: .5vh;
+            width: 100%;
+            height: .5vh;
+            background-color: lightgray;
+        }
+
+        #hm-pg2-2 {
+            position: absolute;
+            left: 0;
+            top: 1.5vh;
+            width: 100%;
+            height: .5vh;
+            background-color: lightgray;
+        }
+
+        #book {
+            position: absolute;
+            left: 0vh;
+            top: 20.25vh;
+            z-index: 2;
+            transform: scale(.6)rotateZ(5deg);
+        }
+
+        p {
+            width: 95%;
+        }
+
         #title_n {
             color: palevioletred;
             font-family: soft;
-            margin: 2vw;
-            font-size: 2vw;
-            font-size: 7vw;
-            margin-bottom: 2vw;
-            margin-top: 2vw;
+            font-size: 7vh;
+            position: absolute;
+            top: 2.5vh;
+            left: -31vh;
+        }
+
+        #title-pos {
+            position: absolute;
+            left: 49vw;
+            width: 100%;
+        }
+
+        #head {
+            position: absolute;
+            left: -46vh;
+        }
+
+        #head-pos {
+            position: absolute;
+            left: 47vw;
+        }
+
+        #lamp_trunk {
+            background-color: dimgray;
+            position: absolute;
+            border-top-left-radius: 180px;
+            border-top-right-radius: 180px;
+            width: 2vh;
+            height: 20vh;
+            top: 52vh;
+            left: 12vh;
+            z-index: -2;
+        }
+
+        #lamp {
+            position: absolute;
+            width: auto;
+            height: auto;
+            top: 7vh;
+            z-index: -2;
+            left: -34vh;
+        }
+
+        #lamp-pos {
+            position: absolute;
+            left: 84vw;
+        }
+
+        #lamp_1half {
+            border-top-left-radius: 180px;
+            border-bottom-left-radius: 180px;
+            position: absolute;
+            width: 5vh;
+            height: 10vh;
+            left: 8vh;
+            top: 46vh;
+            z-index: -1;
+            background-color: #f2f2f2;
+        }
+
+        #lamp_2half {
+            border-top-right-radius: 180px;
+            border-bottom-right-radius: 180px;
+            position: absolute;
+            width: 5vh;
+            height: 10vh;
+            top: 46vh;
+            background-color: #e6e6e6;
+            left: 13vh;
+            z-index: -1;
+        }
+
+        #lamp-cv {
+            position: absolute;
+            left: 9vh;
+            top: 54vh;
+            width: 8vh;
+            height: 2vh;
+            background-color: darkslategray;
+            border-bottom-left-radius: 70%;
+            border-bottom-right-radius: 70%;
+        }
+
+        #lamp-t1 {
+            position: absolute;
+            width: 4vh;
+            height: 2vh;
+            background-color: darkslategray;
+            top: 70vh;
+            z-index: 0;
+            left: 11vh;
+            border-radius: 25%;
+        }
+
+        #lamp-t2 {
+            position: absolute;
+            width: 3vh;
+            height: 11vh;
+            z-index: -1;
+            left: 11.5vh;
+            top: 70vh;
+            background-color: dimgray;
+        }
+
+        #lamp2 {
+            position: absolute;
+            left: 18vw;
+            top: 8vh;
+        }
+
+        #pl1 {
+            position: absolute;
+            left: 78vw;
+            top: 75vh;
+            width: 25vh;
+            height: 3vh;
+            background-color: darkred;
+        }
+
+        #pl2 {
+            position: absolute;
+            left: 77vw;
+            top: 83.5vh;
+            width: 29vh;
+            height: 1.25vh;
+            background-color: darkred;
+        }
+
+        #bm1 {
+            position: absolute;
+            left: 79.5vw;
+            top: 75vh;
+            width: 1vh;
+            height: 9vh;
+            background-color: gray;
+            z-index: -1;
+        }
+
+        #bm2 {
+            position: absolute;
+            left: 77.25vw;
+            top: 84.75vh;
+            width: 28vh;
+            height: .75vh;
+            background-color: gray;
+        }
+
+        #l1 {
+            position: absolute;
+            left: 78.75vw;
+            top: 85vh;
+            width: 1.75vh;
+            height: 9vh;
+            background-color: gray;
+        }
+
+        #bench1 {
+            position: absolute;
+            left: -80vh;
+            top: 0;
+        }
+
+        #bench {
+            position: absolute;
+            top: 0;
+            left: -43vh;
+        }
+
+        #b-ps {
+            position: absolute;
+            left: 20.5vw;
+            top: 0;
+        }
+
+        #b1-ps {
+            position: absolute;
+            left: -30vw;
+            top: 0;
+        }
+
+        #cloud1_1 {
+            position: absolute;
+            left: 84px;
+            top: 65px;
+            width: 100px;
+            height: 35px;
+            background-color: #ffffff;
+            border-top-right-radius: 360px;
+            border-top-left-radius: 360px;
+        }
+
+        #cloud1_2 {
+            position: absolute;
+            left: 44px;
+            top: 27.5px;
+            width: 100px;
+            height: 72.5px;
+            background-color: #ffffff;
+            border-top-right-radius: 360px;
+            border-top-left-radius: 360px;
+        }
+
+        #cloud1_3 {
+            position: absolute;
+            left: 0;
+            top: 50px;
+            width: 100px;
+            height: 50px;
+            background-color: #ffffff;
+            border-top-right-radius: 360px;
+            border-top-left-radius: 360px;
+        }
+
+        #cloud1 {
+            position: absolute;
+            top: 30vh;
+            left: 10vh;
+            transform: scale(1.5);
+            animation: cloud1 100s ease infinite alternate;
+        }
+
+        #cloud2 {
+            position: absolute;
+            top: 20vh;
+            left: 70vh;
+            transform: scale(.5);
+            animation: cloud2 100s ease infinite alternate;
+        }
+
+        @keyframes cloud1 {
+            from {
+                left: 5vh;
+            }
+            to {
+                left: 60vh;
+            }
+        }
+
+        @keyframes cloud2 {
+            from {
+                left: 180vh;
+            }
+            to {
+                left: 125vh;
+            }
+        }
+
+        #lang {
+            position: absolute;
+            left: -12vh;
+            top: 90vh;
+            width: 100%;
+            text-transform: uppercase;
+            color: white;
+            font-size: 2vh;
+            font-weight: bold;
+        }
+
+        #lang-pos {
+            position: absolute;
+            width: 100%;
+            top: 0;
+            left: 52vw;
+        }
+
+        #rus {
+            position: absolute;
+            padding-right: 1.5vh;
+            border-right: .5vh solid #ff0000;
+        }
+
+        #eng {
+            position: absolute;
+            left: 12.25vh;
         }
     </style>
 </head>
 
 <body>
-    <div id="building">
+    <div id="cloud1">
+        <div id="cloud1_1"></div>
+        <div id="cloud1_2"></div>
+        <div id="cloud1_3"></div>
+    </div>
+    <div id="cloud2">
+        <div id="cloud1_1"></div>
+        <div id="cloud1_2"></div>
+        <div id="cloud1_3"></div>
+    </div>
+    <div id="lamp-pos">
+        <div id="lamp">
+            <div id="lamp_1half"></div>
+            <div id="lamp_2half"></div>
+            <div id="lamp-cv"></div>
+            <div id="lamp_trunk"></div>
+            <div id="lamp-t1"></div>
+            <div id="lamp-t2"></div>
+            <div id="lamp-t1" style="top:81vh"></div>
+        </div>
+    </div>
+    <div id="lamp2">
+        <div id="lamp_1half"></div>
+        <div id="lamp_2half"></div>
+        <div id="lamp-cv"></div>
+        <div id="lamp_trunk"></div>
+        <div id="lamp-t1"></div>
+        <div id="lamp-t2"></div>
+        <div id="lamp-t1" style="top:81vh"></div>
+    </div>
+    <div id="b-ps">
+        <div id="bench">
+            <div id="pl1"></div>
+            <div id="pl1" style="top:78.75vh;"></div>
+            <div id="pl2"></div>
+            <div id="bm1"></div>
+            <div id="bm1" style="left:88.4vw;"></div>
+            <div id="bm2"></div>
+            <div id="l1"></div>
+            <div id="l1" style="left:88.75vw"></div>
+        </div>
+    </div>
+    <div id="b1-ps">
+        <div id="bench1">
+            <div id="pl1"></div>
+            <div id="pl1" style="top:78.75vh;"></div>
+            <div id="pl2"></div>
+            <div id="bm1"></div>
+            <div id="bm1" style="left:88.4vw;"></div>
+            <div id="bm2"></div>
+            <div id="l1"></div>
+            <div id="l1" style="left:88.75vw"></div>
+        </div>
+    </div>
+    <div id="head-pos">
+        <div id="head">
+            <div id="book">
+                <div id="hm-c-1"></div>
+                <div id="hm-root"></div>
+                <div id="hm-c-2"></div>
+                <div id="hm-pg1">
+                </div>
+                <div id="hm-pg1c"></div>
+                <div id="hm-pg2">
+                    <div id="hm-pg2-1"></div>
+                    <div id="hm-pg2-2"></div>
+                </div>
+            </div>
+            <div id="hm">
+                <div id="hmb1"></div>
+                <div id="hmb2"></div>
+                <div id="hmb3"></div>
+                <div id="hm-r">
+                    <div id="hm-r-1"></div>
+                    <div id="hm-r-2"></div>
+                </div>
+                <div id="hm-1r"></div>
+                <div id="hm-1">
+                    <div id="hm-1-1">
+                        <div id="hm-1-1bo"></div>
+                        <div id="hm-1-2bo"></div>
+                        <div id="hm-1-3bo"></div>
+                        <div id="hm-1-4bo"></div>
+                        <div id="hm-1-5bo"></div>
+                        <div id="hm-1-6bo"></div>
+                        <div id="hm-1-7bo"></div>
+                        <div id="hm-1-8bo"></div>
+                        <div id="hm-1-9bo"></div>
+                        <div id="hm-1-10bo"></div>
+                        <div id="hm-1-11bo"></div>
+                        <div id="hm-1-12bo"></div>
+                        <div id="hm-1-13bo"></div>
+                        <div id="hm-1-14bo"></div>
+                        <div id="hm-1-15bo"></div>
+                        <div id="hm-1-16bo"></div>
+                        <div id="hm-1-17bo"></div>
+                        <div id="hm-1-18bo"></div>
+                        <div id="hm-1-19bo"></div>
+                        <div id="hm-1-20bo"></div>
+                    </div>
+                    <div id="hm-1-2">
+                        <div id="hm-1-1bo"></div>
+                        <div id="hm-1-2bo"></div>
+                        <div id="hm-1-3bo"></div>
+                        <div id="hm-1-4bo"></div>
+                        <div id="hm-1-5bo"></div>
+                        <div id="hm-1-6bo"></div>
+                        <div id="hm-1-7bo"></div>
+                        <div id="hm-1-8bo"></div>
+                        <div id="hm-1-9bo"></div>
+                        <div id="hm-1-10bo"></div>
+                        <div id="hm-1-11bo"></div>
+                        <div id="hm-1-12bo"></div>
+                        <div id="hm-1-13bo"></div>
+                        <div id="hm-1-14bo"></div>
+                        <div id="hm-1-15bo"></div>
+                        <div id="hm-1-16bo"></div>
+                        <div id="hm-1-17bo"></div>
+                        <div id="hm-1-18bo"></div>
+                        <div id="hm-1-19bo"></div>
+                        <div id="hm-1-20bo"></div>
+                    </div>
+                </div>
+                <div id="hm-2"></div>
+                <div id="hm-d">
+                    <div id="hm-do"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="title-pos">
         <p id="title_n">A New Beginning</p>
-        <p id="text">
-        The world of programming languages is vast. When you get exposed to their busy realm, it’s easy to get swept away and swirled around in this whirlpool to the point of disorientation. To avoid this state of utter confusion, make sure to organize your learning routine.
-            <br>
-	I started my journey with Java. At the time, the technology and the incredible possibilities open to me which I never really used were mind-blowing. I went on to experiment more with it and created many a desktop application. The point I’m making here has nothing to do with bad MS Paint art I did for my games written in Java, but with the fact that to start off you need a framework to use. Knowing basic Java syntax has really helped me learn new languages and if you want to experiment with something new, it’s great to be able to just pick up a language and say: “Alright, this might take some getting used to, but I can pick this up just like that”. And while knowing how to code in Java is a useful skill, I’d recommend to start off with something more general, like C++, perhaps.
-            <br>
-	After you make a couple of projects on your own in your framework language, at some point comes the time to finally let go and take a look at other languages. But here’s the problem: which one do you choose? Surely, considering the fact that I’m blowing this whole process out of proportion so much, it must be important, right? Well, it actually is important, just not as dramatically as one would imagine. So, to make the process even more simple, I went on to classify languages by application. (note: the classification is based on personal or widespread preferences) To start off, you have the general-purpose, very well-known and probably good for making apps on desktop, like the classic Java, the world-famous Python or the numeric C++. These also happen to be very good second or third languages to pick up before you go full-on industrial. If you’re still very new to programming, then you should learn these first, go at your own pace and not fill your head with these peculiar names listed below: after all these languages stand pretty well on their own. Then there’s languages that are good for mobile development, like the Java-bettering Kotlin and Scala or Swift, which is largely avoided by doctors. There are more industrial and scientific languages, like the useful for writing systems software Rust, the brave and new Julia, which is good for data analysis and plot building, the machine-school of a language that is R, the go-to analysis and calculation language F#. Another group of languages is a web-based one: the oh-so-convenient Ruby, the loud and proud Dart, the fast and fresh Golang, or the sophisticated Elixir. There are also languages for Game Development, like the simple GML or the formal and jacket-wearing C# or the flashy ActionScript. There are even languages for writing music composition, like ChucK or Reaktor.
-            <br>
-	So, now that you’ve opened up the documentation, rolled up your sleeves, cracked your knuckles a few times, and dig in, the question will soon hit you: Now what? Well, while the more sophisticated languages are a challene to learn already, the more simple ones go better with a set of tasks to set for yourself. Quite a few good ones come from the 99-problems GitHub repo and many other similar ones, where you can find exercises ranging from pretty simple to rather difficult.
-	In conclusion, programming can be hard. Starting from scratch is even harder. But if you have even a distant idea of what you want to achieve, it’s…
-actually still going to be hard, but you’ll have a better time doing it!
+    </div>
+    <div id="building">
+
+        <p id="text" style="margin-top:10.5vh">
+            The world of programming languages is vast. When you get exposed to their busy realm, it’s easy to get swept away and swirled around in this whirlpool to the point of disorientation. To avoid this state of utter confusion, make sure to organize your learning routine.
+            <br> I started my journey with Java. At the time, the technology and the incredible possibilities open to me which I never really used were mind-blowing. I went on to experiment more with it and created many a desktop application. The point I’m making here has nothing to do with bad MS Paint art I did for my games written in Java, but with the fact that to start off you need a framework to use. Knowing basic Java syntax has really helped me learn new languages and if you want to experiment with something new, it really doesn't take as much as one would think to be able to just pick up a language and say: “Alright, this might take some getting used to, but I can pick this up just like that”. And while knowing how to code in Java is a useful skill, I’d recommend to start off with something more general, like C++, perhaps.
+            <br> After you make a couple of projects on your own in your framework language, at some point comes the time to finally let go and take a look at other languages. But here’s the problem: which one do you choose? Surely, considering the fact that I’m blowing this whole process out of proportion so much, it must be important, right? Well, it actually is important, just not as dramatically as one would imagine. So, to make the process even more simple, I went on to classify languages by application. (note: the classification is based on personal or widespread preferences) To start off, you have the general-purpose, very well-known and probably good for making apps on desktop, like the classic Java, the world-famous Python or the numeric C++. These also happen to be very good second or third languages to pick up before you go full-on industrial. If you’re still very new to programming, then you should learn these first, go at your own pace and not fill your head with these peculiar names listed below: after all these languages stand pretty well on their own. Then there’s languages that are good for mobile development, like the Java-bettering Kotlin and Scala or Swift, which is largely avoided by doctors. There are more industrial and scientific languages, like the useful for writing systems software Rust, the brave and new Julia, which is good for data analysis and plot building, the machine-school of a language that is R, the go-to analysis and calculation language F#. Another group of languages is a web-based one: the oh-so-convenient Ruby, the loud and proud Dart, the fast and fresh Golang, or the sophisticated Elixir. There are also languages for Game Development, like the simple GML or the formal and jacket-wearing C# or the flashy ActionScript. There are even languages for writing music composition, like ChucK or Reaktor.
+            <br> So, now that you’ve opened up the documentation, rolled up your sleeves, cracked your knuckles a few times, and dig in, the question will soon hit you: Now what? Well, while the more sophisticated languages are a challenge to learn already, the more simple ones go better with a set of tasks to set for yourself. Quite a few good ones come from the 99-problems GitHub repo and many other similar ones, where you can find exercises ranging from pretty simple to rather difficult. <br>In conclusion, programming can be hard. Starting from scratch is even harder. But if you have even a distant idea of what you want to achieve, it’s… actually still going to be hard, but you’ll have a better time doing it!
 
         </p>
-        <div id="roof-b-s"></div>
     </div>
 
     <div id="bar">Code:Excelso</div>
@@ -227,6 +1071,12 @@ actually still going to be hard, but you’ll have a better time doing it!
         <div id="tend" onclick="atc()">Articles
             <div id="tend_desc">
                 <div id="tend_desc_fix">Read up about the tendencies of programming languages</div>
+            </div>
+        </div>
+        <div id="lang-pos">
+            <div id="lang">
+                <div id="rus" onclick="window.location.assign('../articles_rus/index.html')">Russian</div>
+                <div id="eng" onclick="window.location.assign('index.html')">English</div>
             </div>
         </div>
         <div id="about">

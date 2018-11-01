@@ -3,8 +3,8 @@
 <meta charset="utf-8" ontent="width=device-width">
 
 <head>
-    <title>Articles - Code:Excelso</title>
     <link rel="icon" href="../coffee.png">
+    <title>О Языках - Code:Excelso</title>
     <style>
         @font-face {
             font-family: soft;
@@ -15,7 +15,7 @@
             font-family: rigid;
             src: url(../reason.otf);
         }
-        
+
         body {
             background-color: #afeeee;
             padding: 0;
@@ -119,10 +119,10 @@
         }
 
         #building {
-            padding-top:20vh;
+            padding-top: 20vh;
             background-color: #eee8aa;
             width: 80vw;
-            height: 50vh;
+            height: auto;
             position: absolute;
             left: 0;
             top: 75vh;
@@ -136,6 +136,7 @@
             height: 5vh;
             background-color: #661933;
         }
+
         #img {
             position: absolute;
             left: -15vw;
@@ -209,6 +210,7 @@
             position: absolute;
             top: -1vh;
         }
+
         #roof-b-s {
             position: absolute;
             left: 0;
@@ -256,45 +258,46 @@
             background-color: #f5f5f5;
             transition: background-color 1s ease;
         }
-        #image {
-            position: absolute;
-            height:auto;width:auto;
-            transform: scale(0.5);
-            left:-50vw;top:-40vh;
-        }
-        #hha {
-            color: palevioletred;
+
+        p {
             font-family: soft;
-            margin-left: 3vh;
-            font-size:4vh;
-            text-decoration: none;
-        }
-        #ah {
-            margin-top:0;
-            margin-left:3vh;
             color: palevioletred;
-            font-family: soft;
+            margin-left: 5vh;
+
         }
+
+        #title {
+            font-size: 5vh;
+            margin-bottom: 2vw;
+            margin-top: 2vw;
+        }
+
+        #desc {
+            width: 55vw;
+        }
+
         #sun {
             position: absolute;
-            left:75vw;
-            top:10vh;
-            width:25vh;
-            height:25vh;
+            left: 75vw;
+            top: 10vh;
+            width: 25vh;
+            height: 25vh;
             z-index: -3;
             background-color: #f0d6ac;
             border-radius: 100%;
             overflow: hidden;
         }
+
         #sun2 {
             position: absolute;
-            left:8vh;
-            top:-16vh;
-            width:31vh;
-            height:31vh;
+            left: 8vh;
+            top: -16vh;
+            width: 31vh;
+            height: 31vh;
             background-color: #f5e3c8;
             border-radius: 100%;
         }
+
         #cloud1_1 {
             position: absolute;
             left: 84px;
@@ -363,6 +366,35 @@
                 left: 50vw;
             }
         }
+
+        #lang {
+            position: absolute;
+            left: -12vh;
+            top: 90vh;
+            width: 100%;
+            text-transform: uppercase;
+            color: white;
+            font-size: 2vh;
+            font-weight: bold;
+        }
+
+        #lang-pos {
+            position: absolute;
+            width: 100%;
+            top: 0;
+            left: 52vw;
+        }
+
+        #rus {
+            position: absolute;
+            padding-right: 1.5vh;
+            border-right: .5vh solid #ff0000;
+        }
+
+        #eng {
+            position: absolute;
+            left: 12.25vh;
+        }
     </style>
 </head>
 
@@ -396,10 +428,43 @@
         </div>
     </div>
     <div id="building">
-        <p onclick="chosen_article()" id="hha">A new beginning</p>
-        <p id="ah" onclick="chosen_article()">What do these even do?</p>
-        <p onclick="chosen_article_2()" id="hha">Burning out</p>
-        <p id="ah" onclick="chosen_article_2()">Have you even slept in the past year?</p>
+        <div onclick="window.location.assign('lrncpp.html')">
+        <p id="title">C++</p>
+        <p id="desc">• Комплексные вычисления • Создание интерфейсов • Разработка игр</p>
+        </div>
+        <div onclick="window.location.assign('lrngo.html')">
+        <p id="title">GO!</p>
+        <p id="desc">• Серверное программирование • Разработка десктопных приложений • Веб-разработка</p>
+        </div>
+        <div onclick="window.location.assign('lrnktln.html')">
+        <p id="title">Kotlin</p>
+        <p id="desc">• Разработка мобильных приложений • Веб-разработка • Разработка десктоп-приложений</p>
+        </div>
+        <div onclick="window.location.assign('lrnjava.html')">
+            <p id="title">Java</p>
+            
+        <p id="desc">• Мобильная, веб и десктоп разработка apps • Алгоритмы</p>
+        </div>
+        <div onclick="window.location.assign('lrnjul.html')">
+        <p style="margin-top:5vh" id="title">Julia</p>
+        <p id="desc">• Комплексные вычисления • Алгоритмы • Серверное программирование • Разработка 2D игр • Мобильная разработка</p>
+        </div>
+        <div onclick="window.location.assign('lrnpy.html')">
+        <p id="title">Python</p>
+        <p id="desc">• Комплексные вычисления • Веб-разработка • Разработка интерфейсов десктоп-приложений • Разработка игр development</p>
+        </div>
+        <div onclick="window.location.assign('lrnr.html')">
+        <p id="title">R</p>
+        <p id="desc">• Комплексные вычисления • Анализ данных • Машинное обучение • Биоинформатика</p>
+        </div>
+        <div onclick="window.location.assign('lrnrust.html')">
+        <p id="title">Rust</p>
+        <p id="desc">• Разработка системных приложений • Анализ данных • Веб-разработка</p>
+        </div>
+        <div onclick="window.location.assign('lrnsc.html')">
+        <p id="title">Scala</p>
+        <p id="desc">• Веб-разработка • Анализ данных • Разработка приложение • Машинное обучение</p>
+        </div>        
         <div id="roof-b"></div>
         <div id="roof-b-s"></div>
     </div>
@@ -415,14 +480,20 @@
         </div>
     </div>
     <div id="sidebar" style="left:100vw;">
-        <div id="learn" onclick="learn_pg()">Tutorials
+        <div id="learn" onclick="learn_pg()">О языках
             <div id="learn_desc">
-                <div id="learn_desc_fix">Learn more about interesting languges in a colorful way</div>
+                <div id="learn_desc_fix">Узнайте больше о языках на красочных страницах!</div>
             </div>
         </div>
-        <div id="tend" onclick="article_pg()">Articles
+        <div id="tend" onclick="article_pg()">Статьи
             <div id="tend_desc">
-                <div id="tend_desc_fix">Read up about the tendencies of programming languages</div>
+                <div id="tend_desc_fix">Прочтите пару полезных статей для программистов!</div>
+            </div>
+        </div>
+        <div id="lang-pos">
+            <div id="lang">
+                <div id="rus" onclick="window.location.assign('index.html')">Russian</div>
+                <div id="eng" onclick="window.location.assign('../tutorials/index.html')">English</div>
             </div>
         </div>
         <div id="about">
@@ -430,16 +501,14 @@
         </div>
     </div>
     <script>
- function main() { window.open("../index.html","_self"); }
-        function chosen_article() {
-            window.open("a_3.html","_self");
-        } 
-        function chosen_article_1() {
-            window.open("a_1.html","_self");
-        } 
-        function chosen_article_2() {
-            window.open("a_2.html","_self");
-        } 
+        function chosen_lang() {
+
+        }
+
+        function main() {
+            window.open("../index.html", "_self");
+        }
+
         function c() {
             document.getElementById("bar9uk_1").style.backgroundColor = "palevioletred";
             document.getElementById("bar9uk_2").style.backgroundColor = "palevioletred";
@@ -453,11 +522,11 @@
         }
 
         function learn_pg() {
-            window.open("../tutorials/index.html", "_self");
+            window.open("index.html", "_self");
         }
 
         function article_pg() {
-            window.open("index.html", "_self");
+            window.open("../articles/index.html", "_self");
         }
 
         function menu_slider() {

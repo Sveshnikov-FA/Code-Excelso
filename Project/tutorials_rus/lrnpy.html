@@ -430,7 +430,7 @@
             top: 1vh;
             z-index: 0;
             left: 10vh;
-            width: 12vh;
+            width: 14vh;
             height: 3.4vh;
             font-family: soft;
             text-align: center;
@@ -772,14 +772,14 @@
             position: absolute;
             top: 0;
             left: 0;
-            width: 75%;
+            width: 85.5%;
             height: 57%;
             z-index: 2;
             color: white;
             background-color: black;
             opacity: 0;
             transition: 1s ease opacity;
-            padding-left: 5vh;
+            padding-left: 3vh;
             padding-top: 8.5vh;
             font-family: soft;
         }
@@ -997,15 +997,15 @@
     </div>
     <div id="building">
         <p id="text" style="margin-top: 10vh">
-            Hissssssssssssssssssssssss… That’s the language of pythons. But there also is a programming language called python and it has little to do with snake tongue. Many consider it to be the perfect language. Its easy-to-understand syntax is what gets people interested, and its efficiency is what everyone sticks around for. For such a simplistic language it has a remarkably wide range of applications: from simple numeric operations to machine learning algorithms and to operation system development.
+            Ссссссссссссссссссссс… Это – язык питонов. А есть язык программирования python, имеющий мало общего со змеями. Многие считают его идеальным языком. Его простой для понимания синтаксис - это то, что заинтересовывает людей, а поражает он остальных своей эффективностью. Для минималистичного языка, у него крайне широкая область применения: от простейших вычислений до алгоритмам по машинному обучению и разработке операционных систем.
         </p>
         <p id="text">
-            To start off, let’s download the compiler for Python, provided on the official website. It’s platform-independent, so that’s one less thing to worry about. And on the IDE side, the IDEal choice would be the basic, but trusty one called PyCharm, which you can get here:
+            Для начала, необходимо убедиться, что у нас скачано всё необходимое, как например, компилятор, который, кстати, универсален для всех платформ, и среда разработки, лучшим вариантом которой является PyCharm, который можно скачать здесь:
         </p>
         <div id="dl-links">
             <div id="dl-cont">
                 <div id="dl-link-comp">
-                    <div id="cv" onclick="window.location.assign('https://www.python.org/downloads/')">Compiler</div>
+                    <div id="cv" onclick="window.location.assign('https://www.python.org/downloads/')">Компилятор</div>
                     <div id="py">
                         <div id="head_blue"></div>
                         <div id="eye_blue"></div>
@@ -1028,23 +1028,24 @@
             </div>
         </div>
         <p id="text">
-            It’s a customary tradition to start learning to program in a certain language by printing out “Hello, World!” in the console. So let’s just jump right into it:
+            Уже стало традицией начать изучение нового языка программирования с вывода сообщения “Hello, World!” в консоль. Приступим же!
         </p>
         <div id="tabs">
-            <div id="ch-code" onclick="cd(0)">Code</div>
-            <div id="ch-rezz" onclick="rz(0)">Result</div>
+            <div id="ch-code" onclick="cd(0)">Код</div>
+            <div id="ch-rezz" onclick="rz(0)">Результат</div>
         </div>
         <div id="code-text_0">
             print “Hello, World!”
         </div>
         <p id="text">
-            Pretty self-explanatory, isn’t it? One thing to note here is that, as you can see, in Python you don’t put semicolons at the end of the line of code, which sets it apart from the others. And in order to receive user input, use input():
+            Просто, не правда ли? Важно заметить, что в конце строк в Python точки с запятой не ставятся.
+            <br> Теперь о переменных. Вновь, с Python мы ломаем стереотипы и не уточняем тип переменной при объявлении. Тип задаётся автоматически, поэтому достаточно для объявления лишь написать название = значение. Чтобы принять пользовательский ввод, используем input():
         </p>
         <p id="code">
             variable = input()
         </p>
         <p id="text">
-            Let’s talk variables now. Again, going against contrary standards, Python does not, in fact, have a particularily large set of them. The type is usually automatically set during definition, so all you need to declare a variable is just name = value In python there are a variety of different collections, or numbered arrays of values of the same type. The most basic and practical one is List, a dynamic instance of arrays, which means you can modify the size of it after the initial declaration. To directly address an element, put the index, or number, of the element in square brackets beside the list name. But remember, elements in arrays in every language are numbered starting from 0! To add an extra element, thus resizing the list, use the append() method, and to do the opposite, use the remove() method, like so:
+            В python много разных структур данных. Самая простая из всех - List, динамический массив, что означает, что его размер можно изменить после объявления. Для получения доступу к элементу, нужно поместить порядковый номер, или индекс, элемента в квадратные скобки рядом с названием листа. Для добавления нового элемента, и получается, изменения размера массива, нужно использовать функцию append() и remove() для удаления вот так:
         </p>
         <p id="code">
             thislist = ["apple", "blueberry", "cherry"]
@@ -1053,7 +1054,7 @@
             <br> thislist.remove("banana")
         </p>
         <p id="text">
-            Conditionals are a huge part of programming. Every language has them, but, taking into account the amount of liberties Python’s syntax takes, it’s kind of weird they left them in. They are defined like this:</p>
+            Условия крайне важны в программировании. Они есть в каждом языке, но учитывая, сколько нового в синтаксисе Python, даже странно, что они и их не убрали. Они объявляются так:</p>
         <p id="code">
             if test1:
             <br> &nbsp;&nbsp;&nbsp;state1
@@ -1063,9 +1064,9 @@
             <br> &nbsp;&nbsp;&nbsp;state3
         </p>
         <p id="text">
-            As you can see, there are some unique things about these rather simple lines of code, which help capitalize on Pythons originality. First of all, the conditions themselves aren’t stated in brackets, but it’s advised to do so if there is more than one condition for the sake of readability. In python, the roles of logical and, or are played by, shocker, words and, or. But, going back to general syntax analysis, the colon is here to take the place of the curly brackets in other languages. Moreover, instead of else if, Python implements a more compact line elif which serves the same purpose: if test1 is not true then check if test2 is true.
-            <br> Let’s address the indentation in python, which you may have noticed in the if/else example. Unlike the other languages, in which it’s usually just a readability optimization practice, here it’s a very important part of the syntax. Whenever there are colons placed, to tell the compiler that this is the code that you want to be executed upon these conditions, you need to indent the needed code by pressing tab so the initial if statement is one tab to the left of the code. This rule is mandatory for every code block, whether it’s a conditional, a loop or a function.
-            <br> Another important part of programming are loops. They make our life easier and our code more efficient. Python decided to keep the two common types of loops: for and while, but they did change up their definition in their usual style.
+            Как видим, в этих простых строках кода есть свои особенности, вновь ставящие ударение на уникальности языка. Во-первых, условия не помещены в скобки, кроме случаев с несколькими условиями. Роли логического «И» и «ИЛИ» в python выполняются словами and и or соответственно. Двоеточие здесь заменят фигурные скобки свойственные другим языкам. Также вместо else if, Python вводит более компактный оператор elif, выполняющий ту же роль.
+            <br> Также стоит обратить внимание на пробелы слева, которые вы могли заметить в примере if/else. В отличие от правил других языков программирования, здесь дело не только в читаемости кода. Пробелы обозначают блоки кода, идущие после двоеточия. Соответствующие пробелы означают принадлежность кода соответствующему блоку, в данном случае, блоку действия при выполнении условия.
+            <br> Циклы – прекрасная вещь. Они делают нашу жизнь лучше, а наш код – эффективнее. В Python 2 типа циклов: for и while. Суть их объявления соответствую вышеописанным правилам.
         </p>
         <p id="code">
             for x in range(25):
@@ -1075,7 +1076,7 @@
                 &nbsp;&nbsp;&nbsp;print a
         </p>
         <p id="text">
-            So, the first thing to address is the range operator in for. What is that, you might ask? Well, it is an operator that gives in the range in which the variable is going to be used. You can use other variables as limits, and you can also set the starting point of the range like this: range(1,5) ( if you don’t the compiler puts 0 in by default ).
+            Для начала, стоит упомянуть оператор range. Что он делает, спросите вы? Это оператор, задающий диапазон переменной, контролирующей работу цикла. Границами могут быть другие переменные и массивы, а также диапазоны, не начинающиеся с 0, объявляются так: range(1,5)
         </p>
         <p id="code">
             string = "Hello World"
@@ -1083,46 +1084,44 @@
             <br> &nbsp;&nbsp;&nbsp;print x
         </p>
         <p id="text">
-            A function, also known as a void, is a block of code that’s only run when explicitly called. To declare one use the command word def, then the function name, then list the arguments, the values you choose to send as extra data to the void, in parentheses, then put the colon to mark the beginning of a function. The said block of code is to be placed with required indentation, as usual.
+            Функция – это блок кода, выполняемый только при вызове. Для объявления используется командное слово def, затем идёт название функции, затем в скобках перечисляются аргументы, значения, которые мы пересылаем в эту функцию. Затем ставим двоеточие для обозначения начала блока, и пишем действия ниже с соответствующими пробелами, как обычно.
         </p>
         <p id="code">
             def my_function(value):
             <br> &nbsp;&nbsp;&nbsp;print(“Hello, world”)
         </p>
         <p id="text">
-            But what’s calling a function? Exactly what it means in the English language: you just call out its name, and if there are arguments to be sent, then it’s like calling someone by their full name.
+            Что значит вызвать функцию? Также, как и в лексике, мы просто зовём её по имени. Если же есть аргументы для пересылания, то перечисляем значения в скобках, то есть зовём по имени и отчеству.
         </p>
         <div id="tabs">
-            <div id="ch-code" onclick='cd(1)'>Code</div>
-            <div id="ch-rezz" onclick="rz(1)">Result</div>
+            <div id="ch-code" onclick='cd(1)'>Код</div>
+            <div id="ch-rezz" onclick="rz(1)">Результат</div>
         </div>
         <div id="code-text_1">
             my_function(5)
         </div>
         <p id="text">
-            There is also a noteworthy thing such as default argument values, which means that if you declare the argument variable within the function definition, you’re allowed to not send any arguments when calling said void.
-            <br> To stop every function ever, you can use quit().
-            <br> Python’s packages cannot go unaddressed. The more well-known ones are numpy, which is the most extensive scientific computing and data analysis package out there, winsound, which can, well, make sound on windows machines when needed, and curses, which is a package for working with the terminal interface. Let’s go a bit more in-depth on the last two.
-            <br> Winsound provides access to the basic sound-playing machinery provided by Windows platforms. To make a simple beep with the PCs speaker, you can use the winsound.Beep(freq, tl) function, but, of course, you’ll have to specify the frequency of the sound and the duration of the beep yourself. The PlaySound(sound,flags) function lets you play any sound you want: if you want to play your own audiofile, the flag must be winsound.SND_FILENAME and if you want to play a system sound (we’ll get back to those in a bit) use winsound.SND_ALIAS. And the MessageBeep(type) function lets you play a system sound directly. But what is a system sound in this case, you might ask? Well, a good example of one would be the Windows 10 notification noise that you might hear when Windows Defender is done trying its best. The sound in question will be played accordingly to the used constant, the full list of which goes like so: winsound.MB_OK, which is the default system sound, winsound.MB_ICONASTERISK, which is like MB_OK but not really, MB_ICONEXCLAMATION which plays a SystemExclamation sound, MB_ICONHAND, which plays the SystemHand sound, and MB_ICONQUESTION, which plays the SystemQuestion sound. To find out what these sound like, feel free to try them out yourself right here!
+            Также стоит обратить внимание на тот факт, что в объявлении самой функции, переменной-аргументу можно придать базовое значение, что позволяет нам в таких ситуациях не пересылать аргументы при вызове.
+            <br> Нельзя не упомянуть дополнения Python. Разберём две относительно известные: winsound, которая, ну, позволяет программе издавать на компьтерах под windows, и curses, дополнение дял работы с интерфесом терминала. Разберём же их.
+            <br> Winsound предоставляет программисту доступ к базовым устройствам по воспроизведению звука на платформах под Windows. Для того, чтобы издать гудок из динамиков, используем функцию winsound.Beep(частота, длина). Функция PlaySound(звук,флаги) позволяет проигрывать любой звук: либо аудиофайл, где флаг тогда равен winsound.SND_FILENAME, либо системный звук (о них попозже), где флаг равен winsound.SND_ALIAS. Функция MessageBeep(тип) позволяет проигрывать системный звук напрямую. Но что вообще такое этот системный звук? Хорошим примером может послужить звук уведомления на Windows 10 о том, как старается Защитник Windows на этот раз. В библиотеке есть множество разных системных звуков. Так они звучат на Windows 10:
         </p>
         <div id="code-text">
-            Try these out!<br>
             <div id="asterisk" onclick="audio(0)" style="cursor:pointer">MB_ICONASTERISK</div><br>
             <div id="a_ok" style="cursor:pointer" onclick="audio(1)">MB_OK</div><br>
             <div id="a_exc" style="cursor:pointer" onclick="audio(2)">MB_ICONEXCLAMATION</div><br>
             <div id="a_hand" style="cursor:pointer" onclick="audio(3)">MB_ICONHAND</div><br>
             <div style="cursor:pointer" id="a_que">MB_ICONQUESTION</div>
         </div>
-        <p id="text"> Curses provide access to the terminal User Interface. With curses you can do fun things like make animations with ASCII characters, change the color of text in the terminal, and make games! Let’s initialize the library by using curses.initscr() and also reserve the space in the terminal. If we declare a variable that’s equal to intiscr, we can get the screen’s properties, like its height and width ( which is done inline using varname.getmaxyx() ). Going on with setting things up, let’s configure the cursor’s state, like if it;’s going to be visible or not, by using curses.curs_set(visibility_level), where vl can be set to 0, 1 or 2 and 2 is “very visible”, which means that the cursor will be shown as a large white block. To prepare curses for working with color, you need 2 lines of code: curses.start_color() and curses.use_default_colors(), the latter meaning we’ll address colors using the curses-provided constants. Moving on, let’s finish setting up the actual window by using newwin(lines, cols, y, x) where lines and cols are the height and width of the widow respectedly and y and x are the coordinates of the left-upper corner of it. Finally let’s set up user input in curses by using window.keypad(1). There’s also ways to refresh the window every once in a while using window.timeout(time) or window.refresh() (this one will not repeat by itself).
-            <br> Now that we’re finally done setting everything up, let’s start working with the window. You can add single characters at desired locations(within reason and bounds of the window) using addch(y, x, character) or even whole strings of them using addstr(y, x, string). But what if you don’t want to look up the needed character to paste it in just for the compilator to tell you that nothing works? Well, curses got you covered with their extensive constant collection of ASCII characters, which are initialized like this: curses.ACS_KEY. This should work, but it doesn’t look fancy enough. Well, we can change the color of the text, by adding a comma after the value and putting in curses.COLOR_colorname. Color too vibrant for you? You can mix colors here with curses.init_pair(id,color1,color2) and then reference the pair by curses.color_pair(id). Also worth mentioning that curses has its own input methods, where window.getch() receives a single input key, which, by the way, may not only be a letter or a number – it can be any key that you have on your keyboard, and window.getstr() receives a whole string. Going back to the whole keyboard input thing, curses still got you covered with their constant system, which, this time, contains names, by which you can reference non-character keys, like the Left-Arrow key, which is curses.KEY_LEFT in the constant library. If you, for whatever reason, want to stop curses, use curses.endwin().
-            <br> Now let’s compile all the things we now know to create a python game. It’s just like snake, but the snake is blue. To generate random food locations, we’ll need a module with a very cryptic name “random”.</p>
+        <p id="text"> Curses предоставляют доступ к пользовательскому интерфейсу терминала. С curses мы можем делать разные весёлые вещи, например, анимировать с символами ASCII, изменять цвет текста и фона в терминале и создавать игры! Начнём с инициализации библиотеки, используя curses.initscr(), тем самым оставляя место в терминале. Если мы приравняем переменную к intiscr, мы можем получить свойства экрана, как его высота и ширина. Далее, зададим свойства курсора, будет ли он виден, используя curses.curs_set(visibility_level), где vl может быть равен от 0 до 2, где 2 – очень видимый, 1 – полупрозрачный, 0 – невидимый. Если он равен 2 или 1, то мы будем видет курсор как белый блок. Для подготовления curses к работе с цветом, необходимы две строки кода: curses.start_color() и curses.use_default_colors(), где последняя означает, что мы будем использовать базовые константы для обозначения цветов. Продвигаясь далее, закончим подготовку рабочего окна, используя newwin(lines, cols, y, x), где lines и cols - высота и ширина окна соответственно, а х и у – координаты левого верхнего угла. И наконец, закончим настраивать пользовательский ввод в curses с помощью window.keypad(1). Окно всегда можно перезагрузить, используя window.timeout(time) или window.refresh(), но первая работатет периодически, а последняя - только по вызову.
+            <br> Теперь, когда мы закончили всё настраивать, поработаем с окном. Мы можем добавить символы в нужных местах (в пределах разума и окна, разумеется) используя addch(y, x, символ), или даже целые строки с помощью addstr(y, x, строка). Но что делать, если это не стандартный символ и его нет на клавиатуре? Сurses всё устроили, ведь у них есть полная коллекция констант под соответствующие ASCII символы, которые инициализируются вот так: curses.ACS_KEY. В целом работает, но недостаточно красиво. Тогда поменяем цвет текста, добавив запятую после строки и написав curses.COLOR_colorname. Слишком кислотный или яркий цвет? Цвета можно смешивать с помощью curses.init_pair(id,color1,color2), а затем называть этот цвет curses.color_pair(id). Также стоит заметить, что у curses свои методы получения пользовательского ввода, где window.getch() получает на вход одно значение, которое, кстати, не обязательно символьное, то есть, это может быть и Esc, и пробел которые можно называть в программе соответственно базовым константам, опять-таки предоставленными curses, А window.getstr() принимает на вход целую строку. Для прекращения выполнения программы в окне, используем curses.endwin().
+            <br> Теперь соберём все полученные знания воедино, чтобы создать игру «питон». Она почти как всем известная «Змейка», но здесь она синего цвета. Для генерации случайных чисел для размещения еды на поле, нам понадобится модуль с таинственным названием “random”.</p>
         <p id="code">
             import random
             <br> import curses
             <br> import winsound
         </p>
         <p id="text">
-            Alright, now let’s initialize curses.
+            Отлично, теперь инициализируем curses.
         </p>
         <p id="code">
             s = curses.initscr()
@@ -1135,65 +1134,60 @@
             <br> w.timeout(100)
         </p>
         <p id="text">
-            Now we create the snake itself. The coordinates of its head should be somewhere around here:
+            Теперь создаём саму змейку. Её начальные координаты должны быть приблизительно:
         </p>
         <p id="code">
             snek_x = int(screenWidth/4)
             <br> snek_y = int(screenHeight/2)
         </p>
         <p id="text">
-            Let’s start off with the snake being 3 characters long, and create a list of coordinates which will be expanded when the snake eats something.
+            Пусть начальная длина змейки будет 3 символа. Создадим list координат каждого символа, который будет расширяться каждый раз, когда змея что-то съедает.
         </p>
         <p id="code">
             snek = [ [snek_y, snek_x], [snek_y, snek_x-1], [snek_y, snek_x-2] ]
         </p>
         <p id="text">
-            Now we put the first bit of food on screen and it will be exactly in the middle of the window. In this case we shall also create a list of coordinates for the food. Food will look like a diamond.
+            Теперь поставим первую еду на экран точно посередине окна. Создадим и для еды list координат.
         </p>
         <p id="code">
             snek_food = [int(screenHeight/2), int(screenWidth/2)]
             <br> w.addch(int(snek_food[0]), int(snek_food[1]), curses.ACS_DIAMOND)
         </p>
         <p id="text">
-            Now let’s initialize the last variables. The snake will be going right initially and will be dark blue.
+            Инициализируем же оставшиеся переменные. Сначала змейка будет двигаться вправо (поэтому сделаем вид, будто с самого начала пользователь нажал клавишу «вправо») и будет тёмно-синего цвета.
         </p>
         <p id="code">
             key = curses.KEY_RIGHT
             <br> curses.init_pair(1, curses.COLOR_BLUE, curses.COLOR_BLACK)
         </p>
         <p id="text">
-            Now let’s make the snake move and read for keys using a function.
+            Теперь сделаем так, чтобы она двигалась и начнём считывать ввод в функции.
         </p>
         <p id="code">
             def mvmt(key):
+            <br> next_key = w.getch()
         </p>
         <p id="text">
-            As you remember, input is read using window.getch(), so:
-        </p>
-        <p id="code">
-            next_key = w.getch()
-        </p>
-        <p id="text">
-            If nothing is input, getch() is equal to -1, so now we check if it is.
+            Если ничего не введено, переменная равна -1. Тогда добавим условие для этого случая.
         </p>
         <p id="code">
             key = key if next_key == -1 else next_key
         </p>
         <p id="text">
-            Now let’s check if the snake hit its own bodypart:
+            Теперь проверим, если змейка укусила сама себя:
         </p>
         <p id="code">
             if snek[0][0] in [screenHeight, 0] or snek[0][1] in [0, screenWidth] or snek[0] in snek[1:]:
             <br> &nbsp;&nbsp;&nbsp;end_of_game()
         </p>
         <p id="text">
-            Now we add an extra head in the front which shall lead the way for the rest of the body.
+            Добавим вперёд ещё одну голову, направляющую её туловище…
         </p>
         <p id="code">
             new_head = [snek[0][0], snek[0][1]]
         </p>
         <p id="text">
-            And then we analyze the input keys.
+            ...И начнём анализировать ввод:
         </p>
         <p id="code">
             if key == curses.KEY_DOWN:
@@ -1208,18 +1202,18 @@
             <br>return key
         </p>
         <p id="text">
-            Now we’ll check whether the snake ate the food and if so we replace.
+            Теперь проверяем, съела ли змейка еду; Если да, её нужно заменить.
         </p>
         <p id="code">
             def replace_snek_food(snek_food):
             <br> if snek[0][0] == snek_food[0] and snek[0][1] == snek_food[1]:
         </p>
         <p id="text">
-            Let’s get the PC to make a sound when food is eaten using winsound.
+            Пусть компьютер издаст гудок с помощью winsound, когда змейка съедает еду.
         </p>
         <p id="code">&nbsp;&nbsp;&nbsp;winsound.Beep(2000,250)</p>
         <p id="text">
-            Now we refresh the food coordinates array and try to get new random coordinates using random.randInt(range) while snake food isn’t on the screen.
+            Теперь мы должны обновить координаты еды и получить новые, случайные, с помощью random.randInt(диапазон), если еды нет в окне.
         </p>
         <p id="code">
             snek_food = None
@@ -1227,14 +1221,14 @@
             <br> &nbsp;&nbsp;&nbsp;snek_food = [ random.randint(1, screenHeight-1), random.randint(1, screenWidth-1) ]
         </p>
         <p id="text">
-            And now we finally put the food on screen again, with the new coordinates and everything.
+            И теперь мы помещаем новую еду в окно, с новыми координатами и прочим.
         </p>
         <p id="code">
             w.addch(int(snek_food[0]), int(snek_food[1]), curses.ACS_DIAMOND)
             <br> else:
         </p>
         <p id="text">
-            And if the food wasn’t eaten, well, remember the additional head we created in the last function to get the snake to move? Well, it shouldn’t be there if we didn’t get the food, so we remove it and overwrite the last place where the new head was with a blank space.
+            Если же еда не была съедена, то.. Помните ту дополнительную голову, которую мы добавили ранее как направляющую? Ну, её по идее быть не должно, поэтому мы ставим пробел в то место, где последний раз был последний символ змеи.
         </p>
         <p id="code">
             tail = snek.pop()
@@ -1242,7 +1236,7 @@
             <br> return snek_food
         </p>
         <p id="text">
-            Now, as you remember, we put end_of_game() in several places, we never addressed what it is. Well, it should be a function which we haven’t declared yet, so let’s do exactly that: create a function which ends the game, prints the score and makes a sad noise.
+            Как мы помним, мы добавили в нескольких местах end_of_game() и так нигде эту функцию и не объявили. Тогда сделаем же это: создадим функцию, закрывающую окно, выводящую очки и издающую грустный звук.
         </p>
         <p id="code">
             def end_of_game():
@@ -1253,7 +1247,7 @@
             <br> &nbsp;&nbsp;&nbsp;curses.endwin()
             <br quit() </p>
             <p id="text">
-                As you remember, we used timeout() above. While it does refresh the screen, we’re not refreshing the now written functions. That’s a shame. Let’s fix that with an infinite loop.
+                Мы также использовали timeout() в самом начале. Это позволяет нам обновить экран, но не функции. А жаль. Исправим же эту проблему с помощью вызова функций в бесконечном цикле.
             </p>
             <p id="code">
                 while True:
@@ -1262,11 +1256,11 @@
                 <br>
             </p>
             <p id="text">
-                Now, we finally have to reinitialize the first part of the snake. But if the snake hits the end of the screen, the program returns an error, which isn’t pretty. Let’s catch the error using try: except errorname: do the thing.
+                Теперь мы наконец заново инициализируем первую часть змейки. Но если она достигает края окна, программа возвращает ошибку, а это не очень красиво. Поймаем же её используя структуру try: except errorname:
             </p>
             <div id='tabs'>
-                <div id="ch-code" onclick="cd(2)">Code</div>
-                <div id="ch-rezz" onclick="rz(2)">Result</div>
+                <div id="ch-code" onclick="cd(2)">Код</div>
+                <div id="ch-rezz" onclick="rz(2)">Результат</div>
             </div>
             <div id="code-text_2">
                 try:
@@ -1276,7 +1270,7 @@
                 <br> &nbsp;&nbsp;&nbsp;end_of_game()
             </div>
             <p id="text">
-                And that’s it. Using this rather simple set of tools we have created our first python game written in python. Click <a style="color:#e6ffe6" href="../CE_Python-project.rar">here</a> to download the finished code. To put it simply, hisssssssssssssss. You should be able to understand this now. If not, then you just need to keep on learning and someday you’ll fully understand this.
+                Вот и всё. Скачать итоговый код можно <a style="color:#e6ffe6" href="../CE_Python-project.rar">здесь</a>. Используя столь простой набор инструментов и знаний, мы создали нашу первую игру на python. Если проще, то сссссссссссссссссссссссссссссс. Это уже должно быть вам понятно. Если нет, то нужно просто продолжать изучать python, и когда-нибудь, вы поймёте весь смысл этого звука.
             </p>
     </div>
     <div id="bar">Code:Excelso</div>
@@ -1290,20 +1284,20 @@
         </div>
     </div>
     <div id="sidebar" style="left:100vw;">
-        <div id="learn" onclick="lrn()">Tutorials
+        <div id="learn" onclick="lrn()">О языках
             <div id="learn_desc">
-                <div id="learn_desc_fix">Learn more about interesting languages in a colorful way!</div>
+                <div id="learn_desc_fix">Узнайте больше о языках на красочных страницах!</div>
             </div>
         </div>
-        <div id="tend" onclick="atc()">Articles
+        <div id="tend" onclick="atc()">Статьи
             <div id="tend_desc">
-                <div id="tend_desc_fix">Read up about the tendencies of programming languages</div>
+                <div id="tend_desc_fix">Прочтите пару полезных статей для программистов!</div>
             </div>
         </div>
         <div id="lang-pos">
             <div id="lang">
-                <div id="rus" onclick="window.location.assign('../tutorials_rus/index.html')">Russian</div>
-                <div id="eng" onclick="window.location.assign('index.html')">English</div>
+                <div id="rus" onclick="window.location.assign('index.html')">Russian</div>
+                <div id="eng" onclick="window.location.assign('../tutorials/index.html')">English</div>
             </div>
         </div>
         <div id="about">

@@ -495,7 +495,7 @@
             top: 1vh;
             z-index: 0;
             left: 10vh;
-            width: 12vh;
+            width: 14vh;
             height: 3.4vh;
             font-family: soft;
             text-align: center;
@@ -629,14 +629,14 @@
             position: absolute;
             top: 0;
             left: 0;
-            width: 75%;
+            width: 84.75%;
             height: 57%;
             z-index: 102;
             color: white;
             background-color: black;
             opacity: 0;
             transition: 1s ease opacity;
-            padding-left: 5vh;
+            padding-left: 3.25vh;
             padding-top: 8.5vh;
             font-family: soft;
         }
@@ -1136,11 +1136,11 @@
         </div>
     </div>
     <div id="building">
-        <p id="text" style="margin-top:15vh">С++ is a general-purpose programming language, which is mainly used for numeric computing, marking up graphic user interfaces, game and web development. Like all languages, it has its fair share of advantages and disadvantages. On the latter side, it underperforms quite a bit compared to the other units on the lineup, but don’t click away just yet: there are many reasons as to why you should pick it up. C++ is well-known for its code’s efficiency (Of course, it’s not the ultra-efficient Python, but it’s definitely out there), and the inclusive standard template library, which, if you don’t know what that is, means that the range of possibilities of the language is remarkably wide. <br> Now, if you want to start coding properly, you’ll have to make sure you have all the necessary things installed. If your main objective is simple numeric programming, then an Online IDE will do, but if you really want to get into it then follow along the checklist: for MacOS and UNIX-based OS users, you need to install the GNU C++ compiler, the magic thing that tells the computer what to do with your code, and for Windows users, you need to check if you have Microsoft Visual C++ installed (usually it comes pre-installed on new computers) which will serve the purpose of the compiler. As for the IDE, the application that will send the code to the compiler and print out the results, I would recommend Eclipse CDT. </p>
+        <p id="text" style="margin-top:15vh">С++ - это язык программирования общего назначения, который в основном используется для создания интерфейсов, разработки десктоп, веб приложений и игр. Несмотря на то, что его производительность может быть ниже некоторых других языков, С++ любят за эффективность кода (не на уровне python, разумеется, но всё же), и возможности стандартной библиотеки, близкие к бесконечным. <br> Перед тем, как мы начнём программировать, мы должны убедиться, что у нас установлено всё необходимое. Нам будет нужен компилятор: для пользователей систем MacOS и UNIX это GNU C++, а для пользователей Windows - Microsoft Visual C++. (Как правило, он уже есть на новых компьютерах). MinGW подходит для всех платформ. Также нам нужна среда разработки, роль которой может выполнить Eclipse для С++. </p>
         <div id="dl-links">
             <div id="dl-cont">
                 <div id="dl-link-comp" cursor="pointer" onclick="window.location.assign('http://www.mingw.org/')">
-                    <div id="cv">Compiler</div>
+                    <div id="cv">Компилятор</div>
                     <div id="cpp">
                         <div id="hex1"></div>
                         <div id="hex2"></div>
@@ -1161,283 +1161,254 @@
                 </div>
             </div>
         </div>
-        <p id="text">After you’ve opened a fresh, brand-new C++ file, it’s time to start coding. It’s a good tradition to start off with a program that prints out “Hello, World!” so let’s do exactly that.
+        <p id="text">Теперь пришло время писать код. Для программистов уже стало традицией начинать изучать новый язык с вывода в консоль сообщения “Hello, World!”. Приступим же!
         </p>
         <div id="tabs">
-            <div id="ch-code" onclick="cd(0)">Code</div>
-            <div id="ch-rezz" onclick="rz(0)">Result</div>
+            <div id="ch-code" onclick="cd(0)">Код</div>
+            <div id="ch-rezz" onclick="rz(0)">Результат</div>
         </div>
         <div id="code-text_0">
             #include
             <iostream> <br> using namespace std;<br> int main() {<br> cout
                 << "Hello World!"; <br>} </div>
         <p id="text">
-            So, half of the code above is auto-generated, and the other half is questionably abbreviated, so let’s break it down. #include
-            <> defines the specific part of the standard template library you want to… include in the project, which means if you include the iostream part you will be able to use the syntax correlated to the iostream part, and to use the syntax for, say, vectors, you need to put an include statement in the beginning of the file. Namespace is, well, a space of certain names which you can reference further in the document. You can define your own namespace in which you put in global variables, so, to reference these variables without copying all of them in every project file, you can just write using namespace N; And std is a namespace pre-defined in C++, which helps shorten the code and make it far more readable, main() is the general function, akin to other main() voids and ints in other languages. Cout is the syntax for output, you put
-                << signs every time you need to change the type, like here: </p>
+            Давайте разберём этот код. #include определяет конкретную библиотеку или модуль, который мы хотим импортировать в свой проект. main() – главная функция, которая возвращает целое число. Cout отвечает за вывод в консоль, и мы ставим
+            << каждый раз, когда мы хотим изменить тип вывода. <br>
+                У C++ свой набор переменных. Это char, одиночный символ, такой как ‘A’ или ‘%’; int, short и long – целые цисла соответствующей длины; float и double – действительные числа, где double имеет более широкий диапазон допустимых значений; Bool, тип, принимающий только одно из двух значений: либо true, либо false;
+                <br>Теперь о принятии пользовательского ввода. Он по сути похож по синтаксису на вывод, но вместо cout мы используем cin, а вместо
+                << ->>. cin>>a>>b;
+        </p>
+        <p id="code"> cin>>a>>b;</p>
+        <p id="text">
+            Условия в C++ объявляются достаточно просто. Если выполняется условие, то выполняется и действие.
+        </p>
+        <p id="code">If (условие) {<br>} else (условие || или_это_условие && и_это_условие) {<br>} else {}</p>
+        <p id="text">
+            Циклы – отличная вещь. Они делают нашу жизнь проще и наполняют её счастьем. Если быть точнее, то они помогают нам выполнять одни и те же действия несколько раз. В C++ 2 типа циклов: for, который всегда будет выполнен конкретное, заданное нами количество раз, и while, который будет выполняться пока выполняется заданное условие.
+        </p>
+        <p id="code">
+            while(условие) {<br> //цикл выполняется, пока выполняется условие<br> }<br>for ( int I =0; i
+            <,5; ++i ) {<br> //цикл выполнится 5 раз<br>}<br></p>
+        <p id="text">
+            Утверждения контроля циклов помогают нам изменить ход выполнения цикла. В С++ существуют 2 типа утверждений: break, полностью прерывающий итерацию цикла, и continue, игнорирующий код после этого и сразу переходящий на следующий круг.
+        </p>
+        <p id="code">
+            while (a
+            < 20) { <br> if (a==15) {
+                <br> continue;
+                <br>}
+                <br>If (a==18) {
+                <br> break;
+                <br> }
+                <br> a=a + 1;
+                <br> }
+        </p>
+        <p id="text">
+            Массив – это последовательность однотипных элементов, размещённых в ячейках памяти компьютера, достигаемых указанием индекса элемента в квадратных скобках. Они объявляются указанием типа содержимого, названием, размером в квадратных скобках, оператором присвоения, и элементами, перечисленными в фигурных скобках через запятую.
+        </p>
+        <p id="code"> int foo [5]={ 16, 2, 77, 40, 12071 };</p>
+        <p id="text"> Также существуют динамические массивы, размер которых можно изменить после объявления - vector. Для того, чтобы их использовать, сначала нужно импортировать соответствующую библиотеку. Затем, для объявления мы сначала пишем, что это вектор, затем тип элементов в угловых скобках, затем название. Также после названия можно написать размер в скобках.
+        </p>
+        <p id="code"> vector
+            < int> myvector;</p>
+        <p id="text">Для того, чтобы добавить элемент в конец вектора, используем функцию push_back, для удаления - pop_back.</p>
+        <p id="code">myvector.push_back (100); myvector.pop_back();</p>
+        <p id="text"> В С++ можно создавать свои функции. Для объявления мы сначала пишем тип возвращаемых данных (int, char, или void, если мы не хотим ничего возвращать), затем название, затем аргументы, то есть значения, посылаемые в функцию из места вызова, затем действия в фигурных скобках. Для того, чтобы они были выполнены, необходимо вызвать функцию, написав сначала название, а затем - пересылаемые данные в скобках.</p>
+        <div id="tabs">
+            <div id="ch-code" onclick="cd(3)">Код</div>
+            <div id="ch-rezz" onclick="rz(3)">Результат</div>
+        </div>
+        <div id="code-text_3"> void woo() {
+            <br> cout
+            << "This function will not return anything"; <br>}</div>
+        <p id="text">Давайте же создадим проект, собрав все полученные здесь знания - крестики-нолики! Начнём с объявления глобального массива символов от 1 до 9.</p>
+        <p id="code"> char ph[9]={ '1', '2', '3', '4', '5', '6', '7', '8', '9'};</p>
+        <p id="text"> Эти элементы будут показывать нам, в какой именно квадрат игрок хочет поставить свой знак. Теперь перейдём к int main() и объявим все необходимые переменные.</p>
+        <p id="code">int main() {<br>int turn=1 ,i=-1,pick; char mark;</p>
+        <p id="text"> Переменная turn будет обозначать, какой игрок ходит в данный момент, I - итератор цикла, pick – индекс выбранного квадрата, mark – символ, который сейчас будет ставить игрок. Используем цикл while для обработки хода. Для начала поставим условие, которое будет решать, чей сейчас ход. Затем примем ввод – выбранный для хода квадрат. Затем решим, какой символ ставится, Х или О. Затем введём условие, проверяющее свободен ли квадрат: если да, то ставим символ, если нет, выводим сообщение и сбрасываем ход. Затем, после условия, увеличиваем переменную turn на 1. Пока что наш цикл должен выглядеть так:</p>
+        <p id="code"> While(i==-1) { <br> if(turn%2!=0) turn=1; else turn=2; <br> cin>>pick;
+            <br> if (turn==1) mark=’X’; else mark=’O’;<br> if (ph[(pick-1)] == to_string(pick)) ph[0] = mark;
+            <br> else {
+            <br> cout
+            << "Invalid move"; <br> turn--;
+                <br>cin.ignore();
+                <br> cin.get();
+                <br>}
+                <br>turn++;<br>}</p>
+        <p id="text">Отлично, мы написали программу, которая позволяет нам совершать ход! Теперь уйдём из функции main() на секунду и напишем новую функцию, которая будет проверять, закончилась ли игра или нет. Она, кстати, должна возвращать целое число. Нам нужно просто проверить, равны ли между собой символы в вертикальных, горизонтальных и диагональных рядах. Получается как-то так:</p>
+        <p id="code"> int checkwin() {
+            <br>if (ph[1]==p h[2] && ph[2]==p h[3]) return 1;
+            <br>else if (ph[4]==p h[5] && ph[5]==p h[6]) return 1;
+            <br>else if (ph[7]==p h[8] && ph[8]==p h[9]) return 1;</p>
+        <p id="text">Это были условия для горизонтальных рядов. Теперь напишем все остальные.</p>
+        <p id="code">else if (ph[1]==p h[4] && ph[4]==p h[7]) return 1;
+            <br>else if (ph[2]==p h[5] && ph[5]==p h[8]) return 1;
+            <br>else if (ph[3]==p h[6] && ph[6]==p h[9]) return 1;
+            <br>else if (ph[1]==p h[5] && ph[5]==p h[9]) return 1;
+            <br>else if (ph[3]==p h[5] && ph[5]==p h[7]) return 1;</p>
+        <p id="text">Теперь добавим условие, которое будет проверять, если игра закончилась ничьёй. Для этого просто нужно проверить, что не осталось свободных квадратов.</p>
+        <p id="code">else if (ph[1] !='1' && ph[2] !='2' && ph[3] !='3' && ph[4] !='4' && ph[5] !='5' && ph[6] !='6' && ph[7] !='7' && ph[8] !='8' && ph[9] !='9' ) return 0;
+            <br>else return -1;
+            <br>}</p>
+        <p id="text"> Отлично! Теперь вернёмся в наш цикл и добавим эту строку в самом его конце.</p>
+        <p id="code">i=checkwin();<br>}</p>
+        <p id="text"> Ура,мы покинули цикл! Теперь добавим условие, проверяющее, какой игрок выиграл. Проверим, равен ли итератор значению, которое мы указали в checkwin, то есть 1. А если он не равен 1, то он может быть равен в таком случае только 0, что означает, что игра закончилась ничьёй.</p>
+        <p id="code">if(i==1) cout
+            << "==>\aPlayer "<<--turn<< " won "; else cout<< "==>\aGame ended in a draw";<br>
+                cin.ignore();
+                <br>cin.get();
+                <br>return 0;
+                <br>}</p>
+        <p id="text">Теперь добавим функцию, которая выводим наше игровое поле в консоль. Сначала выведем общую информацию, например заголовок и какой игрок какой символ ставит. </p>
+        <p id="code">void board() {<br>cout
+            << "\n\n\tWow look we made a thing\n\n";<br>cout
+                << "Player 1 (X)  ||  Player 2 (O)" << endl << endl<< endl;</p>
+                    <p id="text"> Представим, как выглядит поле для игры в крестики-нолики. Как разделители сойдут символы _ и |. Тогда посередине каждого ряда квадратов будут наши значения.</p>
                     <div id="tabs">
-                        <div id="ch-code" onclick="cd(1)">Code</div>
-                        <div id="ch-rezz" onclick="rz(1)">Result</div>
+                        <div id="ch-code" onclick="cd(4)">Код</div>
+                        <div id="ch-rezz" onclick="rz(4)">Результат</div>
                     </div>
-                    <div id="code-text_1">
+                    <div id="code-text_4">
                         cout
-                        << "N" << ” ” << "X"; </div>
-                            <p id="text">
-                                So, unlike many other languages, in C++ you don’t use the + signs to add spaces. As usual, to output a number, you don’t need to use quotation marks.
-                            </p>
-                            <div id="tabs">
-                                <div id="ch-code" onclick="cd(2)">Code</div>
-                                <div id="ch-rezz" onclick="rz(2)">Result</div>
-                            </div>
-                            <div id="code-text_2">cout
-                                << 0 << endl;</div>
-                                    <p id="text">
-                                        C++ has its own set of variables, like any self-respecting programming language. Those include char, which represents a single character, such as ‘A’ or ‘%’; int,short and long; float and double, which represent real values, such as 3.14 with various levels of precision, depending on which type you want to choose, on double the precision is higher or equal to that of float’s; Bool, a type which represents a state: either true or false;
-                                        <br> Another important basic step to touch upon is user input. It’s done in a quite similar way to the output, except the command is cin and instead of using
-                                        <<, we use>> instead:
-                                    </p>
-                                    <p id="code"> cin>>a>>b;</p>
-                                    <p id="text">
-                                        Conditionals in C++ are defined in a simple manner as well. You start off with the first if statement. It goes like this: if(condition) action. Conditions are set accordingly to the variable type, so if you need to compare a variable and a number, you use if(N==5), so double equation marks, if you want to check if a variable fits the value, then use triple equation marks. If you want to check if the Boolean is true, simply put if(boolean). If you want to check if the opposite is true, then use the exclamation point like this:
-                                    </p>
-                                    <p id="code">if(!(N==5))</p>
-                                    <p>or</p>
-                                    <p id="code">if(N!=5)</p>
-                                    <p>or</p>
-                                    <p id="code">if(!boolean)</p>
-                                    <p id="text">Moving onto the action performed if said statement is true, if there is only one action, then there is no extra syntax to add, just put the action afterwards, and if there is more than one, then put said actions in {} brackets. But what if the condition is not true and you need something to cover for that? Well, C++ got you covered, because they implemented an additional else syntax. Basically, if the condition is false, you put an else statement with the same syntax as if. And yes, you can put in a condition after else.
-                                    </p>
-                                    <p id="text">
-                                        Loops are great. They make our life better and fill it with joy. But actually they help us with repeating similar actions over and over again. There are two types of loops in C++: for and while. When we define a for loop we mention the initial value of the loop control variable [LCV], the condition for the continuation for the loop and the step of the LCV. And when we define a while loop we only put a condition for the continuation of the loop, and nothing else.
-                                    </p>
-                                    <p id="code">
-                                        while(condition) { statement(s); }<br> for ( init; condition; increment ) { statement(s); }
-                                    </p>
-                                    <p id="text">
-                                        Loop control statements help change the loop execution from its normal sequence. There are several kinds of statements: the break statement, which completely stops the execution of the loop and the continue statements which leads the loop to skip over the rest of its body for this iteration and start over the next one.
-                                    </p>
-                                    <p id="code">
-                                        while (a
-                                        < 20) { <br> if (a==15) {
-                                            <br>a=a + 1;
-                                            <br> continue;
-                                            <br>}
-                                            <br>If (a==18) {
-                                            <br> break;
-                                            <br> }
-                                            <br> a=a + 1;
-                                            <br> }
-                                    </p>
-                                    <p id="text">
-                                        An array is a series of elements of the same type placed in certain memory locations which can be accessed by adding an index to a unique identifier. You define an array by stating the type of elements it contains, its size in ph brackets, and you can also set its contains initially in curly brackets.
-                                    </p>
-                                    <p id="code"> int foo [5]={ 16, 2, 77, 40, 12071 };</p>
-                                    <p id="text"> Elements in arrays are accessed by putting the index of the element, the first one being labeled 0, in ph brackets after the array name. There are also instances of dynamic arrays, the size of which can be modified after declaration. They are implemented in C++ with the vector type. To properly use vectors, you need to include
-                                        <vector> in your C++ project, the same way we did above with
-                                            <iostream>. To define a vector, you need to state that it’s a vector, put the type of contains in angled brackets and then the name of the array.
-                                    </p>
-                                    <p id="code"> vector
-                                        < int> myvector;</p>
-                                    <p id="text">To add an element at the end of a vector and thus resizing it, you use the push_back function and to remove that element, use the pop_back function.</p>
-                                    <p id="code">myvector.push_back (100); myvector.pop_back();</p>
-                                    <p id="text"> As you remember, the basic C++ project always includes int main(), which is the main function. Well, you can create your own functions, it’s just that to actually execute it you have to call it from the main int. Some functions return values, meaning that you can assign a variable to a function call which will result in the said variable being equal to the whatever value you return in the function like that: To define a function you put in the type of the return value (int, string) or void if you don’t neccesarily want to return something, then the function name, then you put in the arguments in parentheses, which are equal to the values you send from the main void. Then you put the actions to do in the function in curly brackets like that:</p>
-                                    <div id="tabs">
-                                        <div id="ch-code" onclick="cd(3)">Code</div>
-                                        <div id="ch-rezz" onclick="rz(3)">Result</div>
-                                    </div>
-                                    <div id="code-text_3"> void woo() {
-                                        <br> cout
-                                        << "This function will not return anything"; <br>}</div>
-                                    <p id="text">Now let’s compile all this knowledge together to make a simple tic-tac-toe game. Let’s start off simple enough by declaring an array of single characters from 1 to 9.</p>
-                                    <p id="code"> char ph[9]={ '1', '2', '3', '4', '5', '6', '7', '8', '9'};</p>
-                                    <p id="text"> These elements are going to be a placeholder for the turns’ future moves and the way to reference the exact square that we want to make a move on. Now let’s move right onto int main() and declare the essential variables.</p>
-                                    <p id="code">int main() {<br>int turn=1 ,i=-1,pick; char mark;</p>
-                                    <p id="text"> The turn variable signifies whose players’ turn it is now, I is the loop iterator, pick is the index of the chosen square, and mark is a character, either X or O.. To properly process the turn, we’ll use a while loop. in it we switch turns, accept input from player, specify which mark is the active one right now, then check is the square is availible, and then we move over to the next turn. It should look something like this for now.</p>
-                                    <p id="code"> While(i==-1) { <br> if(turn%2!=0) turn=1; else turn=2; <br> cin>>pick;
-                                        <br> if (turn==1) mark=’X’; else mark=’O’;<br> if (ph[(pick-1)] == to_string(pick)) ph[0] = mark;
-                                        <br> else {
-                                        <br> cout
-                                        << "Invalid move"; <br> turn--;
-                                            <br>cin.ignore();
-                                            <br> cin.get();
-                                            <br>}
-                                            <br>turn++;<br>}</p>
-                                    <p id="text">Great, we wrote the program that lets us make moves! Now let’s get away from main() for a second and create a function that checks if the game is supposed to end. Make sure that there are no curly brackets after the part where you want to start writing code for it. The function is going to be called in the loop (so it checks after every turn) above and it needs to return a value.</p>
-                                    <p id="code"> int checkwin() {</p>
-                                    <p id="text">Just like that. Alright, you most likely know the rules of tic-tac-toe, the first player to create a row of three marks wins. So let’s outline the condition to win.So let’s address the marks in the table as array elements of previously declared ph[] and compare them accordingly.</p>
-                                    <p id="code">if (ph[1]==p h[2] && ph[2]==p h[3]) return 1;
-                                        <br>else if (ph[4]==p h[5] && ph[5]==p h[6]) return 1;
-                                        <br>else if (ph[7]==p h[8] && ph[8]==p h[9]) return 1;</p>
-                                    <p id="text">Alright, we’re done with horizontal rows. Now let’s add the conditionals for everything else that are worded in a similar way.</p>
-                                    <p id="code">else if (ph[1]==p h[4] && ph[4]==p h[7]) return 1;
-                                        <br>else if (ph[2]==p h[5] && ph[5]==p h[8]) return 1;
-                                        <br>else if (ph[3]==p h[6] && ph[6]==p h[9]) return 1;
-                                        <br>else if (ph[1]==p h[5] && ph[5]==p h[9]) return 1;
-                                        <br>else if (ph[3]==p h[5] && ph[5]==p h[7]) return 1;</p>
-                                    <p id="text">Now let’s add a conditional that’ll check if the game is a draw by ensuring that there are no blank spaces left, and if it’s not, it’ll return the previously determined iterator value.</p>
-                                    <p id="code">else if (ph[1] !='1' && ph[2] !='2' && ph[3] !='3' && ph[4] !='4' && ph[5] !='5' && ph[6] !='6' && ph[7] !='7' && ph[8] !='8' && ph[9] !='9' ) return 0;
-                                        <br>else return -1;
-                                        <br>}</p>
-                                    <p id="text"> We did it! We created our function that checks if a game should end. Now let’s add actual calls.</p>
-                                    <p id="code">i=checkwin();<br>}</p>
-                                    <p id="text"> Oh, a breath of fresh air, we’ve finally left the loop. Now we should probably add some kind of conditional that prints out who won (or if it’s a draw for that matter). The only reason the compiler would get here is if the game has definitely ended, so a simple check if I is equal to the value you returned in checkwin, the value being 1 in this case, will do, because if it’s not then it can only be 0, which means it’s a draw.</p>
-                                    <p id="code">if(i==1) cout
-                                        << "==>\aPlayer "<<--turn<< " won "; else cout<< "==>\aGame ended in a draw";<br>
-                                            cin.ignore();
-                                            <br>cin.get();
-                                            <br>return 0;
-                                            <br>}</p>
-                                    <p id="text">Now it would look kind of awkward if we didn’t create some sort of a board that would be our playing field. It doesn’t necessarily need to return anything, so we’ll just call it a void. Let’s start by printing out some casual information, like which player has which mark, and maybe even a title card.</p>
-                                    <p id="code">void board() {<br>cout
-                                        << "\n\n\tWow look we made a thing\n\n";<br>cout
-                                            << "Player 1 (X)  ||  Player 2 (O)" << endl << endl<< endl;</p>
-                                                <p id="text"> As you remember, to start off with a new line, put
-                                                    << endl at the end of your output statement. Now imagine what a tic-tac-toe field looks like. We’ll have to build it out of ASCII characters, | and _ will do the trick. Now we just out line it and occasionally fill in values, I’ll add them in the middle of the row, but that’s a matter of preference really.</p>
-                                                        <div id="tabs">
-                                                            <div id="ch-code" onclick="cd(4)">Code</div>
-                                                            <div id="ch-rezz" onclick="rz(4)">Result</div>
-                                                        </div>
-                                                        <div id="code-text_4">
-                                                            cout
-                                                            << "     |     |     " << endl; <br> cout
-                                                                << "  " << ph[1] << "  |  " << ph[2] << "  |  " << ph[3] << endl; <br> cout
-                                                                    << "_____|_____|_____" << endl; <br> cout
-                                                                        << "     |     |     " << endl; <br> cout
-                                                                            << "  " << ph[4] << "  |  " << ph[5] << "  |  " << ph[6] << endl; <br> cout
-                                                                                << "_____|_____|_____" << endl; <br> cout
-                                                                                    << "     |     |     " << endl; <br> cout
-                                                                                        << "  " << ph[7] << "  |  " << ph[8] << "  |  " << ph[9] << endl; <br> cout
-                                                                                            << "     |     |     " << endl << endl; <br> }
-                                                        </div>
-                                                        <p id="text"> And now we should have a properly printable tic-tac-toe field. All we have to do now is add board(); in the beginning of the while loop in int main(). And hurray, we finished our project! You now know the basics of C++ and are ready to move on to a bigger journey, all by yourself! </p>
-                            </div>
-                            <script>
-                                var codes = ["#include <iostream>;<br> using namespace std;<br> int main() {<br> cout << 'Hello World!';<br> }", "cout << 'N' << ” ” << 'X';", "cout << 0 << endl;", "void woo() {<br> cout << 'This function will not return anything'; <br>}", "cout << '     |     |     ' << endl; <br> cout << ' ' << ph[1] << '  |  ' << ph[2] << '  |  ' << ph[3] << endl; <br> cout << '_____|_____|_____' << endl; <br> cout << '     |     |     ' << endl; <br> cout << ' ' << ph[4] << '  |  ' << ph[5] << '  |  ' << ph[6] << endl; <br> cout << '_____|_____|_____' << endl; <br> cout << '     |     |     ' << endl; <br> cout << '  ' << ph[7] << '  |  ' << ph[8] << '  |  ' << ph[9] << endl; <br> cout << '     |     |     ' << endl << endl; <br> }"];
+                        << "     |     |     " << endl; <br> cout
+                            << "  " << ph[1] << "  |  " << ph[2] << "  |  " << ph[3] << endl; <br> cout
+                                << "_____|_____|_____" << endl; <br> cout
+                                    << "     |     |     " << endl; <br> cout
+                                        << "  " << ph[4] << "  |  " << ph[5] << "  |  " << ph[6] << endl; <br> cout
+                                            << "_____|_____|_____" << endl; <br> cout
+                                                << "     |     |     " << endl; <br> cout
+                                                    << "  " << ph[7] << "  |  " << ph[8] << "  |  " << ph[9] << endl; <br> cout
+                                                        << "     |     |     " << endl << endl; <br> }
+                    </div>
+                    <p id="text">Теперь у нас есть полностью рабочее игровое поле! Теперь осталось лишь добавить строку board(); в начале цикла в главной функции, и наш проект будет готов! Теперь вы можете начать своё собственное, совершенно новое погружение в программирование!</p>
+    </div>
+    <script>
+        var codes = ["#include <iostream>;<br> using namespace std;<br> int main() {<br> cout << 'Hello World!';<br> }", "cout << 'N' << ” ” << 'X';", "cout << 0 << endl;", "void woo() {<br> cout << 'This function will not return anything'; <br>}", "cout << '     |     |     ' << endl; <br> cout << ' ' << ph[1] << '  |  ' << ph[2] << '  |  ' << ph[3] << endl; <br> cout << '_____|_____|_____' << endl; <br> cout << '     |     |     ' << endl; <br> cout << ' ' << ph[4] << '  |  ' << ph[5] << '  |  ' << ph[6] << endl; <br> cout << '_____|_____|_____' << endl; <br> cout << '     |     |     ' << endl; <br> cout << '  ' << ph[7] << '  |  ' << ph[8] << '  |  ' << ph[9] << endl; <br> cout << '     |     |     ' << endl << endl; <br> }"];
 
-                                var results = ["Hello World!", "N X", "0<br>", "This function will not return anything", "<div id='ttl'>Wow look we did a thing</div><div id='sc'>Player 1 (X) || Player 2 (O)</div><div id='brd'><div id='box1'>1</div><div id='box2'>2</div><div id='box3'>3</div><div id='box4'>4</div><div id='box5'>5</div><div id='box6'>6</div><div id='box7'>7</div><div id='box8'>8</div><div id='box9'>9</div></div><div id='win'></div><form onsubmit='turn();return false'><input type='text' id='in'></form>"];
-                                var l = 1;
-                                var w = 4;
+        var results = ["Hello World!", "N X", "0<br>", "This function will not return anything", "<div id='ttl'>Wow look we did a thing</div><div id='sc'>Player 1 (X) || Player 2 (O)</div><div id='brd'><div id='box1'>1</div><div id='box2'>2</div><div id='box3'>3</div><div id='box4'>4</div><div id='box5'>5</div><div id='box6'>6</div><div id='box7'>7</div><div id='box8'>8</div><div id='box9'>9</div></div><div id='win'></div><form onsubmit='turn();return false'><input type='text' id='in'></form>"];
+        var l = 1;
+        var w = 4;
 
-                                function chk() {
-                                    var b1 = document.getElementById("box1").innerHTML;
-                                    var b2 = document.getElementById("box2").innerHTML;
-                                    var b3 = document.getElementById("box3").innerHTML;
-                                    var b4 = document.getElementById("box4").innerHTML;
-                                    var b5 = document.getElementById("box5").innerHTML;
-                                    var b6 = document.getElementById("box6").innerHTML;
-                                    var b7 = document.getElementById("box7").innerHTML;
-                                    var b8 = document.getElementById("box8").innerHTML;
-                                    var b9 = document.getElementById("box9").innerHTML;
-                                    if ((b1 == b2 && b2 == b3) || (b4 == b5 && b5 == b6) || (b7 == b8 && b8 == b9) || (b1 == b4 && b4 == b7) || (b2 == b5 && b5 == b8) || (b3 == b6 && b6 == b9) || (b1 == b5 && b5 == b9) || (b3 == b5 && b5 == b7)) {
-                                        if (l % 2 == 0) w = 2;
-                                        else w = 1;
-                                    } else if (b1 != 1 && b2 != 2 && b3 != 3 && b4 != 4 && b5 != 5 && b6 != 6 && b7 != 7 && b8 != 8 && b9 != 9) w = 0;
-                                    if (w != 4) {
-                                        if (w == 0) document.getElementById("win").innerHTML = "Game ended in a draw";
-                                        else if (w == 2) document.getElementById("win").innerHTML = "Player 1 won";
-                                        else if (w == 1) document.getElementById("win").innerHTML = "Player 2 won";
-                                    }
-                                }
+        function chk() {
+            var b1 = document.getElementById("box1").innerHTML;
+            var b2 = document.getElementById("box2").innerHTML;
+            var b3 = document.getElementById("box3").innerHTML;
+            var b4 = document.getElementById("box4").innerHTML;
+            var b5 = document.getElementById("box5").innerHTML;
+            var b6 = document.getElementById("box6").innerHTML;
+            var b7 = document.getElementById("box7").innerHTML;
+            var b8 = document.getElementById("box8").innerHTML;
+            var b9 = document.getElementById("box9").innerHTML;
+            if ((b1 == b2 && b2 == b3) || (b4 == b5 && b5 == b6) || (b7 == b8 && b8 == b9) || (b1 == b4 && b4 == b7) || (b2 == b5 && b5 == b8) || (b3 == b6 && b6 == b9) || (b1 == b5 && b5 == b9) || (b3 == b5 && b5 == b7)) {
+                if (l % 2 == 0) w = 2;
+                else w = 1;
+            } else if (b1 != 1 && b2 != 2 && b3 != 3 && b4 != 4 && b5 != 5 && b6 != 6 && b7 != 7 && b8 != 8 && b9 != 9) w = 0;
+            if (w != 4) {
+                if (w == 0) document.getElementById("win").innerHTML = "Game ended in a draw";
+                else if (w == 2) document.getElementById("win").innerHTML = "Player 1 won";
+                else if (w == 1) document.getElementById("win").innerHTML = "Player 2 won";
+            }
+        }
 
-                                function turn() {
-                                    var val = document.getElementById("in").value;
-                                    var box = document.getElementById("box" + val);
-                                    if (box.innerHTML != "X" && box.innerHTML != "O" && val > 0 && val < 10 && w == 4) {
-                                        document.getElementById("win").innerHTML = "";
-                                        if (l % 2 == 0) box.innerHTML = "O";
-                                        else box.innerHTML = "X";
-                                        document.getElementById("in").value = "";
-                                        l++;
-                                        chk();
-                                    } else if (w == 4) {
-                                        document.getElementById("win").innerHTML = "Invalid Move";
-                                        document.getElementById("in").value = "";
-                                    }
-                                }
+        function turn() {
+            var val = document.getElementById("in").value;
+            var box = document.getElementById("box" + val);
+            if (box.innerHTML != "X" && box.innerHTML != "O" && val > 0 && val < 10 && w == 4) {
+                document.getElementById("win").innerHTML = "";
+                if (l % 2 == 0) box.innerHTML = "O";
+                else box.innerHTML = "X";
+                document.getElementById("in").value = "";
+                l++;
+                chk();
+            } else if (w == 4) {
+                document.getElementById("win").innerHTML = "Invalid Move";
+                document.getElementById("in").value = "";
+            }
+        }
 
-                                function rz(use) {
-                                    document.getElementById("code-text_" + use).innerHTML = results[use];
-                                    var code = document.getElementById("ch-code");
-                                    var rez = document.getElementById("ch-rezz");
-                                    code.style.height = 3.4 + "vh";
-                                    code.style.top = 1 + "vh";
-                                    code.style.paddingTop = .5 + "vh";
-                                    rez.style.height = 4 + "vh";
-                                    rez.style.top = -.1 + "vh";
-                                    rez.style.paddingTop = 1 + "vh";
-                                }
+        function rz(use) {
+            document.getElementById("code-text_" + use).innerHTML = results[use];
+            var code = document.getElementById("ch-code");
+            var rez = document.getElementById("ch-rezz");
+            code.style.height = 3.4 + "vh";
+            code.style.top = 1 + "vh";
+            code.style.paddingTop = .5 + "vh";
+            rez.style.height = 4 + "vh";
+            rez.style.top = -.1 + "vh";
+            rez.style.paddingTop = 1 + "vh";
+        }
 
-                                function cd(use) {
-                                    document.getElementById("code-text_" + use).innerHTML = codes[use];
-                                    var code = document.getElementById("ch-code");
-                                    var rez = document.getElementById("ch-rezz");
-                                    rez.style.height = 3.4 + "vh";
-                                    rez.style.top = 1 + "vh";
-                                    rez.style.paddingTop = .5 + "vh";
-                                    code.style.height = 4 + "vh";
-                                    code.style.top = -.1 + "vh";
-                                    code.style.paddingTop = 1 + "vh";
-                                }
+        function cd(use) {
+            document.getElementById("code-text_" + use).innerHTML = codes[use];
+            var code = document.getElementById("ch-code");
+            var rez = document.getElementById("ch-rezz");
+            rez.style.height = 3.4 + "vh";
+            rez.style.top = 1 + "vh";
+            rez.style.paddingTop = .5 + "vh";
+            code.style.height = 4 + "vh";
+            code.style.top = -.1 + "vh";
+            code.style.paddingTop = 1 + "vh";
+        }
 
-                                function c() {
-                                    document.getElementById("bar9uk_1").style.backgroundColor = "palevioletred";
-                                    document.getElementById("bar9uk_2").style.backgroundColor = "palevioletred";
-                                    document.getElementById("bar9uk_3").style.backgroundColor = "palevioletred";
-                                }
+        function c() {
+            document.getElementById("bar9uk_1").style.backgroundColor = "palevioletred";
+            document.getElementById("bar9uk_2").style.backgroundColor = "palevioletred";
+            document.getElementById("bar9uk_3").style.backgroundColor = "palevioletred";
+        }
 
-                                function h() {
-                                    document.getElementById("bar9uk_1").style.backgroundColor = "whitesmoke";
-                                    document.getElementById("bar9uk_2").style.backgroundColor = "whitesmoke";
-                                    document.getElementById("bar9uk_3").style.backgroundColor = "whitesmoke";
-                                }
+        function h() {
+            document.getElementById("bar9uk_1").style.backgroundColor = "whitesmoke";
+            document.getElementById("bar9uk_2").style.backgroundColor = "whitesmoke";
+            document.getElementById("bar9uk_3").style.backgroundColor = "whitesmoke";
+        }
 
-                                function lrn() {
-                                    window.open("index.html", "_self");
-                                }
+        function lrn() {
+            window.open("index.html", "_self");
+        }
 
-                                function atc() {
-                                    window.open("../articles/index.html", "_self");
-                                }
+        function atc() {
+            window.open("../articles/index.html", "_self");
+        }
 
-                                function sb() {
-                                    if (document.getElementById("sidebar").style.left == "100vw") {
-                                        document.getElementById("sidebar").style.left = 0;
-                                    } else {
-                                        document.getElementById("sidebar").style.left = "100vw";
-                                    }
-                                }
-                            </script>
-                            <div id="bar">Code:Excelso</div>
-                            <div id="sb_click_fix" onclick="sb()" s>
-                                <div id="sb_click">
-                                    <div id="bar9uk" onmouseover="c()" onmouseout="h()">
-                                        <div id="bar9uk_1"></div>
-                                        <div id="bar9uk_2"></div>
-                                        <div id="bar9uk_3"></div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div id="sidebar" style="left:100vw;">
-                                <div id="learn" onclick="lrn()">Tutorials
-                                    <div id="learn_desc">
-                                        <div id="learn_desc_fix">Learn more about interesting languages in a colorful way!</div>
-                                    </div>
-                                </div>
-                                <div id="tend" onclick="atc()">Articles
-                                    <div id="tend_desc">
-                                        <div id="tend_desc_fix">Read up about the tendencies of programming languages</div>
-                                    </div>
-                                </div>
-                                <div id="lang-pos">
-                                    <div id="lang">
-                                        <div id="rus" onclick="window.location.assign('../tutorials_rus/index.html')">Russian</div>
-                                        <div id="eng" onclick="window.location.assign('index.html')">English</div>
-                                    </div>
-                                </div>
-                                <div id="about">
+        function sb() {
+            if (document.getElementById("sidebar").style.left == "100vw") {
+                document.getElementById("sidebar").style.left = 0;
+            } else {
+                document.getElementById("sidebar").style.left = "100vw";
+            }
+        }
+    </script>
+    <div id="bar">Code:Excelso</div>
+    <div id="sb_click_fix" onclick="sb()" s>
+        <div id="sb_click">
+            <div id="bar9uk" onmouseover="c()" onmouseout="h()">
+                <div id="bar9uk_1"></div>
+                <div id="bar9uk_2"></div>
+                <div id="bar9uk_3"></div>
+            </div>
+        </div>
+    </div>
+    <div id="sidebar" style="left:100vw;">
+        <div id="learn" onclick="lrn()">О языках
+            <div id="learn_desc">
+                <div id="learn_desc_fix">Узнайте больше о языках на красочных страницах!</div>
+            </div>
+        </div>
+        <div id="tend" onclick="atc()">Статьи
+            <div id="tend_desc">
+                <div id="tend_desc_fix">Прочтите пару полезных статей для программистов!</div>
+            </div>
+        </div>
+        <div id="lang-pos">
+            <div id="lang">
+                <div id="rus" onclick="window.location.assign('index.html')">Russian</div>
+                <div id="eng" onclick="window.location.assign('../tutorials/index.html')">English</div>
+            </div>
+        </div>
+        <div id="about">
 
-                                </div>
-                            </div>
+        </div>
+    </div>
 
 </body>
 

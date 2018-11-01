@@ -78,6 +78,35 @@
             border-bottom: 3px solid #ff0000;
         }
 
+        #lang {
+            position: absolute;
+            left: -12vh;
+            top: 90vh;
+            width: 100%;
+            text-transform: uppercase;
+            color: white;
+            font-size: 2vh;
+            font-weight: bold;
+        }
+
+        #lang-pos {
+            position: absolute;
+            width: 100%;
+            top: 0;
+            left: 52vw;
+        }
+
+        #rus {
+            position: absolute;
+            padding-right: 1.5vh;
+            border-right: .5vh solid #ff0000;
+        }
+
+        #eng {
+            position: absolute;
+            left: 12.25vh;
+        }
+
         #tend {
             position: absolute;
             top: 10vh;
@@ -400,7 +429,7 @@
             top: 1vh;
             z-index: 0;
             left: 10vh;
-            width: 12vh;
+            width: 14vh;
             height: 3.4vh;
             font-family: soft;
             text-align: center;
@@ -551,14 +580,14 @@
             position: absolute;
             top: 0;
             left: 0;
-            width: 75%;
+            width: 85.5%;
             height: 57%;
             z-index: 2;
             color: white;
             background-color: black;
             opacity: 0;
             transition: 1s ease opacity;
-            padding-left: 5vh;
+            padding-left: 3vh;
             padding-top: 8.5vh;
             font-family: soft;
         }
@@ -782,35 +811,6 @@
                 left: 125vh;
             }
         }
-
-        #lang {
-            position: absolute;
-            left: -12vh;
-            top: 90vh;
-            width: 100%;
-            text-transform: uppercase;
-            color: white;
-            font-size: 2vh;
-            font-weight: bold;
-        }
-
-        #lang-pos {
-            position: absolute;
-            width: 100%;
-            top: 0;
-            left: 52vw;
-        }
-
-        #rus {
-            position: absolute;
-            padding-right: 1.5vh;
-            border-right: .5vh solid #ff0000;
-        }
-
-        #eng {
-            position: absolute;
-            left: 12.25vh;
-        }
     </style>
 </head>
 
@@ -890,13 +890,13 @@
     </div>
     <div id="building">
         <p id="text" style="margin-top:20vh">
-            Java is a different name for coffee, which comes from an Island of Java, located near Indonesia. It also happens to be a name of a programming language released in 1995. Its main purpose is developing mobile, web and desktop applications. Despite the language being named after coffee, it has its weaker sides, the main one being the rather bulky syntax, which doesn’t exactly fit numeric and scientific programming. But after you figure out the basic structure of the syntax, the learning curve smoothens a lot. Other major advantages include the impressive performance and the wide variety of applications you can use the language for.
-            <br> To start off, you need to check if you have the compiler and IDE installed. The compiler for Java is JDK, and The most productive IDE for Java is IntelliJ IDEA.
+            Java – название сорта кофе, родом с одноимённого острова близ Индонезии. По чистой случайности, это ещё и язык программирования, выпущенный в 1995. Его в основном используют для разработки мобильных и десктоп приложений. Синтаксис языка несколько громоздкий, но область применения языка так или иначе крайне широка.
+            <br> Для начала мы должны проверить, установлено ли у нас всё необходимое: компилятор JDK, доступный для скачивания на официальном сайте, и среда разработки, роль которой лучше всего выполняют IntelliJ IDEA и Eclipse IDE.
         </p>
         <div id="dl-links">
             <div id="dl-cont">
                 <div id="dl-link-comp" cursor="pointer" onclick="window.location.assign('https://www.oracle.com/technetwork/java/javase/downloads/index.html');">
-                    <div id="cv">Compiler</div>
+                    <div id="cv">Компилятор</div>
                     <div id="java">
                         <div id="bean"></div>
                         <div id="curve"></div>
@@ -912,11 +912,11 @@
             </div>
         </div>
         <p id="text">
-            It’s a common tradition to start learning a language by printing out “Hello, World!” in the console, so let’s jump right in.
+            Для программистов уже стало традицией начинать изучать новый язык с вывода в консоль сообщения “Hello, World!”. Приступим же!
         </p>
         <div id="tabs">
-            <div id="ch-code" onclick="cd(0)">Code</div>
-            <div id="ch-rezz" onclick="rz(0)">Result</div>
+            <div id="ch-code" onclick="cd(0)">Код</div>
+            <div id="ch-rezz" onclick="rz(0)">Результат</div>
         </div>
         <div id="code-text_0">
             import java.util.*;
@@ -926,9 +926,9 @@
             <br> } }
         </div>
         <p id="text">
-            Let’s break this code down. Starting from the top, import is the key word for importing extra packages into the project to use. The thing that you actually want to import is defined in a fashion similar to that of websites’: if you want to specify what package to import, you keep nesting imports, so, Instead of importing the whole util package (the star at the end of java.util.* means that you import everything that is inside the package, same works for other directories), you can specify by adding, for example, Scanner, at the end, like java.util.Scanner; Class Main is the class of the main project file, the far superior one compared to other files. There can be many classes in a single file, but we’ll talk about that later. Moving on, public static void main(String[] args) is the main void of the file. There can be only one of this and it’s the part of the code that runs right after the imports, no matter the classes and voids above it(?). The basic structure of this function is simple, and all of the IDs used here can be used when declaring your very own functions. Public means it’s visible to every file of the project and all classes of the file, static means it’s going to be there for the compiler when it’s hard, or raining, or snowing, until the last string of code is executed, void simply means it’s a function, main is the name of the function, and in the brackets you see these things called arguments. There can be many of them, and there can be none (in that case the brackets should still be there). You define them like you would a variable, onto which we’ll move on later. I’ll just mention that the System.out.println() part is the one that actually is responsible for printing the code out. If you want to print out a number or a variable, there is no need to use brackets, and if you want to print out some words, then put them in single or double brackets. And if you want do mix things up a little and print out BOTH a variable and a string of words then put the different types together with a + sign between them. There’s also the super-secret codes that only mega advanced programmer people use, but I’ll share my limited knowledge with you. Basically, there are certain strings that do cool things, for example, “\n” gets you to a new line, “\b” serves as backspace (but, you know, you can still use your keyboard key), “\”” will put a quote in your string, which is handy, considering the fact that if you were to try and put it without the backslash, input would end on it, and you would more than likely get an error message, saying your coffee spilled over the mainframe or something.
-            <br> Onto the next topic, variables. Java has them. As I said earlier, they’re very important, so I’ll just list most of them. Int and long are numbers sized accordingly, float and double are floating-point numbers where double can take bigger values than float, char is a single character, String is many characters and Boolean is either true or false. As said earlier variables can be parameters for voids, just like a String args[] is a parameter for main. They are defined in the same manner as shown above: *type* *name*. If there are multiple variables you would want to put in the void, then list them off with a comma as a divider. Also, when naming your variables, remember that Java is case-sensitive. That means that ab and AB are to be considered two different vars.
-            <br> User input is the way to get things into the computer during the program execution. It is implemented with the abovementioned Scanner import. To start off, you need to actually import the Scanner like shown before, then you define a new scanner for the program like this, much like you would an actual scanner. And only then you can input variables accordingly.
+            Давайте разберём этот код. Import – ключевое слово для импортирования дополнительных библиотек в проект. Class Main – главный класс главного файла, с главной функцией main(String[] args) внутри, определение которой должно выглядеть так, как показано выше, и никак иначе. Public означает, что эта функция видна всем файлам и классам проекта, static - что она не изменит свойства до конца выполнения программы, void означает, что это функция, которая не возвращает значения, main – её название, а в скобках перечислены аргументы. Их может быть много, может не быть совсем. Они объявляются прямо как переменные (о них попозже). System.out.println() отвечает за печать в консоль на новой строке. Если мы хотим вывести число или переменную, то кавычки для этого не нужны. Можно попробовать сломать стереотипы и вывести в консоль данные двух типов. Тогда они сиоединены в println знаком +. Также есть сверхсекретные коды которые используют только программисты с большой буквы ПРО, но я поделюсь этими знаниями. “\n” переводит на новую строку, “\b” удаляет последний символ вывода, “\”” позволяет вставлять двойные кавычки в вывод, ведь если бы мы этого не сделали, он бы закончился на них.
+            <br> Далее о переменных. Они в Java есть, поэтому стоит их упомянуть. Int и long - целые числа соответствующего размера, float и double – действительные числа, где double может быть больше, чем float, char – одиночный символ. String - это много символов, а Boolean принимает значения только true или false. Стоит заметить, что в Java переменные аб и АБ – разные переменные.
+            <br> Принимать пользовательский ввод достаточно просто с помощью модуля Scanner, который сначала нужно импортировать, а затем объявить, и только после этого им можно будет пользоваться.
         </p>
         <p id="code">
             import java.util.*;
@@ -940,7 +940,7 @@
             <br> } }
         </p>
         <p id="text">
-            Next up are conditionals. They are defined simply as if(condition) action if true; conditions can be defined as equations (A==5) or as true statements (b) where b is a Boolean. If there is more than one action to be made, then list them off in curly brackets. And if you want the program to do something if the condition is false, there is an else parameter, which you put after the if statement, and which can also have its own condition and else.
+            Далее об условиях. Они работают достаточно очевидным образов, вытекающим из их определения в языке:
         </p>
         <p id="code">
             if(a==5) {
@@ -951,7 +951,7 @@
             <br> doSomething();
         </p>
         <p id="text">
-            Loops are a crucial part of programming. They make our life easier and our code – more efficient. There are two kinds of loops in java, which is unsurprising, considering the fact that not that many really work with coffee: for and while. They work at approximately the same speed, except in the case of for, everything is simply more organized than with while. The syntax is quite common.
+            Циклы – отличная вещь. Они делают нашу жизнь проще, а код – эффективнее. Есть только 2 вида цикло в Java: for, который работает конкретное заданное количество раз,и while, который будет работать пока выполняется некоторое определяющее условие.
         </p>
         <p id="code">
             for(int i=0;i
@@ -962,25 +962,25 @@
                     ++i;<br> }
         </p>
         <p id="text">
-            Arrays in Java are rows of data of the same type. To define one you specify the type of data in it, its name and the size of it in square brackets. It’s also optional to specify its contains right away. Reminder: elements in arrays are numbered starting from 0.
+            Массивы в Java – ряды данных одного типа. Для объявления нужно уточнить тип данных элементов, его название и размер в квадратных скобках, вот так. Напоминаю, что элементы перечисляются с 0.
         </p>
         <p id="code">
             int[] cats = new int[10];
             <br> int[] mice = {4, 8, 10, 12, 16};
         </p>
         <p id="text">
-            To get the length of an array you can use the built-in length feature, and to access a particular element in it, put its index into square brackets beside the array name. There also is a way to implement dynamic arrays, the size of which you can change after definition. It is done with a thing called ArrayList, which is defined like so:
+            Для того, чтобы получить длину массива, используем встроенную функцию length, а для получения некоторого элемента мы помещаем его порядковый номер в квадратные скобки рядом с названием массива. <br> Также есть способ объявить динамический массив, размер которого можно изменить после объявления. Это делается с помощью ArrayList, вот так:
         </p>
         <p id="code">
             ArrayList catNames = new ArrayList();
         </p>
         <p id="text">
-            It has its own methods, size() being the one to check its length and add() to add an extra element, thus resizing an array, the same being for remove().
-            <br> Now let’s make our first Java project. It’s not going to be any ordinary project with consoles and “You have to download 72 apps for this to work” kind of thing, no-no-no, this is going to be a full-on desktop application, where we’ll have sprites of basic coffee ingredients and by mixing them together we’ll be able to make a delicious caffeine-filled drink, which does mean that there’s some theoretical parts to explain, so let’s get right into it. The two very important classes to remember here are JFrame and JPanel, and they are responsible for the window’s frame (you know, the part with the close button) and the panel (the part inside the frame). To properly tell the compiler that we’re going to be using these classes, use the extends suffix. Considering the fact that a panel cannot exist without a frame, we put the JPanel class inside the JFrame one. To set up our window we have to write some necessary code (like setting the window’s size, add the panel to it, make it visible and resizable, etc.) in void main. So that’s what we should end up with.
+            У этого модуля свои методы, например size() возвращает размер массива, add() добавляет элемент, и, таки образом, меняет размер массива, а remove() удаляет элемент.
+            <br> Давайте же создадим наш собственный проект на Java. Это будет полноценное десктоп-приложение, и оно будет о кофе. Приступим! Есть два важных класса, которые нужно запомнить: JFrame и JPanel. Они отвечают за рамку окна (ну ту часть с кнопкой “закрыть”), и за содержимое окна соответственно. Для того, чтобы сообщить компилятору, что мы будем использовать эти два класса, прибавим суффикс extends. Учитывая тот факт, что панель без рамки существовать не может, помещаем класс JPanel внутрь класса JFrame. Для настройки нашего окна мы должны написать немного обязательного кода, который отвечает за размер окна, его цвет, видимость, наличие кнопок на рамке, в главной функции. Вот что у нас должно получиться:
         </p>
         <div id="tabs">
-            <div id="ch-code" onclick="cd(1)">Code</div>
-            <div id="ch-rezz" onclick="rz(1)">Result</div>
+            <div id="ch-code" onclick="cd(1)">Код</div>
+            <div id="ch-rezz" onclick="rz(1)">Результат</div>
         </div>
         <div id="code-text_1">
             public class Main extends JFrame {
@@ -996,7 +996,7 @@
             <br> } }
         </div>
         <p id="text">
-            Now let’s go straight to the Main1 class and declare some variables for the images we’re going to use. You can download the sprites here and make sure to add them into your project folder.
+            Теперь перейдём в класс Main1 и объявим немного переменных для дальнейшей работы над проектом. Все спрайты и код можно скачать <a style="color:#df916d" href="../CE_Java-project.rar">здесь</a>.
         </p>
         <p id="code">
             BufferedImage table = null, kettle = null, coffeepot = null, milk = null, whisk = null,enter = null, back = null;
@@ -1006,7 +1006,7 @@
             <br> int wh = 0,cf = 0;
         </p>
         <p id="text">
-            Coffee is an array which is going to contain the added ingredients, and the ints are service variables which are going to be used later on. Now let’s add a mouse listener in the rendering part of Main1 like so:
+            Coffee – массив с ингредиентами, числа – служебные переменные, которые нам пригодятся чуть позже.Теперь добавим функцию, принимающую ввод с мыши:
         </p>
         <p id="code">
             public Main1() {
@@ -1014,7 +1014,7 @@
             <br> public void mouseClicked(MouseEvent e) {}}}
         </p>
         <p id="text">
-            That’s where our program will receive user input. Questionably enough, there is no better way to get information on whether an image has been clicked or not but to create a rectangle around the image’s bounds and check if the mouse clicked within it, which means we’re going to have to create some rectangles and a separate point which will get the mouse’s coordinates when it clicks.
+            К сожалению, нет другого способа убедиться, нажата ли некоторая часть изображения, кроме как создать невидимый прямоугольник поверх неё и проверять, находился ли в его пределах курсор в момент нажатия. Создадим же эти прямоугольники!
         </p>
         <p id="code">
             Rectangle kettle_bounds = new Rectangle(626, 243, kettle.getWidth(), kettle.getHeight());
@@ -1026,7 +1026,7 @@
             <br> Point clicked = e.getPoint();
         </p>
         <p id="text">
-            Now we start checking the area and add ingredients to our array. Now, since we do have a whisk as one of the images that we’ll use to make milk foam, we’ll have to set the service variable wh to 1 and check it when we click on milk.
+            Теперь начнём проверять и добавлять элементы в наш массив. Переменная wh нам пригодится при нажатии на миксер для создания молочной пены.
         </p>
         <p id="code">
             if (kettle_bounds.contains(clicked)) {
@@ -1048,7 +1048,7 @@
                         <br> }
         </p>
         <p id="text">
-            When we click on the back button, we clear every service variable and the coffee array and refreshes the window using the repaint () function.
+            Когда мы нажимаем «назад», все служебные переменные и массив должны быть очищены, а окно - обновлено.
         </p>
         <p id="code">
             if (back_bounds.contains(clicked)) {
@@ -1059,7 +1059,7 @@
             <br> }
         </p>
         <p id="text">
-            Then if we click on the enter button, we’ll print out the drink we got. We’ll manually check the size and the array’s elements in a particular order. We’ll also have to set the cf service variable to a code number so the function that’s located outside of this keypress one we’re currently in knows what to print. While I have created a limit for only 5 ingredients in total, you can change things up by yourself. It’s really easy once you get used to it.
+            Тогда если мы нажали на зелёную кнопку, мы должны вывести нужный напиток в соответствии с ингредиентами в массиве. Мы сначала проверим размер массива, а затем присвоим соответственное значение глобальной переменной cf, чтобы внешняя функция смогла понять, какой напиток печатать.
         </p>
         <p id="code">
             if (enter_bounds.contains(clicked)) {
@@ -1087,7 +1087,7 @@
             <br> }
         </p>
         <p id="text">
-            While I did add a lot more coffee to the final project, which I’ll link at the end of this page, the code gets rather repetitive, so for now I’m skipping over it. Now we can get on to the painting function, the one that prints out the images onto the window. To start off, we’ll have to set the function to graphics mode in the first line, then we’ll set the background, and finally link the image variables to the source, which, as Java commands, has to be done within a try/catch syntax.
+            После этого места кофе ещё проверяется, но код становится однотонным, и я думаю, что суть вы уже поняли. Теперь перейдём к функции, которая выводит картинки на экран. Напишем немного необходимого для корректной работы кода, изменим цвет фона, и, во избежание ошибок, поместим ссылки на картинки в конструктор try/catch.
         </p>
         <p id="code">
             public void paintComponent(Graphics g) {
@@ -1102,11 +1102,11 @@
             <br> } catch (IOException e) { e.printStackTrace(); }
         </p>
         <p id="text">
-            To actually draw an image onto the window, we will use the g.drawImage function, for which you’ll need to link the image variable, a null, and its desired coordinates.
+            А теперь выведем наконец картинки на экран. Для этого мы уточним, какую картинку мы хотим вывести и её координаты.
         </p>
         <div id="tabs">
-            <div id="ch-code" onclick="cd(2)">Code</div>
-            <div id="ch-rezz" onclick="rz(2)">Result</div>
+            <div id="ch-code" onclick="cd(2)">Код</div>
+            <div id="ch-rezz" onclick="rz(2)">Результат</div>
         </div>
         <div id="code-text_2">
             g.drawImage(table, 90, 250, null);
@@ -1114,11 +1114,11 @@
             <br> g.drawImage(coffeepot, 510, 193, null);<br> g.drawImage(whisk, 159, 205, null);<br> g.drawImage(milk, 204, 230, null);<br> g.drawImage(back, 10, 10, null);<br> g.drawImage(enter, 100, 10, null);
         </div>
         <p id="text">
-            And finally, we get back to our cf service variable and put an according image and sign on the screen.
+            И наконец, воспользуемся служебной переменной cf для выведения полученного напитка на экран.
         </p>
         <div id="tabs">
-            <div id="ch-code" onclick="cd(3)">Code</div>
-            <div id="ch-rezz" onclick="rz(3)">Result</div>
+            <div id="ch-code" onclick="cd(3)">Код</div>
+            <div id="ch-rezz" onclick="rz(3)">Результат</div>
         </div>
         <div id="code-text_3">
             if(cf==0) {
@@ -1136,7 +1136,7 @@
             <br> } } }
         </div>
         <p id="text">
-            Congratulations, you’ve made your own java desktop project! You can get the full code right here and feel like a true programmer with all this coffee right in front of you! You can get all the poject files and sprites <a style="color:#df916d" href="../CE_Java-project.rar">here</a>.
+            Поздравляю, вы только что написали своё собственное десктоп-приложение на Java! Скачать итоговый код и спрайты можно <a style="color:#df916d" href="../CE_Java-project.rar">здесь</a>.
         </p>
     </div>
 
@@ -1151,20 +1151,20 @@
         </div>
     </div>
     <div id="sidebar" style="left:100vw;">
-        <div id="learn" onclick="lrn()">Tutorials
+        <div id="learn" onclick="lrn()">О языках
             <div id="learn_desc">
-                <div id="learn_desc_fix">Learn more about interesting languges in a colorful way!</div>
+                <div id="learn_desc_fix">Узнайте больше о языках на красочных страницах!</div>
             </div>
         </div>
-        <div id="tend" onclick="atc()">Articles
+        <div id="tend" onclick="atc()">Статьи
             <div id="tend_desc">
-                <div id="tend_desc_fix">Read up about the tendencies of programming languages</div>
+                <div id="tend_desc_fix">Прочтите пару полезных статей для программистов!</div>
             </div>
         </div>
         <div id="lang-pos">
             <div id="lang">
-                <div id="rus" onclick="window.location.assign('../tutorials_rus/index.html')">Russian</div>
-                <div id="eng" onclick="window.location.assign('index.html')">English</div>
+                <div id="rus" onclick="window.location.assign('index.html')">Russian</div>
+                <div id="eng" onclick="window.location.assign('../tutorials/index.html')">English</div>
             </div>
         </div>
         <div id="about">
@@ -1173,7 +1173,7 @@
     </div>
     <script>
         var codes = ["import java.util.*;<br> class Main {<br> public static void main(String[] args) {<br> System.out.println('Hello world!');<br> } }", "public class Main extends JFrame {            <br> public static class Main1 extends JPanel {}<br> public static void main(String[] args) {<br> JFrame f = new JFrame('coffee like java');<br>setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);<br> Main1 m = new Main1();<br> f.add(m);<br> f.setSize(900,700);<br> f.setResizable(false);<br> f.setVisible(true);<br> } }", "g.drawImage(table, 90, 250, null);<br> g.drawImage(kettle, 626, 243, null);<br> g.drawImage(coffeepot, 510, 193, null);<br>g.drawImage(whisk, 159, 205, null);<br> g.drawImage(milk, 204, 230, null);<br> g.drawImage(back, 10, 10, null);<br> g.drawImage(enter, 100, 10, null);", "if(cf==0) {<br> g.drawImage(cvr, 416, 272, null);<br> g.drawString('',400,50);<br> }<br> else if(cf==1) {            <br> g.drawImage(wtr, 416, 305, null);<br> g.drawString('WATER',400,50);            <br> } else if (cf==2) {<br> g.drawImage(esp, 416, 305, null);<br> g.drawString('ESPRESSO',375,50);<br> } else if (cf==3) {<br> //etc to cf = 7    <br> } } }"];
-        var results = ["Hello world!", "<div id='frame'>coffee like java<div id='panel'></div>", "<div id='frame'>coffee like java<div id='panel'><img src='../cgv1/base.png' id='base'></div>", "<div id='frame'>coffee like java<div id='panel'><img src='../cgv1/base.png' id='base' draggable='false' /><img draggable='false' src='' id='re' /><div id='lbl'></div><a onclick='add(`milk`)' style='position: absolute; left: 13.25%; top: 32.84%; width: 6%; height: 24.14%; z-index: 2;'></a><a onclick='add(`whisk`)' style='position: absolute; left: 11.5%; top: 28.69%; width: 15%; height: 22%; z-index: 1;'></a><a onclick='clear_cf()' style='position: absolute; left: 0.4%; top: 0.73%; width: 5.5%; height: 11.94%; z-index: 2;'></a><a onclick='enter()' style='position: absolute; left: 6.5%; top: 0.85%; width: 5.5%; height: 11.94%; z-index: 2;'></a><a onclick='add(`cpot`)' style='position: absolute; left: 34%; top: 26.75%; width: 8.5%; height: 25%; z-index: 2;'></a><a onclick='add(`kettle`)' style='position: absolute; left: 42%; top: 34%; width: 9.5%; height: 23%; z-index: 2;'></a></div></div>"];
+        var results = ["Hello world!", "<div id='frame'>coffee like java<div id='panel'></div>", "<div id='frame'>coffee like java<div id='panel'><img src='../cgv1/base.png' id='base' draggable='false' /></div></div>", "<div id='frame'>coffee like java<div id='panel'><img src='../cgv1/base.png' id='base' draggable='false' /><img draggable='false' src='' id='re' /><div id='lbl'></div><a onclick='add(`milk`)' style='position: absolute; left: 13.25%; top: 32.84%; width: 6%; height: 24.14%; z-index: 2;'></a><a onclick='add(`whisk`)' style='position: absolute; left: 11.5%; top: 28.69%; width: 15%; height: 22%; z-index: 1;'></a><a onclick='clear_cf()' style='position: absolute; left: 0.4%; top: 0.73%; width: 5.5%; height: 11.94%; z-index: 2;'></a><a onclick='enter()' style='position: absolute; left: 6.5%; top: 0.85%; width: 5.5%; height: 11.94%; z-index: 2;'></a><a onclick='add(`cpot`)' style='position: absolute; left: 34%; top: 26.75%; width: 8.5%; height: 25%; z-index: 2;'></a><a onclick='add(`kettle`)' style='position: absolute; left: 42%; top: 34%; width: 9.5%; height: 23%; z-index: 2;'></a></div></div>"];
         var cf = [],
             wh = 0;
 
