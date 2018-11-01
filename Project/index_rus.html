@@ -1,0 +1,506 @@
+<!DOCTYPE html>
+<html>
+<meta charset="utf-8" ontent="width=device-width">
+
+<head>
+    <title>Code:Excelso</title>
+    <link rel="icon" href="coffee.png">
+    <style>
+        @font-face {
+            font-family: soft;
+            src: url(ssf.ttf);
+        }
+
+        @font-face {
+            font-family: rigid;
+            src: url(reason.otf);
+        }
+
+        body {
+            background-color: #afeeee;
+            padding: 0;
+            overflow: hidden;
+        }
+
+        #sb_click {
+            position: absolute;
+            left: 100vw;
+            top: 0;
+            z-index: 2;
+            width: 5vh;
+            height: 5vh;
+            background-color: #eee8aa;
+            z-index: 101;
+        }
+
+        #sb_click_fix {
+            position: absolute;
+            left: -5vh;
+            top: 0;
+        }
+
+        #bar {
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 100vw;
+            height: 5vh;
+            background-color: #eee8aa;
+            z-index: 100;
+            color: #fff;
+            font-size: 3vh;
+            font-family: soft;
+            padding-top: 1vh;
+            padding-left: 1vh;
+            padding-bottom: 0;
+            z-index: 100;
+        }
+
+        #sidebar {
+            position: absolute;
+            z-index: 5;
+            left: 100vw;
+            top: 5vh;
+            width: 100vw;
+            height: 100vh;
+            background-color: #000000;
+            opacity: .75;
+            transition: left ease 1s;
+        }
+
+        #img {
+            position: absolute;
+            left: -15vw;
+            top: 75vh;
+            width: 100%;
+            height: auto;
+            z-index: 1;
+        }
+
+        #img_pos {
+            position: absolute;
+            top: -45vw;
+            left: 5vh;
+            width: 100%;
+            height: 100%;
+        }
+
+        #img_again {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 2vw;
+        }
+
+        #h1 {
+            position: absolute;
+            width: 1.4vw;
+            height: 50vh;
+            left: 17vw;
+            top: 70vh;
+            z-index: 0;
+            background-color: #a9a9a9;
+        }
+
+        #h1_sh {
+            position: absolute;
+            width: 1.4vw;
+            height: 3vh;
+            left: 0;
+            top: 0.25vh;
+            z-index: 101;
+            background-color: #696969;
+        }
+
+        #h1_pos {
+            position: absolute;
+            top: -1vh;
+        }
+
+        #h2 {
+            position: absolute;
+            width: 1.4vw;
+            height: 50vh;
+            left: 57vw;
+            top: 70vh;
+            z-index: 0;
+            background-color: #a9a9a9;
+        }
+
+        #h2_sh {
+            position: absolute;
+            width: 1.4vw;
+            height: 3vh;
+            left: 0;
+            top: 0;
+            z-index: 101;
+            background-color: #696969;
+        }
+
+        #h2_pos {
+            position: absolute;
+            top: -1vh;
+        }
+
+        #learn {
+            position: absolute;
+            top: 10vh;
+            left: 20vw;
+            text-transform: uppercase;
+            font-weight: 900;
+            font-size: 4vw;
+            color: white;
+            border-bottom: 3px solid #ff0000;
+        }
+
+        #tend {
+            position: absolute;
+            top: 10vh;
+            left: 60vw;
+            text-transform: uppercase;
+            font-size: 4vw;
+            font-weight: 900;
+            color: white;
+            opacity: 1;
+            border-bottom: 3px solid #ffa500;
+        }
+
+        #learn_desc {
+            position: absolute;
+            top: 1vh;
+            width: 100%;
+            font-size: 1.75vw;
+        }
+
+        #learn_desc_fix {
+            position: absolute;
+            top: 5vw;
+        }
+
+        #tend_desc {
+            position: absolute;
+            top: 1vh;
+            width: 100%;
+            font-size: 1.75vw;
+        }
+
+        #tend_desc_fix {
+            position: absolute;
+            top: 5vw;
+        }
+
+        #about {
+            border-top: 3px solid #ff0000;
+        }
+
+        #building {
+            background-color: #eee8aa;
+            width: 80vw;
+            height: 50vh;
+            position: absolute;
+            left: 0;
+            top: 75vh;
+        }
+
+        #roof-b {
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 81.5vw;
+            height: 5vh;
+            background-color: #661933;
+        }
+
+        #roof-b-s {
+            position: absolute;
+            left: 0;
+            top: 5vh;
+            width: 80vw;
+            height: 2.5vh;
+            background-color: #e6dd7f;
+        }
+
+        #cloud1_1 {
+            position: absolute;
+            left: 0;
+            top: 30px;
+            width: 75px;
+            height: 35px;
+            background-color: #ffffff;
+            border-top-right-radius: 360px;
+            border-top-left-radius: 360px;
+        }
+
+        #cloud1_2 {
+            position: absolute;
+            left: 37px;
+            top: 0;
+            width: 75px;
+            height: 65px;
+            background-color: #ffffff;
+            border-top-right-radius: 360px;
+            border-top-left-radius: 360px;
+        }
+
+        #cloud1_3 {
+            position: absolute;
+            left: 78px;
+            top: 22px;
+            width: 75px;
+            height: 42.5px;
+            background-color: #ffffff;
+            border-top-right-radius: 360px;
+            border-top-left-radius: 360px;
+        }
+
+        #cloud2_1 {
+            position: absolute;
+            left: 84px;
+            top: 65px;
+            width: 100px;
+            height: 35px;
+            background-color: #ffffff;
+            border-top-right-radius: 360px;
+            border-top-left-radius: 360px;
+        }
+
+        #cloud2_2 {
+            position: absolute;
+            left: 44px;
+            top: 27.5px;
+            width: 100px;
+            height: 72.5px;
+            background-color: #ffffff;
+            border-top-right-radius: 360px;
+            border-top-left-radius: 360px;
+        }
+
+        #cloud2_3 {
+            position: absolute;
+            left: 0;
+            top: 50px;
+            width: 100px;
+            height: 50px;
+            background-color: #ffffff;
+            border-top-right-radius: 360px;
+            border-top-left-radius: 360px;
+        }
+
+        #cloud1 {
+            position: absolute;
+            left: 10vw;
+            top: 16vh;
+            transform: scale(4);
+            z-index: -1;
+            animation: cloud1 25s ease infinite alternate;
+        }
+
+        #cloud2 {
+            position: absolute;
+            top: 40vh;
+            left: 70vw;
+            transform: scale(4);
+            animation: cloud2 25s ease infinite alternate;
+        }
+
+        @keyframes cloud1 {
+            from {
+                left: 10vw;
+            }
+            to {
+                left: 20vw;
+            }
+        }
+
+        @-webkit-keyframes cloud1 {
+            from {
+                left: 10vw;
+            }
+            to {
+                left: 20vw;
+            }
+        }
+
+        @keyframes cloud2 {
+            from {
+                left: 70vw;
+            }
+            to {
+                left: 60vw;
+            }
+        }
+
+        @-webkit-keyframes cloud2 {
+            from {
+                left: 70vw;
+            }
+            to {
+                left: 60vw;
+            }
+        }
+
+        #bar9uk {
+            position: absolute;
+            left: 0.75vh;
+        }
+
+        #bar9uk_1 {
+            position: absolute;
+            left: 0;
+            width: 25px;
+            height: 5px;
+            top: 0.75vh;
+            left: -0.25vw;
+            background-color: #f5f5f5;
+            border-radius: 5px;
+            transition: background-color 1s ease;
+        }
+
+        #bar9uk_2 {
+            position: absolute;
+            width: 25px;
+            height: 5px;
+            top: 2vh;
+            left: -0.25vw;
+            background-color: #f5f5f5;
+            border-radius: 5px;
+            transition: background-color 1s ease;
+        }
+
+        #bar9uk_3 {
+            position: absolute;
+            width: 25px;
+            height: 5px;
+            top: 3.35vh;
+            left: -0.25vw;
+            border-radius: 5px;
+            background-color: #f5f5f5;
+            transition: background-color 1s ease;
+        }
+
+        #lang {
+            position: absolute;
+            left: -12vh;
+            top: 90vh;
+            width: 100%;
+            text-transform: uppercase;
+            color: white;
+            font-size: 2vh;
+            font-weight: bold;
+        }
+
+        #lang-pos {
+            position: absolute;
+            width: 100%;
+            top: 0;
+            left: 52vw;
+        }
+
+        #rus {
+            position: absolute;
+            padding-right: 1.5vh;
+            border-right: .5vh solid #ff0000;
+        }
+
+        #eng {
+            position: absolute;
+            left: 12.25vh;
+        }
+
+    </style>
+</head>
+
+<body>
+    <div id="img_again">
+        <div id="img_pos">
+            <img id="img" src='coffee.png' draggable="false">
+        </div>
+    </div>
+    <div id="h1_pos">
+        <div id="h1">
+            <div id="h1_sh"></div>
+        </div>
+    </div>
+    <div id="h2_pos">
+        <div id="h2">
+            <div id="h2_sh"></div>
+        </div>
+    </div>
+    <div id="building">
+        <div id="roof-b"></div>
+        <div id="roof-b-s"></div>
+    </div>
+    <div id="cloud1">
+        <div id="cloud1_1"></div>
+        <div id="cloud1_2"></div>
+        <div id="cloud1_3"></div>
+    </div>
+    <div id="cloud2">
+        <div id="cloud2_1"></div>
+        <div id="cloud2_2"></div>
+        <div id="cloud2_3"></div>
+    </div>
+    <div id="bar">Code:Excelso</div>
+    <div id="sb_click_fix" onclick="menu_slider()" s>
+        <div id="sb_click">
+            <div id="bar9uk" onmouseover="c()" onmouseout="h()">
+                <div id="bar9uk_1"></div>
+                <div id="bar9uk_2"></div>
+                <div id="bar9uk_3"></div>
+            </div>
+        </div>
+    </div>
+    <div id="sidebar" style="left:100vw;">
+        <div id="learn" onclick="learn_pg()">О языках
+            <div id="learn_desc">
+                <div id="learn_desc_fix">Узнайте больше о языках на красочных страницах!</div>
+            </div>
+        </div>
+        <div id="tend" onclick="article_pg()">Статьи
+            <div id="tend_desc">
+                <div id="tend_desc_fix">Прочтите пару полезных статей для программистов!</div>
+            </div>
+        </div>
+        <div id="lang-pos">
+            <div id="lang">
+                <div id="rus" onclick="window.location.assign('index_rus.html')">Russian</div>
+                <div id="eng" onclick="window.location.assign('index.html')">English</div>
+            </div>
+        </div>
+        <div id="about">
+
+        </div>
+    </div>
+    <script>
+        function c() {
+            document.getElementById("bar9uk_1").style.backgroundColor = "palevioletred";
+            document.getElementById("bar9uk_2").style.backgroundColor = "palevioletred";
+            document.getElementById("bar9uk_3").style.backgroundColor = "palevioletred";
+        }
+
+        function h() {
+            document.getElementById("bar9uk_1").style.backgroundColor = "whitesmoke";
+            document.getElementById("bar9uk_2").style.backgroundColor = "whitesmoke";
+            document.getElementById("bar9uk_3").style.backgroundColor = "whitesmoke";
+        }
+
+        function learn_pg() {
+            window.open("tutorials_rus/index.html", "_self");
+        }
+
+        function article_pg() {
+            window.open("articles_rus/index.html", "_self");
+        }
+
+        function menu_slider() {
+            if (document.getElementById("sidebar").style.left == "100vw") {
+                document.getElementById("sidebar").style.left = 0;
+            } else {
+                document.getElementById("sidebar").style.left = "100vw";
+            }
+        }
+
+    </script>
+</body>
+
+</html>
